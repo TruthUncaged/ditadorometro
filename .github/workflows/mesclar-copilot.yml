@@ -1,0 +1,75 @@
+name: Mesclar atualização do Copilot
+
+# O agente de código do Copilot só entrega mudanças por pull request. Este
+# workflow valida o PR assim que o Copilot termina e faz o merge automático
+# na main, sem revisão humana; o push resultante dispara a publicação.
+#
+# pull_request_target roda a versão deste arquivo que está na main, então o
+# PR não consegue alterar as regras abaixo. O código do PR só é executado no
+# job "validar", sem segredos e com permissão somente de leitura.
+
+on:
+  pull_request_target:
+    types: [opened, edited, synchronize, ready_for_review, review_requested]
+
+concurrency:
+  group: mesclar-copilot-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  validar:
+    # Só PRs do Copilot, e só quando ele termina (título sem “[WIP]”).
+    if: >-
+      github.event.pull_request.user.login == 'Copilot' &&
+      startsWith(github.event.pull_request.head.ref, 'copilot/') &&
+      !startsWith(github.event.pull_request.title, '[WIP]')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Restringir ao registro
+        run: |
+          outros=$(git diff --name-only "origin/${{ github.event.pull_request.base.ref }}...HEAD" | grep -v '^src/data/news\.js$' || true)
+          if [ -n "$outros" ]; then
+            echo "::error::O Copilot alterou arquivos fora do registro:"
+            echo "$outros"
+            exit 1
+          fi
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - run: npm ci --ignore-scripts
+
+      - name: Validar registro e build
+        run: |
+          node scripts/validate.mjs
+          npm run build
+
+  mesclar:
+    needs: validar
+    runs-on: ubuntu-latest
+    steps:
+      # Token de usuário: um merge feito com GITHUB_TOKEN não dispararia o deploy.
+      - name: Merge na main
+        env:
+          GH_TOKEN: ${{ secrets.COPILOT_ASSIGN_TOKEN }}
+          PR: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          if [ "$(gh pr view "$PR" -R "$REPO" --json isDraft --jq .isDraft)" = "true" ]; then
+            gh pr ready "$PR" -R "$REPO"
+          fi
+          gh pr merge "$PR" -R "$REPO" --squash --delete-branch
+          gh issue list -R "$REPO" --label atualizacao-copilot --state open --json number --jq '.[].number' |
+            xargs -r -I{} gh issue close {} -R "$REPO" --comment "Concluída pelo PR #$PR."

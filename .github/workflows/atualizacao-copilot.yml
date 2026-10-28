@@ -1,0 +1,126 @@
+name: Atualização diária do registro (Copilot)
+
+# Variante da atualização diária que usa o agente de código do GitHub Copilot.
+#
+# O Copilot não faz busca na web e roda atrás de um firewall, então este
+# workflow faz a parte mecânica: coleta notícias candidatas, verifica os links
+# existentes e abre uma issue atribuída ao Copilot com tudo isso. O Copilot
+# edita src/data/news.js e abre um pull request; o merge publica o site.
+#
+# Requer o secret COPILOT_ASSIGN_TOKEN: token de um usuário com licença do
+# Copilot (a API não aceita GITHUB_TOKEN para atribuir issues ao Copilot).
+
+on:
+  schedule:
+    - cron: '30 9 * * *' # 06:30 em Brasília
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: atualizacao-copilot
+  cancel-in-progress: false
+
+env:
+  LABEL: atualizacao-copilot
+
+jobs:
+  abrir-tarefa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GH_TOKEN: ${{ secrets.COPILOT_ASSIGN_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Verificar se a tarefa anterior ainda está aberta
+        id: pending
+        run: |
+          gh label create "$LABEL" --color 8a1c1c --description "Atualização diária feita pelo Copilot" --force
+          open=$(gh issue list --label "$LABEL" --state open --json number --jq 'length')
+          echo "open=$open" >> "$GITHUB_OUTPUT"
+          [ "$open" = "0" ] || echo "::notice::Já existe uma tarefa aberta para o Copilot; nada a fazer hoje."
+
+      - name: Coletar notícias e verificar fontes
+        if: steps.pending.outputs.open == '0'
+        run: |
+          mkdir -p .agent
+          echo "HOJE=$(TZ=America/Sao_Paulo date +%F)" >> "$GITHUB_ENV"
+          node scripts/validate.mjs > .agent/indice.txt
+          node scripts/check-links.mjs .agent/links.md
+          node scripts/collect-news.mjs .agent/candidatos.md 7
+
+      - name: Montar a issue
+        if: steps.pending.outputs.open == '0'
+        run: |
+          {
+            echo "Atualização diária do registro de **$HOJE**."
+            echo
+            echo "Siga as instruções de [\`.github/prompts/atualizar-registro.md\`](../blob/main/.github/prompts/atualizar-registro.md), com estas adaptações:"
+            echo
+            echo "- **Busca:** use a lista de candidatas abaixo no lugar da busca na web. Para confirmar um fato, abra a página original do veículo com o navegador (Playwright)."
+            echo "- **Links:** use a verificação abaixo para saber quais fontes corrigir."
+            echo "- **Relatório:** escreva o relatório do Passo 5 na descrição do pull request, não em arquivo."
+            echo "- Altere apenas \`src/data/news.js\`. O PR é bloqueado se outro arquivo mudar."
+            echo
+            echo "## Índice atual"
+            echo
+            echo '```'
+            cat .agent/indice.txt
+            echo '```'
+            echo
+            cat .agent/links.md
+            echo
+            cat .agent/candidatos.md
+          } > .agent/issue.md
+          # Limite de tamanho do corpo de issue no GitHub.
+          head -c 60000 .agent/issue.md > .agent/issue-final.md
+
+      - name: Criar a issue e atribuir ao Copilot
+        if: steps.pending.outputs.open == '0'
+        run: |
+          url=$(gh issue create \
+            --title "Registro: atualização de $HOJE" \
+            --label "$LABEL" \
+            --body-file .agent/issue-final.md)
+          number=${url##*/}
+
+          ids=$(gh api graphql \
+            -H 'GraphQL-Features: issues_copilot_assignment_api_support' \
+            -f owner="${GITHUB_REPOSITORY%/*}" -f name="${GITHUB_REPOSITORY#*/}" -F number="$number" \
+            -f query='
+              query($owner: String!, $name: String!, $number: Int!) {
+                repository(owner: $owner, name: $name) {
+                  issue(number: $number) { id }
+                  suggestedActors(capabilities: [CAN_BE_ASSIGNED], first: 100) {
+                    nodes { login ... on Bot { id } }
+                  }
+                }
+              }')
+          issue_id=$(echo "$ids" | jq -r '.data.repository.issue.id')
+          bot_id=$(echo "$ids" | jq -r '.data.repository.suggestedActors.nodes[] | select(.login == "copilot-swe-agent") | .id')
+
+          if [ -z "$bot_id" ]; then
+            echo "::error::O agente de código do Copilot não está habilitado neste repositório."
+            exit 1
+          fi
+
+          gh api graphql \
+            -H 'GraphQL-Features: issues_copilot_assignment_api_support' \
+            -f issue="$issue_id" -f bot="$bot_id" \
+            -f query='
+              mutation($issue: ID!, $bot: ID!) {
+                replaceActorsForAssignable(input: { assignableId: $issue, actorIds: [$bot] }) {
+                  assignable { ... on Issue { url } }
+                }
+              }' > /dev/null
+
+          echo "::notice::Tarefa criada e atribuída ao Copilot: $url"
