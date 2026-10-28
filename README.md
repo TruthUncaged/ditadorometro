@@ -16,6 +16,7 @@ dos citados e uma classificação feita com uma tabela pública de critérios.
 - [Estrutura do projeto](#estrutura-do-projeto)
 - [Rodar localmente](#rodar-localmente)
 - [Feed RSS](#feed-rss)
+- [SEO](#seo)
 - [Publicação no GitHub Pages](#publicação-no-github-pages)
 - [Atualização diária automática](#atualização-diária-automática)
 - [Regras editoriais](#regras-editoriais)
@@ -153,6 +154,8 @@ Pontos a considerar antes de decidir:
 ├── index.html                    página base (fontes, metadados, feed)
 ├── src/
 │   ├── App.jsx                   montagem da página
+│   ├── main.jsx                  entrada do navegador (hidrata o HTML pré-renderizado)
+│   ├── entry-server.jsx          entrada do build que pré-renderiza a página
 │   ├── components/               termômetro, dimensões, registro, tabela, histórico, método, sobre
 │   ├── data/
 │   │   ├── news.js               registro de ocorrências (o que move o ponteiro) e UPDATED_AT
@@ -165,6 +168,7 @@ Pontos a considerar antes de decidir:
 ├── scripts/
 │   ├── validate.mjs              valida o registro e imprime o índice
 │   ├── saturacao.mjs             simula o índice com outros valores de SATURATION
+│   ├── build-seo.mjs             pré-renderiza a página e gera metadados, sitemap, robots e imagens
 │   ├── build-feed.mjs            gera dist/feed.xml
 │   ├── collect-news.mjs          lista notícias candidatas dos últimos dias (Google News RSS)
 │   ├── check-links.mjs           confere se as fontes ainda respondem
@@ -201,6 +205,36 @@ leem a web, então só pode conter dados).
 
 Os links do feed são absolutos: no deploy, `SITE_URL` vem do endereço do GitHub Pages; localmente, o padrão é
 `http://localhost:4173/`. O feed não existe em `npm run dev`.
+
+## SEO
+
+`npm run build` roda, depois do build normal, um build SSR (`src/entry-server.jsx`) e `scripts/build-seo.mjs`, que:
+
+- **pré-renderiza a página** em `dist/index.html`: buscadores e redes sociais leem todo o conteúdo (índice, registro,
+  tabela, método) sem executar JavaScript, e o navegador apenas hidrata o HTML (`src/main.jsx`);
+- escreve um **título e uma descrição com o índice atual** (por exemplo, “Ditadorômetro: quão perto o Brasil está de
+  uma ditadura? (50/100)”), além de `canonical` e `robots`;
+- adiciona **Open Graph e Twitter Card** com uma imagem de compartilhamento 1200×630 (`og-image.png`) gerada a cada
+  build com o termômetro, o índice, o estágio e a data;
+- inclui **dados estruturados JSON-LD** (`WebSite`, `Organization`, `WebPage`, `Book` e `Dataset`, este com o feed
+  RSS como distribuição);
+- gera `sitemap.xml` (com `lastmod` igual a `UPDATED_AT`), `robots.txt`, `site.webmanifest`, `favicon.svg` e os ícones
+  `apple-touch-icon.png` e `icon-512.png`, todos na cor do estágio atual.
+
+Como o texto e a imagem saem do registro, cada atualização diária já publica os metadados novos. Todos os links
+absolutos usam `SITE_URL`, que no deploy vem do endereço do GitHub Pages.
+
+Depois da primeira publicação, para acelerar a indexação:
+
+1. Cadastre o site no [Google Search Console](https://search.google.com/search-console) e no
+   [Bing Webmaster Tools](https://www.bing.com/webmasters), e envie `sitemap.xml` nos dois. Num site de projeto do
+   GitHub Pages (`usuario.github.io/ditadorometro/`), os buscadores só leem o `robots.txt` da raiz do domínio, então o
+   envio manual do sitemap é o que garante a descoberta.
+2. Confira a prévia de compartilhamento no [Validador de Cards do LinkedIn](https://www.linkedin.com/post-inspector/)
+   ou no [Depurador de Compartilhamento do Facebook](https://developers.facebook.com/tools/debug/), e os dados
+   estruturados no [Teste de pesquisa aprimorada do Google](https://search.google.com/test/rich-results).
+3. Com um domínio próprio (Settings → Pages → Custom domain), o `robots.txt` passa a valer e o endereço fica mais
+   fácil de lembrar e citar. Basta publicar com o novo `SITE_URL`, que o deploy obtém automaticamente.
 
 ## Publicação no GitHub Pages
 
