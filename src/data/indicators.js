@@ -56,4 +56,7 @@ export const STATUS = {
 }
 
 // Pontos necessários para uma dimensão atingir 100%.
+// Decisão pendente: com 15, Liberdades e Árbitros já estão no teto e não reagem a casos novos;
+// um valor maior devolve a sensibilidade, mas baixa o índice publicado. Veja "Decisão pendente:
+// o valor de SATURATION" no README e simule com: node scripts/saturacao.mjs 20 25 30
 export const SATURATION = 15

@@ -108,6 +108,45 @@ Os pontos são somados por dimensão e limitados a `SATURATION` (15 pontos = 100
 seis dimensões, de 0 a 100. O código está em `src/lib/score.js`, e o mesmo cálculo é usado pelo site, pelo
 validador, pelo feed e pelos scripts de automação.
 
+### Decisão pendente: o valor de `SATURATION`
+
+`SATURATION` (em `src/data/indicators.js`) é quantos pontos uma dimensão precisa para chegar a 100%. Ele resolve duas
+coisas que puxam em direções opostas:
+
+- **Sensibilidade.** Quando uma dimensão chega ao teto, casos novos daquela dimensão deixam de mover o termômetro.
+  Em outubro de 2026, com 15 pontos, *Liberdades* (17,8 pontos) e *Árbitros* (20,6 pontos) já estão no teto: um novo
+  caso de censura ou de captura de tribunal entra no registro, mas o índice não muda.
+- **Nível do índice.** Um teto maior faz cada ponto valer menos, então o índice publicado cai, e pode mudar de
+  estágio, sem que nenhum fato novo tenha acontecido.
+
+Simulação com o registro de 28 de outubro de 2026 (22 ocorrências):
+
+| `SATURATION` | Índice | Estágio | Liberdades | Árbitros | Efeito |
+| --- | --- | --- | --- | --- | --- |
+| **15 (atual)** | 50 | 3 · Captura dos árbitros | 100% (teto) | 100% (teto) | Duas dimensões não reagem mais |
+| 20 | 44 | 3 · Captura dos árbitros | 89% | 100% (teto) | Árbitros continua sem reagir |
+| 25 | 36 | 2 · Erosão das normas | 71% | 82% | Cabem 2 ou 3 casos graves por dimensão antes do teto |
+| 30 | 30 | 2 · Erosão das normas | 59% | 69% | Mais folga, índice perto do limite do estágio 2 |
+
+Para repetir a simulação com os dados atuais ou outros valores:
+
+```bash
+node scripts/saturacao.mjs            # compara 15, 20, 25 e 30
+node scripts/saturacao.mjs 18 22 40   # compara os valores informados
+```
+
+Pontos a considerar antes de decidir:
+
+1. **Mudar o teto muda a leitura publicada de uma vez.** Se o índice cair de estágio, o site e o feed RSS mostram uma
+   "melhora" que não veio de nenhum fato. Vale publicar a mudança junto com uma nota explicando a recalibração.
+2. **O teto vale para todas as dimensões.** As dimensões com poucos pontos (*Regras*, *Legitimidade*, *Violência*)
+   também ficam menores, mesmo sem estar perto do limite.
+3. **Alternativas ao teto único**, se nenhum valor servir: um teto por dimensão (por exemplo, maior em *Árbitros* e
+   *Liberdades*), ou uma curva de retorno decrescente no lugar do corte (cada ponto vale um pouco menos que o
+   anterior, sem um limite rígido). As duas exigem mudar `src/lib/score.js` e a seção de método do site.
+4. **Ajustar as faixas dos estágios** (`src/data/levels.js`) junto com o teto pode manter o estágio atual, mas também
+   muda o critério para todos os casos futuros.
+
 ## Estrutura do projeto
 
 ```
@@ -125,6 +164,7 @@ validador, pelo feed e pelos scripts de automação.
 │   └── styles.css                estilos (tema claro e escuro, movimento reduzido)
 ├── scripts/
 │   ├── validate.mjs              valida o registro e imprime o índice
+│   ├── saturacao.mjs             simula o índice com outros valores de SATURATION
 │   ├── build-feed.mjs            gera dist/feed.xml
 │   ├── collect-news.mjs          lista notícias candidatas dos últimos dias (Google News RSS)
 │   ├── check-links.mjs           confere se as fontes ainda respondem
