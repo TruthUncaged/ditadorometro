@@ -42,15 +42,17 @@ export const NEWS = [
     power: 'judiciario',
     title: 'Na noite da apuração, PF pede e Moraes autoriza a retenção dos passaportes de Flávio Bolsonaro, sem ouvir a PGR',
     summary:
-      'O pedido da Polícia Federal, de 16 páginas, foi assinado às 21h16 de 25 de outubro, sete minutos depois de o TSE oficializar a derrota de Flávio Bolsonaro (PL-RJ) no segundo turno. O ministro Alexandre de Moraes concedeu a medida na mesma noite, sem consulta prévia à Procuradoria-Geral da República, e ela foi cumprida na manhã seguinte. A PF citou um inquérito sigiloso sobre lavagem de dinheiro atribuída ao advogado Willer Tomaz, em que Flávio aparece como usuário master de uma conta de empresa de Tomaz em Portugal até maio de 2025, e uma declaração de Eduardo Bolsonaro, em 23 de outubro, de que seria a favor de o irmão deixar o país se perdesse a eleição. Segundo a PF, Tomaz está em Miami desde agosto.',
+      'O pedido da Polícia Federal, de 16 páginas, foi assinado às 21h16 de 25 de outubro, sete minutos depois de o TSE oficializar a derrota de Flávio Bolsonaro (PL-RJ) no segundo turno. O ministro Alexandre de Moraes concedeu a medida na mesma noite, sem consulta prévia à Procuradoria-Geral da República, e ela foi cumprida na manhã seguinte. A PF citou um inquérito sigiloso sobre lavagem de dinheiro atribuída ao advogado Willer Tomaz, em que Flávio aparece como usuário master de uma conta de empresa de Tomaz em Portugal até maio de 2025, e uma declaração de Eduardo Bolsonaro, em 23 de outubro, de que seria a favor de o irmão deixar o país se perdesse a eleição. Segundo a PF, Tomaz está em Miami desde agosto. Flávio não entregou os documentos, e a PF cancelou os passaportes comum e diplomático em 27 de outubro. Segundo a CNN Brasil, ele cruzou para a Argentina com passaporte italiano e entrou nos Estados Unidos, por Miami, com o passaporte diplomático já cancelado; a Agência Brasil registrou que não havia saída formal do país.',
     response:
-      'Flávio Bolsonaro contesta a base da decisão e pergunta se a medida seria tomada caso ele tivesse vencido; integrantes da campanha falam em retaliação política. O STF não informou quando a decisão, sob sigilo, foi assinada. Os relatos sobre a saída de Flávio do país são divergentes.',
+      'Flávio Bolsonaro contesta a base da decisão e pergunta se a medida seria tomada caso ele tivesse vencido; integrantes da campanha falam em retaliação política. O STF não informou quando a decisão, sob sigilo, foi assinada. As reportagens consultadas não trazem manifestação de Flávio ou da defesa sobre a viagem.',
     institutions: ['STF', 'Polícia Federal', 'PGR'],
     status: 'em-curso',
     cases: ['B4', 'E2'],
     sources: [
       { outlet: 'Estado de Minas', url: 'https://www.em.com.br/politica/2026/10/7528647-7-minutos-separam-o-resultado-da-eleicao-do-pedido-da-pf-de-apreender-o-passaporte-de-flavio-bolsonaro.html' },
       { outlet: 'Gazeta do Povo', url: 'https://www.gazetadopovo.com.br/republica/moraes-ordena-cancelamento-de-passaporte-de-flavio-bolsonaro-apos-eleicoes/' },
+      { outlet: 'Agência Brasil', url: 'https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/policia-federal-cancela-passaportes-de-flavio-bolsonaro' },
+      { outlet: 'CNN Brasil', url: 'https://www.cnnbrasil.com.br/internacional/flavio-bolsonaro-entrou-nos-eua-com-passaporte-diplomatico-que-pf-cancelou/' },
     ],
   },
   {
