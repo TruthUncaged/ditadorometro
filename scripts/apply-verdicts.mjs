@@ -16,8 +16,8 @@ const VERIFIERS = 3
 const MIN_APPROVALS = 2
 const [basePath, candPath, verdictDir] = process.argv.slice(2)
 
-const base = await loadNews(basePath)
-const cand = await loadNews(candPath)
+const base = loadNews(basePath)
+const cand = loadNews(candPath)
 const changes = JSON.parse(readFileSync('.agent/mudancas.json', 'utf8'))
 
 const verdicts = []
@@ -64,7 +64,13 @@ final.sort((a, b) => b.sort.localeCompare(a.sort))
 const updatedAt = accepted.size ? cand.UPDATED_AT : base.UPDATED_AT
 
 // ---------- Serialização no mesmo estilo do arquivo escrito à mão ----------
-const q = (s) => `'${String(s).replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/\n/g, '\\n')}'`
+const ITEM_FIELDS = ['id', 'sort', 'when', 'power', 'title', 'summary', 'response', 'institutions', 'status', 'cases', 'sources']
+const SOURCE_FIELDS = ['outlet', 'url']
+for (const n of final) {
+  const extra = [...Object.keys(n).filter((k) => !ITEM_FIELDS.includes(k)), ...n.sources.flatMap((s) => Object.keys(s).filter((k) => !SOURCE_FIELDS.includes(k)))]
+  if (extra.length) throw new Error(`Ocorrência ${n.id} tem campos que o consolidador não grava: ${extra.join(', ')}`)
+}
+const q = (s) => `'${String(s).replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/\r/g, '\\r').replace(/\n/g, '\\n')}'`
 const list = (a) => `[${a.map(q).join(', ')}]`
 const item = (n) =>
   [
@@ -98,11 +104,21 @@ writeFileSync(
 const icon = { aprovar: 'aprova', rejeitar: 'rejeita', vetar: '**veta**' }
 const rows = decisions.map((d) => {
   const v = d.votes.map((x) => `${x.verificador}: ${icon[x.voto] ?? x.voto}`).join('; ')
-  const why = d.accepted ? 'aceita' : d.veto ? 'recusada (veto)' : !d.pointsOk ? 'recusada (pontos não confirmados)' : 'recusada (aprovações insuficientes)'
+  const why = d.accepted ? 'aceita' : d.veto ? 'recusada (veto)' : d.approvals < MIN_APPROVALS ? 'recusada (aprovações insuficientes)' : 'recusada (pontos não confirmados)'
   return `| \`${d.id}\` | ${d.tipo} | ${v} | ${why} |`
 })
 const reasons = decisions
   .flatMap((d) => d.votes.filter((v) => v.voto !== 'aprovar').map((v) => `- \`${d.id}\` · ${v.verificador}: ${v.motivo}`))
+  .join('\n')
+const coverage = verdicts
+  .filter((v) => v.cobertura && typeof v.cobertura === 'object')
+  .map((v) => {
+    const c = v.cobertura
+    const esferas = Array.isArray(c.esferas_menos_cobertas) ? c.esferas_menos_cobertas.join(', ') : '—'
+    const buscas = Array.isArray(c.buscas_feitas) ? c.buscas_feitas.length : 0
+    const om = Array.isArray(c.omissoes) ? c.omissoes.length : 0
+    return `- ${v.verificador ?? '?'}: esferas menos cobertas: ${esferas}; ${buscas} busca(s) própria(s); ${om} omissão(ões) apontada(s) (ver data/pendencias.md).`
+  })
   .join('\n')
 
 writeFileSync(
@@ -116,7 +132,7 @@ ${verdicts.length} de ${VERIFIERS} verificadores responderam. Regra: ${MIN_APPRO
 | Ocorrência | Tipo | Votos | Resultado |
 | --- | --- | --- | --- |
 ${rows.join('\n')}
-${reasons ? `\n### Objeções registradas\n\n${reasons}\n` : ''}`,
+${reasons ? `\n### Objeções registradas\n\n${reasons}\n` : ''}${coverage ? `\n### Cobertura (o que pode ter ficado de fora)\n\n${coverage}\n` : ''}`,
 )
 
 console.log(`${accepted.size}/${decisions.length} mudanças aceitas`)

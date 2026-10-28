@@ -3,13 +3,17 @@
 //   SITE_URL=https://usuario.github.io/ditadorometro/ node scripts/build-feed.mjs
 //
 // O feed tem um item para o índice, que reaparece no leitor sempre que o índice
-// muda, e um item por ocorrência, que reaparece quando a situação dela muda.
+// muda (o guid é o próprio valor), e um item por ocorrência, que reaparece quando
+// a situação dela muda (o guid é id + status).
 
 import { mkdirSync, writeFileSync } from 'node:fs'
-import { NEWS, POWERS, UPDATED_AT } from '../src/data/news.js'
+import { loadNewsFile } from './lib/load-news.mjs'
 import { STATUS } from '../src/data/indicators.js'
 import { levelFor } from '../src/data/levels.js'
 import { computeScore, itemPoints } from '../src/lib/score.js'
+
+// Nunca importa o registro diretamente (ver scripts/lib/load-news.mjs).
+const { NEWS, POWERS, UPDATED_AT } = loadNewsFile(new URL('../src/data/news.js', import.meta.url))
 
 const site = (process.env.SITE_URL || 'http://localhost:4173/').replace(/\/?$/, '/')
 if (!process.env.SITE_URL) console.warn(`SITE_URL não definido; usando ${site}`)
@@ -37,7 +41,8 @@ const level = levelFor(score)
 const indexItem = {
   title: `Índice em ${score}/100: ${level.name}`,
   link: `${site}#inicio`,
-  guid: `indice-${score}-${updated.toISOString().slice(0, 10)}`,
+  // Sem a data: o item só reaparece no leitor quando o índice muda, não a cada atualização.
+  guid: `indice-${score}`,
   date: updated,
   category: 'Índice',
   html: [

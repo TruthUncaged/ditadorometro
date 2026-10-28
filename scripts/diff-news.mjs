@@ -4,24 +4,28 @@
 //
 // Grava mudancas.json e mudancas.md na pasta de saída e imprime a quantidade.
 
-import { writeFileSync, copyFileSync, mkdtempSync } from 'node:fs'
-import { join, resolve } from 'node:path'
-import { tmpdir } from 'node:os'
+import { writeFileSync } from 'node:fs'
+import { join } from 'node:path'
 import { pathToFileURL } from 'node:url'
 import { itemPoints } from '../src/lib/score.js'
+import { loadNewsFile } from './lib/load-news.mjs'
 
 const [basePath, candPath, out = '.agent'] = process.argv.slice(2)
 
-// Copia para nomes distintos para o Node não reaproveitar o módulo em cache.
-export async function loadNews(path) {
-  const tmp = join(mkdtempSync(join(tmpdir(), 'news-')), 'news.mjs')
-  copyFileSync(resolve(path), tmp)
-  return import(pathToFileURL(tmp).href)
+// Nunca importa o arquivo: o candidato vem de um agente e pode conter código.
+export function loadNews(path) {
+  return loadNewsFile(path)
 }
 
+// Comparação estável, indiferente à ordem das chaves.
+const canon = (v) =>
+  Array.isArray(v) ? `[${v.map(canon).join(',')}]`
+  : v && typeof v === 'object' ? `{${Object.keys(v).sort().map((k) => `${JSON.stringify(k)}:${canon(v[k])}`).join(',')}}`
+  : JSON.stringify(v)
+
 if (import.meta.url === pathToFileURL(process.argv[1]).href) {
-  const base = (await loadNews(basePath)).NEWS
-  const cand = (await loadNews(candPath)).NEWS
+  const base = loadNews(basePath).NEWS
+  const cand = loadNews(candPath).NEWS
   const byId = (list) => new Map(list.map((n) => [n.id, n]))
   const B = byId(base)
   const C = byId(cand)
@@ -30,8 +34,8 @@ if (import.meta.url === pathToFileURL(process.argv[1]).href) {
   for (const n of cand) {
     const b = B.get(n.id)
     if (!b) changes.push({ id: n.id, tipo: 'nova', pontos: itemPoints(n), depois: n })
-    else if (JSON.stringify(b) !== JSON.stringify(n)) {
-      const campos = Object.keys({ ...b, ...n }).filter((k) => JSON.stringify(b[k]) !== JSON.stringify(n[k]))
+    else if (canon(b) !== canon(n)) {
+      const campos = Object.keys({ ...b, ...n }).filter((k) => canon(b[k]) !== canon(n[k]))
       changes.push({ id: n.id, tipo: 'alterada', campos, pontos: itemPoints(n), antes: b, depois: n })
     }
   }

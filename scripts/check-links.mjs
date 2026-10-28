@@ -3,7 +3,10 @@
 //   node scripts/check-links.mjs [arquivo-de-saída]
 
 import { writeFileSync } from 'node:fs'
-import { NEWS } from '../src/data/news.js'
+import { loadNewsFile } from './lib/load-news.mjs'
+
+// Nunca importa o registro diretamente (ver scripts/lib/load-news.mjs).
+const { NEWS } = loadNewsFile(new URL('../src/data/news.js', import.meta.url))
 
 const OUT = process.argv[2] ?? '.agent/links.md'
 const UA = 'Mozilla/5.0 (compatible; Ditadorometro-LinkCheck/1.0)'

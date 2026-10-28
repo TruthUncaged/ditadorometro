@@ -9,10 +9,13 @@
 import { existsSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
 import { pathToFileURL } from 'node:url'
 import { Resvg } from '@resvg/resvg-js'
-import { NEWS, UPDATED_AT } from '../src/data/news.js'
+import { loadNewsFile } from './lib/load-news.mjs'
 import { INDICATORS } from '../src/data/indicators.js'
 import { levelFor } from '../src/data/levels.js'
 import { computeScore } from '../src/lib/score.js'
+
+// Nunca importa o registro diretamente (ver scripts/lib/load-news.mjs).
+const { NEWS, UPDATED_AT } = loadNewsFile(new URL('../src/data/news.js', import.meta.url))
 
 const SSR_ENTRY = 'dist-ssr/entry-server.js'
 const site = (process.env.SITE_URL || 'http://localhost:4173/').replace(/\/?$/, '/')

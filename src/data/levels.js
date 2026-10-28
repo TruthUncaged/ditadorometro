@@ -9,7 +9,7 @@ export const LEVELS = [
     id: 0,
     name: 'Democracia plena',
     summary:
-      'Liberdade irrestrita de expressão e imprensa. Árbitros (tribunais, Ministério Público, polícia, órgãos de controle) independentes. Oposição tratada como adversária legítima, não como inimiga.',
+      'Liberdade de expressão e de imprensa protegida. Árbitros (tribunais, Ministério Público, polícia, órgãos de controle) independentes de quem governa. Oposição tratada como adversária legítima, não como inimiga.',
     examples: [],
   },
   {
@@ -23,22 +23,22 @@ export const LEVELS = [
     id: 2,
     name: 'Erosão das normas',
     summary:
-      'Prerrogativas legais usadas até o limite (“jogo duro constitucional”). Investigações seletivas, sigilo excessivo, decisões monocráticas sem controle. Casos graves ficam sem apuração.',
-    examples: ['Venezuela, 1999–2003', 'Equador, 2007–2010'],
+      'As prerrogativas legais passam a ser usadas até o limite, por qualquer dos Poderes (“jogo duro constitucional”). Quebrar uma norma deixa de ter custo; os árbitros e os guardiões reagem pouco ou de forma seletiva.',
+    examples: ['Estados Unidos, 2017–2020', 'Equador, 2007–2010'],
   },
   {
     id: 3,
     name: 'Captura dos árbitros',
     summary:
       'Tribunais, procuradoria, polícia e órgãos de controle passam a proteger aliados e mirar adversários. Quem deveria fiscalizar o poder fica imune à fiscalização.',
-    examples: ['Argentina, 1946–1947', 'Hungria, 2011–2013', 'Turquia, 2010'],
+    examples: ['Argentina, 1946–1947', 'Venezuela, 2004', 'Hungria, 2011–2013', 'Turquia, 2010'],
   },
   {
     id: 4,
     name: 'Adversários fora de campo',
     summary:
-      'Perseguição a opositores, jornalistas, empresários e plataformas. Censura indireta, multas e processos usados para silenciar. A autocensura se espalha.',
-    examples: ['Venezuela, 2007', 'Turquia, 2016–2017', 'Rússia, anos 2000'],
+      'Opositores, jornalistas e críticos são afastados, processados ou silenciados pelo aparato estatal. Censura indireta, multas e processos usados para calar. A autocensura se espalha.',
+    examples: ['Venezuela, 2007 (RCTV)', 'Turquia, 2016–2017', 'Rússia, anos 2000'],
   },
   {
     id: 5,

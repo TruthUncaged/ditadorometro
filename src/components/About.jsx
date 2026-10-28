@@ -39,6 +39,15 @@ export default function About() {
             Encontrou um erro, uma fonte melhor ou uma resposta oficial que não está aqui? O registro é revisado e
             as correções são indicadas na própria ocorrência.
           </p>
+
+          <h3>Licença</h3>
+          <p>
+            O registro de ocorrências, a tabela de classificação, a escala, os precedentes, as notas e os demais
+            textos do site podem ser reutilizados sob a licença{' '}
+            <a href="https://creativecommons.org/licenses/by/4.0/deed.pt-br" rel="license">Creative Commons Atribuição 4.0</a>,
+            com crédito ao Ditadorômetro. As reportagens e os documentos citados como fontes, e os trechos do livro
+            reproduzidos na tabela, pertencem aos seus autores. O código do site é software livre sob a licença MIT.
+          </p>
         </div>
       </div>
     </section>

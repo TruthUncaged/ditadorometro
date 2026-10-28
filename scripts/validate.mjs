@@ -5,41 +5,53 @@
 //
 // Sai com código 1 se houver erro, o que bloqueia publicação e PR.
 
-import { readFileSync } from 'node:fs'
+import { fileURLToPath } from 'node:url'
+import { loadNewsFile } from './lib/load-news.mjs'
+import { STATUS } from '../src/data/indicators.js'
+import { RUBRIC_BY_CODE } from '../src/data/rubric.js'
+import { LEVELS, levelFor } from '../src/data/levels.js'
+import { computeScore } from '../src/lib/score.js'
 
-// O registro é escrito por agentes expostos a conteúdo da web: antes de
-// importá-lo, garante que ele contém só dados, sem código executável.
-const NEWS_FILE = new URL('../src/data/news.js', import.meta.url)
-const FORBIDDEN = [/^\s*import\s/m, /\brequire\s*\(/, /\bprocess\./, /\bfetch\s*\(/, /\beval\s*\(/, /\bFunction\s*\(/, /=>/, /\bfunction\b/, /`/]
-const unsafe = FORBIDDEN.filter((re) => re.test(readFileSync(NEWS_FILE, 'utf8')))
-if (unsafe.length) {
-  console.error(`✗ src/data/news.js contém construções de código não permitidas: ${unsafe.join(', ')}`)
+// O registro é escrito por agentes expostos a conteúdo da web, então nunca é
+// importado: scripts/lib/load-news.mjs analisa a sintaxe e só aceita dados.
+const NEWS_FILE = fileURLToPath(new URL('../src/data/news.js', import.meta.url))
+let data
+try {
+  data = loadNewsFile(NEWS_FILE)
+} catch (e) {
+  console.error(`✗ src/data/news.js recusado: ${e.message}`)
   process.exit(1)
 }
-
-const { NEWS, POWERS, UPDATED_AT } = await import('../src/data/news.js')
-const { STATUS } = await import('../src/data/indicators.js')
-const { RUBRIC_BY_CODE } = await import('../src/data/rubric.js')
-const { LEVELS, levelFor } = await import('../src/data/levels.js')
-const { computeScore } = await import('../src/lib/score.js')
+const EXPORTS = ['NEWS', 'POWERS', 'UPDATED_AT']
+const unknownExport = Object.keys(data).find((k) => !EXPORTS.includes(k))
+if (unknownExport || !Array.isArray(data.NEWS)) {
+  console.error(unknownExport ? `✗ export desconhecido em news.js: ${unknownExport}` : '✗ NEWS não é uma lista')
+  process.exit(1)
+}
+const { NEWS, POWERS = {}, UPDATED_AT } = data
 
 const errors = []
 const ids = new Set()
 const required = ['id', 'sort', 'when', 'power', 'title', 'summary', 'response', 'status']
+// Campos aceitos numa ocorrência e numa fonte. Qualquer outro é erro: o consolidador
+// (scripts/apply-verdicts.mjs) só grava estes, e um campo novo sumiria em silêncio.
+const ITEM_FIELDS = [...required, 'institutions', 'cases', 'sources']
+const SOURCE_FIELDS = ['outlet', 'url']
 
 for (const [i, n] of NEWS.entries()) {
   const at = `ocorrência ${n.id ?? `#${i}`}`
   for (const f of required) if (typeof n[f] !== 'string' || !n[f].trim()) errors.push(`${at}: campo "${f}" vazio`)
+  for (const f of Object.keys(n)) if (!ITEM_FIELDS.includes(f)) errors.push(`${at}: campo desconhecido "${f}"`)
   if (ids.has(n.id)) errors.push(`${at}: id duplicado`)
   ids.add(n.id)
   if (!/^\d{4}-\d{2}-\d{2}$/.test(n.sort ?? '')) errors.push(`${at}: "sort" deve ser AAAA-MM-DD`)
-  if (!POWERS[n.power]) errors.push(`${at}: "power" inválido (${n.power})`)
-  if (!STATUS[n.status]) errors.push(`${at}: "status" inválido (${n.status})`)
+  if (!Object.hasOwn(POWERS, n.power ?? '')) errors.push(`${at}: "power" inválido (${n.power})`)
+  if (!Object.hasOwn(STATUS, n.status ?? '')) errors.push(`${at}: "status" inválido (${n.status})`)
   if (!Array.isArray(n.institutions) || !n.institutions.length) errors.push(`${at}: "institutions" vazio`)
   if (!Array.isArray(n.cases) || !n.cases.length) errors.push(`${at}: sem códigos em "cases"`)
-  for (const c of n.cases ?? []) if (!RUBRIC_BY_CODE[c]) errors.push(`${at}: código desconhecido "${c}"`)
+  for (const c of n.cases ?? []) if (typeof c !== 'string' || !Object.hasOwn(RUBRIC_BY_CODE, c)) errors.push(`${at}: código desconhecido "${c}"`)
 
-  const scoring = (n.cases ?? []).some((c) => RUBRIC_BY_CODE[c]?.gravity > 0)
+  const scoring = (n.cases ?? []).some((c) => Object.hasOwn(RUBRIC_BY_CODE, c) && RUBRIC_BY_CODE[c].gravity > 0)
   if (n.status === 'contexto' && scoring) errors.push(`${at}: status "contexto" com código que pontua`)
   if (n.status !== 'contexto' && !scoring) errors.push(`${at}: só códigos de contexto; use status "contexto"`)
 
@@ -48,6 +60,7 @@ for (const [i, n] of NEWS.entries()) {
   const urls = new Set()
   for (const s of sources) {
     if (!s.outlet?.trim()) errors.push(`${at}: fonte sem nome do veículo`)
+    for (const f of Object.keys(s)) if (!SOURCE_FIELDS.includes(f)) errors.push(`${at}: campo desconhecido "${f}" na fonte`)
     if (!/^https:\/\/[^\s]+$/.test(s.url ?? '')) errors.push(`${at}: URL inválida (${s.url})`)
     if (urls.has(s.url)) errors.push(`${at}: URL repetida (${s.url})`)
     urls.add(s.url)
@@ -55,7 +68,9 @@ for (const [i, n] of NEWS.entries()) {
 }
 if (!UPDATED_AT?.trim()) errors.push('UPDATED_AT vazio')
 
-const { score, dimensions } = computeScore(NEWS)
+// Só calcula com um registro válido: um campo inválido viraria NaN.
+const { score, dimensions } = errors.length ? { score: NaN, dimensions: [] } : computeScore(NEWS)
+if (!errors.length && !Number.isFinite(score)) errors.push(`índice não numérico (${score})`)
 
 if (process.argv.includes('--score')) {
   console.log(errors.length ? 'erro' : score)

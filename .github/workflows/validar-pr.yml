@@ -14,11 +14,14 @@ jobs:
         with:
           fetch-depth: 0
 
-      # PRs abertos por agentes só podem alterar o registro.
+      # PRs abertos por agentes ou por contas automatizadas só podem alterar o registro.
+      # (Prefixo de branch é escolhido por quem abre o PR; o merge continua sendo humano.)
       - name: Restringir arquivos alterados por agentes
-        if: startsWith(github.head_ref, 'agente/')
+        if: startsWith(github.head_ref, 'agente/') || endsWith(github.actor, '[bot]')
+        env:
+          BASE_REF: ${{ github.base_ref }}
         run: |
-          outros=$(git diff --name-only "origin/${{ github.base_ref }}...HEAD" | grep -v '^src/data/news\.js$' || true)
+          outros=$(git diff --name-only "origin/$BASE_REF...HEAD" | grep -v '^src/data/news\.js$' || true)
           if [ -n "$outros" ]; then
             echo "::error::O agente alterou arquivos fora do registro:"
             echo "$outros"
@@ -27,12 +30,14 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version-file: .nvmrc
           cache: npm
 
       - run: npm ci
 
       - name: Validar registro
         run: node scripts/validate.mjs
+
+      - run: npm test
 
       - run: npm run build
