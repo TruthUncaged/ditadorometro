@@ -18,6 +18,42 @@ export const POWERS = {
 
 export const NEWS = [
   {
+    id: 'flavio-resultado',
+    sort: '2026-10-26',
+    when: '25 e 26 out. 2026',
+    power: 'eleicoes',
+    title: 'Derrotado no segundo turno, Flávio Bolsonaro diz que “o sistema ganhou” e acusa compra de votos sem apresentar provas',
+    summary:
+      'Na noite de 25 de outubro, Flávio Bolsonaro disse que não aceitaria “que a regra do jogo tenha sido mudada em cima do jogo”, em referência à decisão do ministro Cristiano Zanin que prorrogou a votação até as 19h. Em vídeo no dia seguinte, afirmou que “não fui eu que perdi, foi o sistema que ganhou” e que a democracia “faliu”, disse que Lula usou dinheiro público para fazer “a maior compra de votos da história” e anunciou que pedirá a cassação da chapa vencedora. As reportagens não registram provas apresentadas para as acusações. O pedido de cassação à Justiça Eleitoral é um caminho legal e, sozinho, não pontua.',
+    response:
+      'Flávio sustenta que a campanha de Lula cometeu abuso de poder político e econômico. O cientista político Cláudio Couto, ouvido pelo Brasil de Fato, considera descabida a tese de que a prorrogação mudou as regras durante a disputa.',
+    institutions: ['TSE', 'STF'],
+    status: 'declaracao',
+    cases: ['A1'],
+    sources: [
+      { outlet: 'Exame', url: 'https://exame.com/brasil/flavio-bolsonaro-diz-recebeu-intimicao-para-entregar-passsaporte-e-nao-pode-deixar-o-pais/' },
+      { outlet: 'Brasil de Fato', url: 'https://www.brasildefato.com.br/2026/10/26/pf-apreende-passaporte-de-flavio-bolsonaro-que-volta-a-questionar-resultado-das-urnas/' },
+    ],
+  },
+  {
+    id: 'flavio-passaporte',
+    sort: '2026-10-25',
+    when: '25 out. 2026',
+    power: 'judiciario',
+    title: 'Na noite da apuração, PF pede e Moraes autoriza a retenção dos passaportes de Flávio Bolsonaro, sem ouvir a PGR',
+    summary:
+      'O pedido da Polícia Federal, de 16 páginas, foi assinado às 21h16 de 25 de outubro, sete minutos depois de o TSE oficializar a derrota de Flávio Bolsonaro (PL-RJ) no segundo turno. O ministro Alexandre de Moraes concedeu a medida na mesma noite, sem consulta prévia à Procuradoria-Geral da República, e ela foi cumprida na manhã seguinte. A PF citou um inquérito sigiloso sobre lavagem de dinheiro atribuída ao advogado Willer Tomaz, em que Flávio aparece como usuário master de uma conta de empresa de Tomaz em Portugal até maio de 2025, e uma declaração de Eduardo Bolsonaro, em 23 de outubro, de que seria a favor de o irmão deixar o país se perdesse a eleição. Segundo a PF, Tomaz está em Miami desde agosto.',
+    response:
+      'Flávio Bolsonaro contesta a base da decisão e pergunta se a medida seria tomada caso ele tivesse vencido; integrantes da campanha falam em retaliação política. O STF não informou quando a decisão, sob sigilo, foi assinada. Os relatos sobre a saída de Flávio do país são divergentes.',
+    institutions: ['STF', 'Polícia Federal', 'PGR'],
+    status: 'em-curso',
+    cases: ['B4', 'E2'],
+    sources: [
+      { outlet: 'Estado de Minas', url: 'https://www.em.com.br/politica/2026/10/7528647-7-minutos-separam-o-resultado-da-eleicao-do-pedido-da-pf-de-apreender-o-passaporte-de-flavio-bolsonaro.html' },
+      { outlet: 'Gazeta do Povo', url: 'https://www.gazetadopovo.com.br/republica/moraes-ordena-cancelamento-de-passaporte-de-flavio-bolsonaro-apos-eleicoes/' },
+    ],
+  },
+  {
     id: 'master-relatorio-pf',
     sort: '2026-09-15',
     when: 'set. 2026',

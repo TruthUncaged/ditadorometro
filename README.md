@@ -67,14 +67,14 @@ estado das instituições (os “árbitros” e as “grades de proteção”). 
 
 ## Tabela de classificação
 
-`src/data/rubric.js` traz 36 tipos genéricos de caso, pensados para classificar qualquer ocorrência futura com o
+`src/data/rubric.js` traz 37 tipos genéricos de caso, pensados para classificar qualquer ocorrência futura com o
 mesmo critério, independentemente de partido ou Poder. Cada código tem dimensão, gravidade (1 a 3), a passagem
 correspondente do livro e um exemplo.
 
 | Grupo | Dimensão | Exemplos de tipo |
 | --- | --- | --- |
 | A1–A5 | Regras do jogo | Questionar eleições sem provas; tentativa de golpe; descumprir decisão judicial; mudar regras para favorecer quem está no poder. |
-| B1–B3 | Legitimidade | Rotular adversários como inimigos; pedir prisão ou cassação por opinião; usar o Estado para fichar críticos. |
+| B1–B4 | Legitimidade | Rotular adversários como inimigos; pedir prisão ou cassação por opinião; usar o Estado para fichar críticos; medida cautelar contra opositor no momento do resultado eleitoral. |
 | C1–C3 | Violência | Não condenar violência de aliados; elogiar golpes ou tortura; incitar ou financiar depredação. |
 | D1–D8 | Liberdades | Remoção de conteúdo sem decisão fundamentada; suspensão de plataforma; busca e apreensão por opinião; assédio judicial a jornalistas. |
 | E1–E8 | Árbitros | Conflito de interesses de julgador; quem investiga também julga; inquérito de ofício sem prazo; nomeação de aliado; expurgos. |
