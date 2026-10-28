@@ -16,7 +16,7 @@ jobs:
 
       # PRs abertos por agentes só podem alterar o registro.
       - name: Restringir arquivos alterados por agentes
-        if: startsWith(github.head_ref, 'copilot/') || startsWith(github.head_ref, 'agente/')
+        if: startsWith(github.head_ref, 'agente/')
         run: |
           outros=$(git diff --name-only "origin/${{ github.base_ref }}...HEAD" | grep -v '^src/data/news\.js$' || true)
           if [ -n "$outros" ]; then

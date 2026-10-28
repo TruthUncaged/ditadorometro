@@ -18,7 +18,6 @@ dos citados e uma classificação feita com uma tabela pública de critérios.
 - [Feed RSS](#feed-rss)
 - [Publicação no GitHub Pages](#publicação-no-github-pages)
 - [Atualização diária automática](#atualização-diária-automática)
-- [Variante com o agente de código do GitHub Copilot](#variante-com-o-agente-de-código-do-github-copilot)
 - [Regras editoriais](#regras-editoriais)
 - [Como contribuir](#como-contribuir)
 
@@ -127,14 +126,13 @@ validador, pelo feed e pelos scripts de automação.
 ├── scripts/
 │   ├── validate.mjs              valida o registro e imprime o índice
 │   ├── build-feed.mjs            gera dist/feed.xml
-│   ├── collect-news.mjs          coleta notícias candidatas (Google News RSS)
+│   ├── collect-news.mjs          lista notícias candidatas dos últimos dias (Google News RSS)
 │   ├── check-links.mjs           confere se as fontes ainda respondem
 │   ├── diff-news.mjs             lista as mudanças entre duas versões do registro
 │   └── apply-verdicts.mjs        consolida os votos dos verificadores
 └── .github/
-    ├── workflows/                deploy, atualização diária, variante Copilot, validação de PR
-    ├── prompts/                  instruções dos agentes pesquisador e verificadores
-    └── copilot-instructions.md   regras do agente do Copilot
+    ├── workflows/                deploy, atualização diária, validação de PR
+    └── prompts/                  instruções dos agentes pesquisador e verificadores
 ```
 
 ## Rodar localmente
@@ -171,7 +169,7 @@ Os links do feed são absolutos: no deploy, `SITE_URL` vem do endereço do GitHu
 Configuração: **Settings → Pages → Source: GitHub Actions.**
 
 `.github/workflows/validar-pr.yml` valida e gera o build em todo pull request. PRs abertos por agentes (branches
-`copilot/` ou `agente/`) só podem alterar `src/data/news.js`.
+`agente/`) só podem alterar `src/data/news.js`.
 
 ## Atualização diária automática
 
@@ -200,31 +198,14 @@ Configuração:
 1. Secret `ANTHROPIC_API_KEY` em **Settings → Secrets and variables → Actions**.
 2. Se a `main` tiver proteção de branch, permitir que o GitHub Actions faça push nela.
 
-## Variante com o agente de código do GitHub Copilot
+## Ferramentas de apoio
 
-> **Desativada.** A atualização em uso é a [diária com três verificadores](#atualização-diária-automática). Esta
-> variante não tem agendamento e só roda se for disparada manualmente em **Actions**. Para reativá-la, volte a
-> incluir o bloco `schedule` comentado no topo de `atualizacao-copilot.yml`; nesse caso, desative a outra variante.
+Scripts para manutenção manual do registro:
 
-Quando ativa, `.github/workflows/atualizacao-copilot.yml` roda todo dia às 06:30 (Brasília):
-
-1. coleta notícias candidatas dos últimos 7 dias (`scripts/collect-news.mjs`);
-2. verifica se as fontes existentes ainda respondem (`scripts/check-links.mjs`);
-3. abre uma issue com esse material e a atribui ao Copilot, que edita `src/data/news.js` e abre um PR;
-4. `mesclar-copilot.yml` detecta quando o Copilot termina, valida o PR (só `src/data/news.js` pode mudar) e faz o
-   merge automático na `main`; o push dispara a publicação.
-
-Se a tarefa do dia anterior ainda estiver aberta, nenhuma issue nova é criada. O ambiente do agente é preparado por
-`copilot-setup-steps.yml`.
-
-Configuração:
-
-1. Plano do Copilot com agente de código (Pro+, Business ou Enterprise) e agente habilitado no repositório.
-2. Secret `COPILOT_ASSIGN_TOKEN`: token pessoal *fine-grained* de um usuário com licença do Copilot, com acesso a
-   este repositório e permissão de leitura e escrita em Actions, Contents, Issues e Pull requests.
-3. **Settings → Copilot → Coding agent → Firewall:** liberar os domínios dos veículos (ou desativar o firewall).
-
-Na variante do Copilot não há verificação independente de fatos, apenas a validação automática de formato.
+```bash
+node scripts/collect-news.mjs candidatas.md 7   # notícias candidatas dos últimos 7 dias
+node scripts/check-links.mjs links.md           # confere se as fontes do registro ainda respondem
+```
 
 ## Regras editoriais
 
