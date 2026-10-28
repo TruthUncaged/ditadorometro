@@ -56,6 +56,78 @@ export const NEWS = [
     ],
   },
   {
+    id: 'zanin-prorrogacao',
+    sort: '2026-10-25',
+    when: '25 out. 2026',
+    power: 'eleicoes',
+    title: 'Zanin, ex-advogado de Lula, atende pedido da campanha do presidente e prorroga a votação do segundo turno até as 19h',
+    summary:
+      'Em reclamação apresentada ao STF pela coligação de Lula, que apontou redução da frota de ônibus em cidades da Bahia e de São Paulo e descumprimento da ADPF 1.013 (transporte público gratuito no dia da eleição), o ministro Cristiano Zanin prorrogou a votação em duas horas em todas as seções do país; depois, restringiu a medida aos locais com problemas. O pedido havia sido feito antes ao TSE, cujo presidente, Nunes Marques, pediu esclarecimentos às prefeituras sem decidir até o fim do horário. Segundo a CNN Brasil, ministros do TSE viram na decisão interferência em atribuição do tribunal, mas descartaram um terceiro turno. Zanin foi advogado pessoal de Lula na Lava Jato.',
+    response:
+      'Especialistas ouvidos pela Conjur afirmam que a decisão estava dentro da competência do STF, por garantir uma decisão anterior da Corte, e que a omissão do TSE justificava a intervenção; Lenio Streck avaliou que Zanin decidiu fora de hora e foi além do pedido. Segundo a Conjur, 34,3 mil eleitores votaram depois das 17h, número que não muda o resultado. A campanha de Flávio Bolsonaro também havia pedido prorrogação ao TSE, por causa de chuvas em São Paulo e no Sul.',
+    institutions: ['STF', 'TSE'],
+    status: 'consumado',
+    cases: ['E1'],
+    sources: [
+      { outlet: 'CNN Brasil', url: 'https://www.cnnbrasil.com.br/eleicoes/decisao-de-zanin-constrange-tse-e-ministros-descartam-3o-turno/' },
+      { outlet: 'Conjur', url: 'https://conjur.com.br/2026-out-26/zanin-agiu-dentro-de-suas-competencias-ao-estender-horario-da-votacao/' },
+    ],
+  },
+  {
+    id: 'flavio-acao-imprensa',
+    sort: '2026-10-22',
+    when: '22 out. 2026',
+    power: 'eleicoes',
+    title: 'Campanha de Flávio Bolsonaro pede ao TSE a remoção de 241 publicações de três sites de notícias e que eles não divulguem atos de campanha',
+    summary:
+      'Em ação protocolada em 22 de outubro e dirigida ao corregedor-geral eleitoral, a campanha pediu a retirada, em três horas, de 241 publicações do Diário do Centro do Mundo, do ICL Notícias e do Brasil Fora da Caverna, e que os sites deixassem de publicar convocações e agendas de atos de campanha até o fim do segundo turno. A campanha sustenta que os veículos funcionam como extensões da campanha de Lula e diz ter usado inteligência artificial para classificar as manchetes como favoráveis ou desfavoráveis. A Abraji classificou o pedido como censura prévia, contrária à Constituição.',
+    response:
+      'A própria petição reconhece que publicar notícias críticas a um candidato não é, por si só, infração eleitoral. Até a última verificação, não havia decisão do TSE sobre o pedido.',
+    institutions: ['TSE'],
+    status: 'em-curso',
+    cases: ['D8'],
+    sources: [
+      { outlet: 'Abraji', url: 'https://www.abraji.org.br/noticias/abraji-repudia-tentativa-de-censura-da-imprensa-pela-campanha-de-flavio-bolsonaro' },
+      { outlet: 'SpaceMoney', url: 'https://www.spacemoney.com.br/politica/flavio-bolsonaro-tse-icl' },
+    ],
+  },
+  {
+    id: 'tse-remocoes-2turno',
+    sort: '2026-10-19',
+    when: '12 a 19 out. 2026',
+    power: 'eleicoes',
+    title: 'No segundo turno, Justiça Eleitoral manda recolher jornal sindical e proíbe republicar trechos que o próprio TSE havia considerado lícitos',
+    summary:
+      'A pedido da campanha de Flávio Bolsonaro, o presidente do TSE, Nunes Marques, mandou recolher em 12 de outubro 30 mil exemplares de uma edição especial do Sindicato Unificado dos Petroleiros, suspender a circulação e retirar o conteúdo do site, sob multa de R$ 10 mil por descumprimento; a decisão é liminar e ainda vai ao Plenário. Em 15 de outubro, o Plenário removeu um vídeo de Flávio que ligava o filho de Lula à fraude do INSS, mas considerou que a parte sobre a fala de Lula a respeito de garis faz parte do debate eleitoral. Em 19 de outubro, a pedido da coligação de Lula, o corregedor-geral eleitoral, Ricardo Villas Bôas Cueva, proibiu Nikolas Ferreira e Pablo Marçal de publicar conteúdos já vetados, incluindo, segundo o Poder360, trechos sobre os garis que o Plenário havia liberado.',
+    response:
+      'Nunes Marques afirmou que a liberdade de expressão não é “salvo-conduto para a prática de ilícitos eleitorais”; a FUP classificou o recolhimento do jornal como censura. O TSE informou que só se manifesta nos autos, e o gabinete do corregedor não respondeu ao Poder360.',
+    institutions: ['TSE'],
+    status: 'consumado',
+    cases: ['D3'],
+    sources: [
+      { outlet: 'Correio da Manhã', url: 'https://www.correiodamanha.com.br/politica/2026/10/326302-tse-manda-recolher-jornal-sindical-contra-flavio-bolsonaro.html' },
+      { outlet: 'Poder360', url: 'https://www.poder360.com.br/poder-eleicoes-2026/corregedor-do-tse-veta-conteudo-de-flavio-que-o-tribunal-disse-ser-licito/' },
+    ],
+  },
+  {
+    id: 'lula-fascismo-ato',
+    sort: '2026-10-09',
+    when: '9 out. 2026',
+    power: 'executivo',
+    title: 'Em ato do segundo turno, Lula diz que o país não será governado “pelo fascismo” nem por “assassinos” da pandemia',
+    summary:
+      'Em Ceilândia (DF), no primeiro ato do segundo turno, o presidente e candidato à reeleição afirmou, segundo a Agência Brasil, que “esse país não voltará a ser governado pelo fascismo”, nem “por aqueles assassinos de milhares de pessoas com covid-19”, nem “pelos sócios do Banco Master, pelos parentes do Vorcaro”. Ele não citou Flávio Bolsonaro pelo nome; a Folhapress, publicada pelo Jornal de Brasília, relacionou as falas ao adversário.',
+    response:
+      'As reportagens consultadas não trazem resposta da campanha de Flávio Bolsonaro nem manifestação do presidente sobre o alvo das falas.',
+    institutions: ['Presidência da República'],
+    status: 'declaracao',
+    cases: ['B1'],
+    sources: [
+      { outlet: 'Jornal de Brasília (Folhapress)', url: 'https://jornaldebrasilia.com.br/noticias/politica-e-poder/em-primeiro-ato-do-2o-turno-lula-cita-fascismo-assassinos-da-pandemia-e-master-para-atacar-flavio/' },
+      { outlet: 'Agência Brasil (via Mais Minas)', url: 'https://maisminas.com.br/brasil/brasil-nao-sera-governado-por-socios-do-banco-master-diz-lula-em-ato/' },
+    ],
+  },
+  {
     id: 'master-relatorio-pf',
     sort: '2026-09-15',
     when: 'set. 2026',
