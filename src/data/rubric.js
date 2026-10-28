@@ -76,6 +76,14 @@ export const RUBRIC = [
     book: 'Segunda estratégia: usar o aparato estatal para “tirar jogadores de campo”.',
     example: 'Dossiês de inteligência sobre jornalistas e opositores.',
   },
+  {
+    code: 'B4',
+    dimension: 'legitimidade',
+    gravity: 2,
+    type: 'Medida cautelar contra líder de oposição cujo momento coincide com o resultado eleitoral ou cujo fundamento é a fala de terceiros',
+    book: 'Segunda estratégia: usar o aparato estatal para “tirar jogadores de campo”, aplicando a lei de forma seletiva contra rivais.',
+    example: 'Restrição imposta a candidato derrotado na própria noite da apuração, com base em declaração de um parente.',
+  },
 
   // ---------- 3. Tolerância à violência ----------
   {
