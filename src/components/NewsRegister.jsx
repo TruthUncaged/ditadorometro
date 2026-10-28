@@ -52,7 +52,7 @@ function Entry({ item }) {
   const weights = itemWeights(item)
   const points = itemPoints(item)
   return (
-    <article className="entry" aria-labelledby={`t-${item.id}`}>
+    <article id={`ocorrencia-${item.id}`} className="entry" aria-labelledby={`t-${item.id}`}>
       <div className="entry__meta">
         <time className="entry__date">{item.when}</time>
         <span className={`status status--${item.status}`}>{STATUS[item.status].label}</span>

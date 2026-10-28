@@ -9,6 +9,7 @@ export default function Header() {
           <ul className="nav">
             <li><a href="#inicio">Início</a></li>
             <li><a href="#sobre">Sobre</a></li>
+            <li><a href="feed.xml" type="application/rss+xml">RSS</a></li>
           </ul>
         </nav>
       </div>

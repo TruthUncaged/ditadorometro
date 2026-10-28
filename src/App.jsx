@@ -66,6 +66,10 @@ export default function App() {
             Ditadorômetro é um projeto independente e sem fins lucrativos. Não há coleta de dados de visitantes.
           </p>
           <p>
+            Para receber as atualizações do índice e do registro, assine o <a href="feed.xml" type="application/rss+xml">feed
+            RSS</a> em qualquer leitor de feeds.
+          </p>
+          <p>
             As pessoas citadas não foram condenadas pelos fatos relatados, salvo quando indicado. Vale a presunção
             de inocência.
           </p>
