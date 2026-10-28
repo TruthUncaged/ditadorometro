@@ -19,20 +19,22 @@ export const POWERS = {
 export const NEWS = [
   {
     id: 'master-relatorio-pf',
-    sort: '2026-09-01',
+    sort: '2026-09-15',
     when: 'set. 2026',
     power: 'judiciario',
     title: 'Relatório da PF aponta 187 interações entre Alexandre de Moraes e Daniel Vorcaro; PGR pede a nulidade do documento',
     summary:
-      'O relatório, entregue em 27 de agosto e tornado público em 1º de setembro, registra 187 interações e indícios de ao menos seis encontros entre o ministro do STF e o controlador do Banco Master. O procurador-geral Paulo Gonet e o diretor-geral da PF também são citados nas mensagens. O relator, ministro André Mendonça, abriu vista à PGR e propôs levar o material ao Plenário. O pedido de nulidade partiu da PGR, cujo chefe é citado no mesmo material.',
+      'O relatório, entregue em 27 de agosto e tornado público em 1º de setembro, registra 187 interações e indícios de ao menos seis encontros entre o ministro do STF e o controlador do Banco Master. O procurador-geral Paulo Gonet e o diretor-geral da PF também são citados nas mensagens. O relator, ministro André Mendonça, abriu vista à PGR e propôs levar o material ao Plenário. O pedido de nulidade partiu da PGR, cujo chefe é citado no mesmo material. Em 15 de setembro, o Plenário do STF discutiu por mais de seis horas a validade das ordens de Mendonça e se os processos seriam julgados em conjunto; o ministro Flávio Dino pediu vista, com prazo de até 90 dias, e o mérito não foi decidido. Segundo O Povo, a votação preliminar estava em 4 a 3 pela separação dos processos, e Nunes Marques e Dias Toffoli se declararam impedidos.',
     response:
-      'A PF ressalva que não concluiu que o ministro tenha cometido crime, interferido em apurações ou atendido a pedidos de Vorcaro. A PGR sustenta que o relatório foi produzido de forma irregular.',
+      'A PF ressalva que não concluiu que o ministro tenha cometido crime, interferido em apurações ou atendido a pedidos de Vorcaro. A PGR sustenta que o relatório foi produzido de forma irregular. Em manifestação a Edson Fachin, Moraes chamou a investigação conduzida por Mendonça de “inconstitucional e ilegal”, disse que ela foi ordenada sem pedido da PGR ou da PF e sem aval do Plenário, e negou ter favorecido Vorcaro.',
     institutions: ['STF', 'PGR', 'Polícia Federal'],
     status: 'arquivamento',
     cases: ['E1', 'F3', 'F4'],
     sources: [
       { outlet: 'Congresso em Foco', url: 'https://www.congressoemfoco.com.br/noticia/121871/pgr-pede-nulidade-de-relatorio-sobre-mensagens-de-moraes-e-vorcaro' },
       { outlet: 'Diario de Pernambuco', url: 'https://www.diariodepernambuco.com.br/politica/2026/09/11722819-pgr-devera-se-manifestar-sobre-supostas-conversas-entre-vorcaro-e-moraes.html' },
+      { outlet: 'O Povo', url: 'https://mais.opovo.com.br/jornal/politica/2026/09/15/supremo-adia-definicao-sobre-moraes-mas-escancara-fraturas-em-sessao-historica.html' },
+      { outlet: 'Correio da Manhã', url: 'https://www.correiodamanha.com.br/politica/2026/09/319107-moraes-chama-investigacao-de-vinganca-e-nega-favorecimento-a-vorcaro-antes-de-julgamento-no-stf.html' },
       { outlet: 'Correio da Manhã', url: 'https://www.correiodamanha.com.br/politica/2026/09/316129-fachin-levara-caso-moraes-vorcaro-ao-plenario-do-stf-apos-revelacoes-da-pf.html' },
     ],
   },
@@ -44,7 +46,8 @@ export const NEWS = [
     title: 'Balanços de promessas da campanha de 2022 apontam compromissos não cumpridos',
     summary:
       'Levantamentos jornalísticos divergem conforme o critério: um balanço até junho de 2026 conta 26 de 36 promessas cumpridas; outro, com 103 promessas, aponta 28% cumpridas e 17% paralisadas. Entre as pendências citadas estão o Ministério da Segurança Pública e a reorganização do sistema penitenciário. Em pesquisa Quaest de junho de 2025, 70% disseram que o presidente não cumpre o que prometeu.',
-    response: 'O presidente afirma que cumprirá os compromissos até o fim do mandato.',
+    response:
+      'O presidente afirma que cumprirá os compromissos até o fim do mandato.',
     institutions: ['Presidência da República'],
     status: 'contexto',
     cases: ['N1'],
@@ -81,7 +84,8 @@ export const NEWS = [
     title: 'CPMI do INSS termina sem relatório aprovado sobre descontos indevidos de aposentados',
     summary:
       'Instalada em agosto de 2025 para apurar fraudes de até R$ 6,3 bilhões em descontos de benefícios, a comissão teve o relatório do relator Alfredo Gaspar, com 216 pedidos de indiciamento, rejeitado por 19 a 12. O texto alternativo da base governista também não foi aprovado, e a CPMI terminou sem relatório oficial. As investigações da Polícia Federal seguem.',
-    response: 'Cópias do material foram enviadas ao MPF e ao STF. O governo anunciou ressarcimento aos segurados com recursos da União.',
+    response:
+      'Cópias do material foram enviadas ao MPF e ao STF. O governo anunciou ressarcimento aos segurados com recursos da União.',
     institutions: ['Congresso Nacional', 'INSS'],
     status: 'em-curso',
     cases: ['F2'],
@@ -140,7 +144,8 @@ export const NEWS = [
     title: 'Banco Central decreta a liquidação extrajudicial do Banco Master',
     summary:
       'O BC liquidou o Banco Master e outras empresas do conglomerado, citando grave crise de liquidez e violações às normas do Sistema Financeiro Nacional. Os bens de controladores e ex-administradores ficaram indisponíveis.',
-    response: 'Registro de contexto: aqui o órgão de controle agiu.',
+    response:
+      'Registro de contexto: aqui o órgão de controle agiu.',
     institutions: ['Banco Central'],
     status: 'contexto',
     cases: ['N3'],
@@ -157,7 +162,8 @@ export const NEWS = [
     title: 'STF condena o ex-presidente Jair Bolsonaro e outros sete réus por tentativa de golpe de Estado',
     summary:
       'Por 4 votos a 1, a Primeira Turma do STF condenou o ex-presidente e aliados por tentativa de golpe e outros quatro crimes ligados à tentativa de impedir a posse do governo eleito em 2022. A pena do ex-presidente foi de 27 anos e 3 meses. É o tipo de conduta que o livro aponta como o primeiro indicador de autoritarismo; a resposta institucional reduz o peso no termômetro.',
-    response: 'A defesa nega os crimes e recorreu. O ministro Luiz Fux votou contra a condenação.',
+    response:
+      'A defesa nega os crimes e recorreu. O ministro Luiz Fux votou contra a condenação.',
     institutions: ['STF'],
     status: 'responsabilizado',
     cases: ['A2', 'A3', 'C3'],
@@ -175,7 +181,8 @@ export const NEWS = [
     title: 'STF muda regra do Marco Civil e passa a responsabilizar plataformas por conteúdo de usuários sem ordem judicial prévia',
     summary:
       'Por 8 votos a 3, o Plenário declarou o artigo 19 do Marco Civil da Internet parcialmente inconstitucional. Antes, a plataforma só respondia se descumprisse ordem judicial; agora pode ser responsabilizada após notificação e tem “deveres de cuidado”. Para crimes contra a honra, a ordem judicial continua necessária. Especialistas apontam risco de remoção preventiva de conteúdo legítimo.',
-    response: 'A maioria do STF entendeu que a regra anterior não protegia de forma suficiente direitos fundamentais e a democracia. O tema estava parado no Congresso.',
+    response:
+      'A maioria do STF entendeu que a regra anterior não protegia de forma suficiente direitos fundamentais e a democracia. O tema estava parado no Congresso.',
     institutions: ['STF'],
     status: 'revisado',
     cases: ['D6'],
@@ -193,7 +200,8 @@ export const NEWS = [
     title: 'Rede social X é suspensa em todo o país por decisão do STF',
     summary:
       'O ministro Alexandre de Moraes determinou a suspensão nacional do X depois que a empresa fechou o escritório no Brasil e descumpriu ordens judiciais, acumulando R$ 18,35 milhões em multas. A Primeira Turma confirmou a decisão por unanimidade. O serviço foi liberado em 8 de outubro, após a empresa cumprir as exigências.',
-    response: 'O STF justificou a medida pela ausência de representante legal no país e pelo descumprimento de decisões judiciais.',
+    response:
+      'O STF justificou a medida pela ausência de representante legal no país e pelo descumprimento de decisões judiciais.',
     institutions: ['STF'],
     status: 'revisado',
     cases: ['D2'],
@@ -211,7 +219,8 @@ export const NEWS = [
     title: 'Presidente Lula diz que “o conceito de democracia é relativo” ao defender o governo da Venezuela',
     summary:
       'Em entrevista à Rádio Gaúcha, questionado sobre o regime de Nicolás Maduro, o presidente afirmou que a Venezuela faz mais eleições que o Brasil e que o conceito de democracia é relativo. Um mês antes, havia chamado as acusações de autoritarismo contra Maduro de “narrativa”. O ministro do STF Gilmar Mendes e a ministra Simone Tebet contestaram publicamente a declaração.',
-    response: 'O governo sustenta que a política externa brasileira privilegia o diálogo e a não intervenção.',
+    response:
+      'O governo sustenta que a política externa brasileira privilegia o diálogo e a não intervenção.',
     institutions: ['Presidência da República'],
     status: 'declaracao',
     cases: ['D7'],
@@ -230,7 +239,8 @@ export const NEWS = [
     title: 'Presidente indica seu advogado pessoal, Cristiano Zanin, ao STF',
     summary:
       'Zanin defendeu Lula nos processos da Lava Jato. A indicação foi criticada por falta de impessoalidade e aprovada pelo Senado por 58 votos a 18 em 21 de junho de 2023.',
-    response: 'O presidente afirmou que Zanin “será um excepcional ministro”. A indicação seguiu o rito constitucional, com sabatina e aprovação do Senado.',
+    response:
+      'O presidente afirmou que Zanin “será um excepcional ministro”. A indicação seguiu o rito constitucional, com sabatina e aprovação do Senado.',
     institutions: ['Presidência da República', 'Senado', 'STF'],
     status: 'revisado',
     cases: ['E6'],
@@ -248,7 +258,8 @@ export const NEWS = [
     title: 'STF manda o Telegram apagar mensagem contrária ao PL das Fake News e publicar retratação',
     summary:
       'Durante a tramitação do projeto, o Telegram enviou aos usuários um texto afirmando que a proposta daria ao governo poder de censura. Moraes deu uma hora para a remoção, sob pena de suspensão do aplicativo por 72 horas, e obrigou a empresa a divulgar um texto de retratação. O ministro da Justiça elogiou a decisão.',
-    response: 'A decisão classificou a mensagem como desinformação e ataque ao Congresso durante a votação.',
+    response:
+      'A decisão classificou a mensagem como desinformação e ataque ao Congresso durante a votação.',
     institutions: ['STF', 'Ministério da Justiça'],
     status: 'consumado',
     cases: ['D3'],
@@ -266,7 +277,8 @@ export const NEWS = [
     title: 'Governo cria na AGU a Procuradoria Nacional de Defesa da Democracia, encarregada de combater “desinformação”',
     summary:
       'O órgão pode notificar plataformas e pedir a remoção de publicações sobre políticas públicas e instituições. Especialistas ouvidos pelo Poder360 consideraram válidas as críticas de que falta critério claro de atuação; a oposição o apelidou de “ministério da verdade” e acionou o STF. Após críticas, a AGU refez o grupo de trabalho que regulamentaria a procuradoria.',
-    response: 'A AGU afirma que a procuradoria não cerceia opiniões nem críticas e atua apenas contra desinformação.',
+    response:
+      'A AGU afirma que a procuradoria não cerceia opiniões nem críticas e atua apenas contra desinformação.',
     institutions: ['AGU', 'Presidência da República'],
     status: 'em-curso',
     cases: ['D5'],
@@ -284,7 +296,8 @@ export const NEWS = [
     title: 'Empresários são alvo de busca e apreensão por mensagens em grupo privado de WhatsApp; caso é arquivado um ano depois',
     summary:
       'Às vésperas da eleição de 2022, Moraes autorizou operação da PF, com bloqueio de contas, contra oito empresários a partir de reportagem sobre mensagens em um grupo fechado. A PGR considerou a operação ilegal, por violar o sistema acusatório, e pediu a anulação; o pedido foi negado. Em agosto de 2023, a investigação contra seis deles foi arquivada por ausência de justa causa: as mensagens não ultrapassaram os limites da manifestação de opinião.',
-    response: 'A decisão original apontou indícios de apoio a atos antidemocráticos. A apuração sobre um dos empresários continuou.',
+    response:
+      'A decisão original apontou indícios de apoio a atos antidemocráticos. A apuração sobre um dos empresários continuou.',
     institutions: ['STF', 'PGR', 'Polícia Federal'],
     status: 'consumado',
     cases: ['D4', 'E2'],
@@ -302,7 +315,8 @@ export const NEWS = [
     title: 'Inquérito das fake news: aberto de ofício pelo STF e prorrogado há mais de seis anos',
     summary:
       'Instaurado pelo próprio tribunal, sem pedido do Ministério Público, com relator designado sem sorteio, para apurar ataques à própria Corte. Tramita sob sigilo e vem sendo prorrogado sucessivamente — a última prorrogação localizada, de 180 dias, é de dezembro de 2024. Críticos apontam objeto indefinido e quebra do sistema acusatório, em que quem investiga não deveria julgar.',
-    response: 'O Plenário do STF validou o inquérito em 2020, no julgamento da ADPF 572.',
+    response:
+      'O Plenário do STF validou o inquérito em 2020, no julgamento da ADPF 572.',
     institutions: ['STF'],
     status: 'em-curso',
     cases: ['E3', 'E2', 'E5', 'D1'],
