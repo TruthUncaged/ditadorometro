@@ -1,0 +1,222 @@
+name: Atualização diária do registro
+
+# 1. pesquisar:   um agente revisa as fontes, busca novas ocorrências e propõe
+#                 mudanças em src/data/news.js.
+# 2. verificar:   três agentes independentes (contextos separados, focos
+#                 diferentes) votam em cada mudança.
+# 3. consolidar:  só entram as mudanças com 2 aprovações, nenhum veto e pontos
+#                 confirmados; o resultado é validado e enviado direto à main.
+# 4. publicar:    o site é reconstruído e publicado no GitHub Pages.
+
+on:
+  schedule:
+    - cron: '0 9 * * *' # 06:00 em Brasília
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: atualizacao-diaria
+  cancel-in-progress: false
+
+jobs:
+  pesquisar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: read
+      id-token: write
+    outputs:
+      changed: ${{ steps.diff.outputs.count != '0' }}
+      score: ${{ steps.before.outputs.score }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Preparar
+        id: before
+        run: |
+          echo "HOJE=$(TZ=America/Sao_Paulo date +%F)" >> "$GITHUB_ENV"
+          echo "score=$(node scripts/validate.mjs --score)" >> "$GITHUB_OUTPUT"
+          mkdir -p .agent
+          git show HEAD:src/data/news.js > .agent/base-news.mjs
+
+      - name: Agente pesquisador
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          prompt: |
+            Hoje é ${{ env.HOJE }}. Siga integralmente as instruções de .github/prompts/atualizar-registro.md.
+          claude_args: |
+            --model claude-sonnet-5-5
+            --max-turns 120
+            --allowedTools "Read,Write,Edit,Glob,Grep,WebSearch,WebFetch,Bash(node scripts/validate.mjs),Bash(npm run build)"
+
+      # O pesquisador só pode alterar o registro.
+      - name: Descartar alterações fora do registro
+        run: git checkout -- . ':!src/data/news.js'
+
+      - name: Validar proposta
+        run: |
+          node scripts/validate.mjs
+          npm run build
+
+      - name: Listar mudanças
+        id: diff
+        run: |
+          count=$(node scripts/diff-news.mjs .agent/base-news.mjs src/data/news.js .agent)
+          echo "count=$count" >> "$GITHUB_OUTPUT"
+          echo "::notice::$count mudança(s) proposta(s)"
+          cp src/data/news.js .agent/cand-news.mjs
+          [ -f .agent/relatorio.md ] || echo "O pesquisador não gerou relatório." > .agent/relatorio.md
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: proposta
+          path: .agent/
+          include-hidden-files: true
+          retention-days: 14
+
+  verificar:
+    needs: pesquisar
+    if: needs.pesquisar.outputs.changed == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    permissions:
+      contents: read
+      id-token: write
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - foco: fontes
+            model: claude-sonnet-5-5
+          - foco: classificacao
+            model: claude-opus-5-5
+          - foco: linguagem
+            model: claude-sonnet-5-5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: proposta
+          path: .agent
+
+      - name: Aplicar proposta para leitura
+        run: cp .agent/cand-news.mjs src/data/news.js
+
+      - name: Agente verificador (${{ matrix.foco }})
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          prompt: |
+            Você é o verificador independente com foco em "${{ matrix.foco }}".
+            Siga integralmente as instruções de .github/prompts/verificar-registro.md.
+            Grave o veredito em .agent/veredito-${{ matrix.foco }}.json.
+          claude_args: |
+            --model ${{ matrix.model }}
+            --max-turns 80
+            --allowedTools "Read,Glob,Grep,WebSearch,WebFetch,Write"
+
+      # Só o veredito sai deste job; qualquer outra alteração é descartada.
+      - uses: actions/upload-artifact@v4
+        with:
+          name: veredito-${{ matrix.foco }}
+          path: .agent/veredito-${{ matrix.foco }}.json
+          include-hidden-files: true
+          if-no-files-found: warn
+          retention-days: 14
+
+  consolidar:
+    needs: [pesquisar, verificar]
+    # Roda mesmo se um verificador falhar: a falta de voto conta como rejeição.
+    if: always() && needs.pesquisar.outputs.changed == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    outputs:
+      committed: ${{ steps.commit.outputs.committed }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Mesmo commit que o pesquisador usou como base.
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: proposta
+          path: .agent
+
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: veredito-*
+          path: .agent/vereditos
+          merge-multiple: true
+
+      - name: Consolidar votos
+        run: |
+          echo "HOJE=$(TZ=America/Sao_Paulo date +%F)" >> "$GITHUB_ENV"
+          node scripts/apply-verdicts.mjs .agent/base-news.mjs .agent/cand-news.mjs .agent/vereditos
+          cat .agent/consolidacao.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Validar resultado
+        run: |
+          node scripts/validate.mjs
+          npm run build
+
+      - name: Commit na main
+        id: commit
+        run: |
+          if git diff --quiet -- src/data/news.js; then
+            echo "committed=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::Nenhuma mudança aprovada pelos verificadores."
+            exit 0
+          fi
+          after=$(node scripts/validate.mjs --score)
+          {
+            echo "Registro: atualização de $HOJE (índice ${{ needs.pesquisar.outputs.score }} → $after)"
+            echo
+            cat .agent/consolidacao.md
+            echo
+            echo "## Relatório do pesquisador"
+            echo
+            cat .agent/relatorio.md
+          } > .agent/commit.txt
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/news.js
+          git commit -F .agent/commit.txt
+          # Se a main avançou, rebase; um conflito interrompe sem sobrescrever nada.
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
+          echo "committed=true" >> "$GITHUB_OUTPUT"
+
+  # Commits feitos com GITHUB_TOKEN não disparam outros workflows,
+  # então a publicação chama o deploy diretamente.
+  publicar:
+    needs: consolidar
+    if: needs.consolidar.outputs.committed == 'true'
+    uses: ./.github/workflows/deploy.yml
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
