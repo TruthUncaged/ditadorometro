@@ -10,9 +10,11 @@ name: Atualização diária do registro (Copilot)
 # Requer o secret COPILOT_ASSIGN_TOKEN: token de um usuário com licença do
 # Copilot (a API não aceita GITHUB_TOKEN para atribuir issues ao Copilot).
 
+# Desativada: a atualização oficial é atualizacao-diaria.yml. Para reativar,
+# volte a incluir o agendamento:
+#   schedule:
+#     - cron: '30 9 * * *' # 06:30 em Brasília
 on:
-  schedule:
-    - cron: '30 9 * * *' # 06:30 em Brasília
   workflow_dispatch:
 
 permissions:

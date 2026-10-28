@@ -202,7 +202,11 @@ Configuração:
 
 ## Variante com o agente de código do GitHub Copilot
 
-`.github/workflows/atualizacao-copilot.yml` roda todo dia às 06:30 (Brasília):
+> **Desativada.** A atualização em uso é a [diária com três verificadores](#atualização-diária-automática). Esta
+> variante não tem agendamento e só roda se for disparada manualmente em **Actions**. Para reativá-la, volte a
+> incluir o bloco `schedule` comentado no topo de `atualizacao-copilot.yml`; nesse caso, desative a outra variante.
+
+Quando ativa, `.github/workflows/atualizacao-copilot.yml` roda todo dia às 06:30 (Brasília):
 
 1. coleta notícias candidatas dos últimos 7 dias (`scripts/collect-news.mjs`);
 2. verifica se as fontes existentes ainda respondem (`scripts/check-links.mjs`);
@@ -220,8 +224,7 @@ Configuração:
    este repositório e permissão de leitura e escrita em Actions, Contents, Issues e Pull requests.
 3. **Settings → Copilot → Coding agent → Firewall:** liberar os domínios dos veículos (ou desativar o firewall).
 
-> **Use só uma das duas variantes.** Desative a outra em **Actions → (workflow) → Disable workflow**. Na variante do
-> Copilot não há verificação independente de fatos, apenas a validação automática de formato.
+Na variante do Copilot não há verificação independente de fatos, apenas a validação automática de formato.
 
 ## Regras editoriais
 
