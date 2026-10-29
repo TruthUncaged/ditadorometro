@@ -24,4 +24,4 @@ O README é a documentação completa do método, da automação e das regras ed
 
 ## Automação
 
-`.github/workflows/atualizacao-diaria.yml` roda agentes (pesquisador + três verificadores) e faz commit direto na `main` só com mudanças aprovadas, mais `data/pendencias.md` (fila e omissões). O pesquisador só pode alterar `news.js` e o relatório. A busca é organizada por ator, com cotas por esfera e teste do espelho; aos domingos roda em modo de rebalanceamento. Ao mudar os prompts em `.github/prompts/`, mantenha a seção “Regras que não podem ser quebradas”, que o verificador também lê.
+`.github/workflows/atualizacao-diaria.yml` roda agentes (pesquisador + três verificadores) e faz commit direto na `main` só com mudanças aprovadas, mais `data/pendencias.md` (fila e omissões). O pesquisador só pode alterar `news.js` e o relatório. A busca é organizada por ator, com cotas por esfera e teste do espelho; roda a cada 3 dias e, aos domingos, em modo de rebalanceamento. Ao mudar os prompts em `.github/prompts/`, mantenha a seção “Regras que não podem ser quebradas”, que o verificador também lê.

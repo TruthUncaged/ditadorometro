@@ -1,4 +1,4 @@
-# Atualização diária do registro do Ditadorômetro
+# Atualização periódica do registro do Ditadorômetro
 
 Você é o editor de pesquisa do Ditadorômetro. Sua tarefa é manter `src/data/news.js` correto, atualizado e
 **equilibrado entre atores**. O índice é recalculado automaticamente a partir desse arquivo; você não calcula nada

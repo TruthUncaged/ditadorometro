@@ -34,7 +34,7 @@ dos citados e uma classificação feita com uma tabela pública de critérios.
 - [Feed RSS](#feed-rss)
 - [SEO](#seo)
 - [Publicação no GitHub Pages](#publicação-no-github-pages)
-- [Atualização diária automática](#atualização-diária-automática)
+- [Atualização automática](#atualização-automática)
 - [Ferramentas de apoio](#ferramentas-de-apoio)
 - [Regras editoriais](#regras-editoriais)
 - [Licença](#licença)
@@ -173,7 +173,7 @@ três convergiram no mesmo diagnóstico, que não era de intenção partidária,
   organizada por tema judicial, não por ator.
 
 As correções estão na tabela de recalibrações acima, na [tabela de classificação](#tabela-de-classificação), no
-[cálculo do índice](#cálculo-do-índice) e na [atualização diária](#atualização-diária-automática). Pontos deixados
+[cálculo do índice](#cálculo-do-índice) e na [atualização automática](#atualização-automática). Pontos deixados
 para uma próxima revisão: janela temporal ou decaimento (hoje 2019 pesa como 2026); estágio com gatilhos
 qualitativos por dimensão, além da média; campo `actors[]` separado da arena.
 
@@ -215,7 +215,7 @@ qualitativos por dimensão, além da média; campo `actors[]` separado da arena.
 │   ├── diff-news.mjs             lista as mudanças entre duas versões do registro
 │   └── apply-verdicts.mjs        consolida os votos dos verificadores
 └── .github/
-    ├── workflows/                deploy, atualização diária, validação de PR
+    ├── workflows/                deploy, atualização a cada 3 dias, validação de PR
     └── prompts/                  instruções dos agentes pesquisador e verificadores
 ```
 
@@ -273,7 +273,7 @@ Os links do feed são absolutos: no deploy, `SITE_URL` vem do endereço do GitHu
 - gera `sitemap.xml` (com `lastmod` igual a `UPDATED_AT`), `robots.txt`, `site.webmanifest`, `favicon.svg` e os ícones
   `apple-touch-icon.png` e `icon-512.png`, todos na cor do estágio atual.
 
-Como o texto e a imagem saem do registro, cada atualização diária já publica os metadados novos. Todos os links
+Como o texto e a imagem saem do registro, cada atualização automática já publica os metadados novos. Todos os links
 absolutos usam `SITE_URL`, que no deploy vem do endereço do GitHub Pages.
 
 Depois da primeira publicação, para acelerar a indexação:
@@ -297,9 +297,10 @@ Configuração: **Settings → Pages → Source: GitHub Actions.**
 `.github/workflows/validar-pr.yml` valida e gera o build em todo pull request. PRs abertos por agentes (branches
 `agente/`) só podem alterar `src/data/news.js`.
 
-## Atualização diária automática
+## Atualização automática
 
-`.github/workflows/atualizacao-diaria.yml` roda todo dia às 06:00 (Brasília), com agentes de IA executados pelo
+`.github/workflows/atualizacao-diaria.yml` roda a cada 3 dias às 06:00 (Brasília), nos dias 1, 4, 7 e assim por diante
+de cada mês, com agentes de IA executados pelo
 GitHub Actions, e aos domingos às 07:00 numa **execução de
 rebalanceamento**, que ignora o Judiciário e busca só atos de Executivo, Congresso, Forças Armadas, estados, partidos
 e plataformas, com janela de 30 dias. Nenhuma mudança vai ao ar sem passar por três verificações independentes:

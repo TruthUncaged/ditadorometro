@@ -1,4 +1,4 @@
-name: Atualização diária do registro
+name: Atualização periódica do registro
 
 # 1. pesquisar:   um agente revisa as fontes, busca novas ocorrências e propõe
 #                 mudanças em src/data/news.js.
@@ -10,15 +10,15 @@ name: Atualização diária do registro
 
 on:
   schedule:
-    - cron: '0 9 * * *' # 06:00 em Brasília: atualização diária
+    - cron: '0 9 */3 * *' # 06:00 em Brasília, a cada 3 dias (dias 1, 4, 7… de cada mês): atualização regular
     - cron: '0 10 * * 0' # domingo, 07:00 em Brasília: varredura de rebalanceamento (só Executivo, Congresso, FA, estados, partidos, plataformas)
   workflow_dispatch:
     inputs:
       modo:
-        description: 'diaria ou rebalanceamento'
-        default: diaria
+        description: 'regular ou rebalanceamento'
+        default: regular
         type: choice
-        options: [diaria, rebalanceamento]
+        options: [regular, rebalanceamento]
 
 permissions:
   contents: read
@@ -54,7 +54,7 @@ jobs:
           AGENDA: ${{ github.event.schedule }}
         run: |
           echo "HOJE=$(TZ=America/Sao_Paulo date +%F)" >> "$GITHUB_ENV"
-          if [ "$MODO_INPUT" = "rebalanceamento" ] || [ "$AGENDA" = "0 10 * * 0" ]; then modo=rebalanceamento; else modo=diaria; fi
+          if [ "$MODO_INPUT" = "rebalanceamento" ] || [ "$AGENDA" = "0 10 * * 0" ]; then modo=rebalanceamento; else modo=regular; fi
           echo "MODO=$modo" >> "$GITHUB_ENV"
           echo "score=$(node scripts/validate.mjs --score)" >> "$GITHUB_OUTPUT"
           mkdir -p .agent
