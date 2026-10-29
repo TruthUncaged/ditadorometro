@@ -21,7 +21,7 @@ jobs:
         env:
           BASE_REF: ${{ github.base_ref }}
         run: |
-          outros=$(git diff --name-only "origin/$BASE_REF...HEAD" | grep -v '^src/data/news\.js$' || true)
+          outros=$(git diff --name-only "origin/$BASE_REF...HEAD" | grep -v '^db/ocorrencias\.json$' || true)
           if [ -n "$outros" ]; then
             echo "::error::O agente alterou arquivos fora do registro:"
             echo "$outros"

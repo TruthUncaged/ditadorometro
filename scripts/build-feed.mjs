@@ -7,25 +7,25 @@
 // a situação dela muda (o guid é id + status).
 
 import { mkdirSync, writeFileSync } from 'node:fs'
-import { loadNewsFile } from './lib/load-news.mjs'
-import { STATUS } from '../src/data/indicators.js'
-import { levelFor } from '../src/data/levels.js'
-import { computeScore, itemPoints } from '../src/lib/score.js'
+import { openDatabase } from '../src/services/repository.node.js'
+import { computeScore, itemPoints } from '../src/services/scoring.js'
+import { levelFor } from '../src/services/levels.js'
+import { updatedAtToIso } from '../src/services/dates.js'
 
-// Nunca importa o registro diretamente (ver scripts/lib/load-news.mjs).
-const { NEWS, POWERS, UPDATED_AT } = loadNewsFile(new URL('../src/data/news.js', import.meta.url))
+const db = openDatabase()
+const NEWS = db.items
+const UPDATED_AT = db.updatedAt
+const POWERS = db.model.powers
+const STATUS = db.model.status
 
 const site = (process.env.SITE_URL || 'http://localhost:4173/').replace(/\/?$/, '/')
 if (!process.env.SITE_URL) console.warn(`SITE_URL não definido; usando ${site}`)
 
-const MONTHS = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro']
-
-// "28 de outubro de 2026" → Date
+// "29 de outubro de 2026" → Date (meio-dia UTC)
 function parseUpdatedAt(text) {
-  const m = /^(\d{1,2}) de (\S+) de (\d{4})$/.exec(text.trim())
-  const month = m ? MONTHS.indexOf(m[2].toLowerCase()) : -1
-  if (month < 0) throw new Error(`UPDATED_AT em formato inesperado: "${text}"`)
-  return new Date(Date.UTC(+m[3], month, +m[1], 12))
+  const iso = updatedAtToIso(text)
+  if (!iso) throw new Error(`updatedAt em formato inesperado: "${text}"`)
+  return new Date(`${iso}T12:00:00Z`)
 }
 
 // "2026-09-01" → Date (meio-dia em Brasília, para não trocar de dia em nenhum fuso)
@@ -35,8 +35,8 @@ const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replac
 const fmt = (n) => n.toFixed(1).replace('.', ',')
 
 const updated = parseUpdatedAt(UPDATED_AT)
-const { score, dimensions } = computeScore(NEWS)
-const level = levelFor(score)
+const { score, dimensions } = computeScore(NEWS, db.model)
+const level = levelFor(score, db.levels)
 
 const indexItem = {
   title: `Índice em ${score}/100: ${level.name}`,
@@ -64,7 +64,7 @@ const newsItems = NEWS.map((n) => ({
     `<p><strong>${esc(STATUS[n.status].label)}</strong> · ${esc(n.institutions.join(', '))} · ${esc(n.when)}</p>`,
     `<p>${esc(n.summary)}</p>`,
     `<p><strong>Outro lado:</strong> ${esc(n.response)}</p>`,
-    `<p>Códigos: ${esc(n.cases.join(', '))} · ${fmt(itemPoints(n))} pontos</p>`,
+    `<p>Códigos: ${esc(n.cases.join(', '))} · ${fmt(itemPoints(n, db.model))} pontos</p>`,
     '<p>Fontes:</p><ul>',
     ...n.sources.map((s) => `<li><a href="${esc(s.url)}">${esc(s.outlet)}</a></li>`),
     '</ul>',

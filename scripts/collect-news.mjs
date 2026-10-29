@@ -65,7 +65,7 @@ const OUTLETS = {
   },
 }
 
-// Buscas agrupadas por código da tabela (src/data/rubric.js), com o vocabulário
+// Buscas agrupadas por código da tabela (db/tabela.json), com o vocabulário
 // dos dois lados do debate. Consultas curtas: o operador when:Nd do Google News
 // perde recall com frases longas.
 const QUERIES = {

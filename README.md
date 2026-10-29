@@ -43,9 +43,9 @@ dos citados e uma classificação feita com uma tabela pública de critérios.
 ## Como funciona
 
 1. **Ocorrências.** Cada fato relevante (uma decisão, uma CPI que não é instalada, um inquérito sem prazo, uma
-   declaração de autoridade) vira uma entrada em `src/data/news.js`, com resumo, outro lado, instituições
+   declaração de autoridade) vira uma entrada em `db/ocorrencias.json`, com resumo, outro lado, instituições
    envolvidas, situação e fontes.
-2. **Classificação.** A ocorrência recebe um ou mais códigos da tabela de classificação (`src/data/rubric.js`).
+2. **Classificação.** A ocorrência recebe um ou mais códigos da tabela de classificação (`db/tabela.json`).
    Cada código pertence a uma dimensão e tem uma gravidade de 0 a 3.
 3. **Resposta institucional.** A situação (`status`) mede o que as instituições fizeram com o fato: um caso sem
    apuração pesa mais do que um caso em que houve responsabilização.
@@ -58,7 +58,7 @@ A página mostra, nesta ordem: o termômetro e o nível atual, a pressão em cad
 
 ## A escala
 
-Sete estágios, cada um ocupando 1/7 da escala (`src/data/levels.js`), seguindo o roteiro do livro:
+Sete estágios, cada um ocupando 1/7 da escala (`db/estagios.json`), seguindo o roteiro do livro:
 
 | Estágio | Nome | Em resumo |
 | --- | --- | --- |
@@ -73,7 +73,7 @@ Sete estágios, cada um ocupando 1/7 da escala (`src/data/levels.js`), seguindo 
 ## As seis dimensões
 
 As quatro primeiras são os indicadores de comportamento autoritário de Levitsky e Ziblatt; as duas últimas medem o
-estado das instituições (os “árbitros” e as “grades de proteção”). Definidas em `src/data/indicators.js`.
+estado das instituições (os “árbitros” e as “grades de proteção”). Definidas em `db/metodo.json`.
 
 | Dimensão | O que mede |
 | --- | --- |
@@ -86,7 +86,7 @@ estado das instituições (os “árbitros” e as “grades de proteção”). 
 
 ## Tabela de classificação
 
-`src/data/rubric.js` traz 47 tipos genéricos de caso, pensados para classificar qualquer ocorrência futura com o
+`db/tabela.json` traz 47 tipos genéricos de caso, pensados para classificar qualquer ocorrência futura com o
 mesmo critério, independentemente de partido ou Poder. Cada código tem dimensão, gravidade (0 a 3; os códigos N valem
 0), a passagem correspondente do livro e um exemplo genérico ou histórico, nunca o caso concreto que motivou o
 código. Todo código descreve uma **conduta, não um ator**: para cada conduta típica de tribunais ou do Ministério
@@ -106,7 +106,7 @@ situação.
 
 Os códigos N valem zero de propósito: o livro trata de erosão das instituições, não de mau governo. Promessas
 quebradas e declarações falsas ficam registradas como contexto e podem ganhar peso, se assim se decidir, alterando a
-gravidade em `rubric.js`.
+gravidade em `db/tabela.json`.
 
 ## Cálculo do índice
 
@@ -132,16 +132,16 @@ Para cada ocorrência:
 | Responsabilização efetivada (`responsabilizado`) | 0,7 | Condenação ou sanção efetivada. O desconto é limitado de propósito: a punição não apaga a conduta. |
 | Contexto, não pontua (`contexto`) | 0 | Só com códigos N. |
 
-Os pontos são somados por dimensão e limitados a um **teto próprio de cada dimensão** (`SATURATION` em
-`src/data/indicators.js`), menor nas dimensões em que as ocorrências são raras e graves: Regras 20, Legitimidade 15,
+Os pontos são somados por dimensão e limitados a um **teto próprio de cada dimensão** (`saturation` em
+`db/metodo.json`), menor nas dimensões em que as ocorrências são raras e graves: Regras 20, Legitimidade 15,
 Violência 12, Liberdades 30, Árbitros 30, Impunidade 20. O índice é a média das seis dimensões, de 0 a 100. O código
-está em `src/lib/score.js`, e o mesmo cálculo é usado pelo site, pelo validador, pelo feed e pelos scripts de
+está em `src/services/scoring.js`, e o mesmo cálculo é usado pelo site, pelo validador, pelo feed e pelos scripts de
 automação.
 
 ### Recalibrações
 
 Toda mudança de critério (tetos, multiplicadores, gravidades, regra de soma) é uma **recalibração**: ela altera a
-leitura publicada de uma vez, sem fato novo, e precisa vir com uma nota em `src/data/notes.js` (exibida na seção de
+leitura publicada de uma vez, sem fato novo, e precisa vir com uma nota em `db/notas.json` (exibida na seção de
 método do site) e nesta lista, com o efeito no índice.
 
 | Data | Mudança | Índice antes → depois | Motivo |
@@ -185,35 +185,43 @@ qualitativos por dimensão, além da média; campo `actors[]` separado da arena.
 ├── .nvmrc                        versão do Node usada no CI
 ├── AGENTS.md                     orientações para agentes e sessões de IA que mexem no repositório
 ├── LICENSE / LICENSE-DADOS.md    MIT para o código, CC BY 4.0 para dados e textos
+├── db/                           banco de dados do site, em JSON (só dados; é o que os agentes editam)
+│   ├── ocorrencias.json          registro de ocorrências: { updatedAt, items[] }
+│   ├── tabela.json               tabela de classificação (47 códigos)
+│   ├── metodo.json               esferas, dimensões, situações e multiplicadores, tetos, regra da 2ª dimensão
+│   ├── estagios.json             os sete estágios
+│   ├── notas.json                notas de método (recalibrações)
+│   └── historia.json             precedentes históricos
 ├── src/
-│   ├── App.jsx                   montagem da página
+│   ├── services/                 camada de domínio, pura e testável (sem React, sem IO)
+│   │   ├── model.js              monta o modelo de cálculo a partir de metodo.json e tabela.json
+│   │   ├── scoring.js            gravidades, contribuições, pontos e índice
+│   │   ├── levels.js             estágio a partir do índice
+│   │   ├── validation.js         validação de forma e de campos do registro; normalização
+│   │   ├── coverage.js           estatística de cobertura (esfera, dimensão, ano, códigos sem uso)
+│   │   ├── repository.js         repositório: recebe os documentos do banco e expõe coleções e modelo
+│   │   └── repository.node.js    repositório para Node: lê e grava os JSON de db/
+│   ├── app/
+│   │   ├── database.js           importa os JSON para o bundle e instancia o repositório do site
+│   │   └── view-model.js         monta tudo o que a página precisa a partir do repositório
+│   ├── components/               componentes de apresentação; recebem dados só por props
+│   ├── App.jsx                   compõe a página a partir do modelo de visão
 │   ├── main.jsx                  entrada do navegador (hidrata o HTML pré-renderizado)
 │   ├── entry-server.jsx          entrada do build que pré-renderiza a página
-│   ├── components/               menu, termômetro, dimensões, registro, tabela, histórico, método, sobre
-│   ├── data/
-│   │   ├── news.js               registro de ocorrências (o que move o ponteiro) e UPDATED_AT
-│   │   ├── rubric.js             tabela de classificação (A1…F6, N1…N3)
-│   │   ├── indicators.js         as seis dimensões, multiplicadores de situação e saturação
-│   │   ├── levels.js             os sete estágios
-│   │   ├── notes.js              notas de método (recalibrações), exibidas no site
-│   │   └── history.js            precedentes históricos
-│   ├── lib/score.js              cálculo do índice
 │   └── styles.css                estilos (tema claro e escuro, movimento reduzido)
 ├── data/pendencias.md            fila do pesquisador e omissões dos verificadores (escrito pela automação)
-├── scripts/
-│   ├── lib/load-news.mjs         carregador seguro do registro: analisa a sintaxe e só aceita dados
-│   ├── validate.mjs              valida o registro e imprime o índice
+├── scripts/                      ferramentas de linha de comando, todas sobre os serviços
+│   ├── validate.mjs              valida o banco e imprime o índice
+│   ├── services.test.mjs         testes dos serviços e da integridade do banco (npm test)
 │   ├── cobertura.mjs             ocorrências e pontos por esfera e dimensão, códigos nunca usados
 │   ├── pendencias.mjs            monta data/pendencias.md (fila e omissões) na consolidação
-│   ├── score.test.mjs            testes do cálculo (npm test)
-│   ├── load-news.test.mjs        testes do carregador seguro contra payloads de código
-│   ├── saturacao.mjs             simula o índice com outros valores de SATURATION
+│   ├── saturacao.mjs             simula o índice com outros tetos
 │   ├── build-seo.mjs             pré-renderiza a página e gera metadados, sitemap, robots e imagens
 │   ├── build-feed.mjs            gera dist/feed.xml
 │   ├── collect-news.mjs          lista notícias candidatas: feeds oficiais, veículos por linha editorial, buscas por código
 │   ├── check-links.mjs           confere se as fontes ainda respondem
 │   ├── diff-news.mjs             lista as mudanças entre duas versões do registro
-│   └── apply-verdicts.mjs        consolida os votos dos verificadores
+│   └── apply-verdicts.mjs        consolida os votos dos verificadores e grava o registro
 └── .github/
     ├── workflows/                deploy, atualização a cada 3 dias, validação de PR
     └── prompts/                  instruções dos agentes pesquisador e verificadores
@@ -227,23 +235,32 @@ Requer Node.js 20 ou mais recente (o CI usa a versão em `.nvmrc`).
 npm install
 npm run dev                  # desenvolvimento em http://localhost:5173
 node scripts/validate.mjs    # valida o registro e mostra o índice por dimensão
-npm test                     # testes do cálculo e do carregador do registro
+npm test                     # testes dos serviços e da integridade do banco
 npm run build                # valida e gera dist/ estático, incluindo dist/feed.xml
 npm run preview              # serve o build em http://localhost:4173
 ```
 
-O validador recusa: campos faltando ou desconhecidos, ids repetidos, códigos ou situações inexistentes, ocorrências
-com menos de duas fontes `https` e URLs repetidas.
+O validador recusa: JSON inválido, campos faltando ou desconhecidos (no registro, na ocorrência e na fonte), ids
+repetidos ou fora do padrão kebab-case, códigos ou situações inexistentes, ocorrências com menos de duas fontes
+`https` e URLs repetidas. O `npm run build` roda o validador antes de qualquer outra etapa.
 
-**Nenhum script importa `news.js` antes de ele passar pelo carregador seguro.** O arquivo é escrito por agentes
-que leem a web, e um `import` executaria qualquer código de topo que ele contivesse; o build SSR (que embute o
-registro) só roda depois que o validador aceitou o arquivo. Por isso `scripts/lib/load-news.mjs` analisa a sintaxe do
-arquivo
-(com o `acorn`) e só aceita `export const` com strings, números, booleanos, `null`, listas e objetos de chaves
-simples; chamadas, `await`, `import()`, template strings, funções, getters, spread e chaves computadas são
-recusados, com a linha do erro. Validador, diff, consolidação, build, feed e testes passam por esse carregador;
-`scripts/load-news.test.mjs` confere que os payloads conhecidos são recusados sem executar nada. O `npm run build`
-roda o validador antes de qualquer outra etapa.
+### Arquitetura
+
+O site é uma função do banco. Os dados vivem em `db/` como JSON puro, que `JSON.parse` lê sem executar nada: é o
+que um agente ou uma pessoa edita para incluir, alterar ou excluir uma ocorrência, e o build reconstrói a página a
+partir dele. Em cima do banco há três camadas com responsabilidades separadas:
+
+- **Serviços** (`src/services/`): funções puras de domínio. O `repository` recebe os documentos do banco e expõe as
+  coleções e o modelo de cálculo; `scoring`, `levels`, `validation` e `coverage` recebem itens e modelo e devolvem
+  resultados. Nenhum serviço lê arquivo nem conhece React. `repository.node.js` é a única porta de IO, usada pelos
+  scripts; o site injeta os JSON importados em tempo de build.
+- **Aplicação** (`src/app/`): `database.js` instancia o repositório do site; `view-model.js` monta o objeto que a
+  página exibe. É o único lugar em que o front-end toca o banco.
+- **Apresentação** (`src/components/`): componentes React que recebem tudo por props e não importam dados.
+
+Os scripts de linha de comando (validar, diff, consolidar, build, feed, cobertura) usam os mesmos serviços, de
+modo que site, validador, feed e automação calculam o índice com o mesmo código. Trocar o formato do banco, a regra
+de cálculo ou a apresentação mexe em uma camada só.
 
 ## Feed RSS
 
@@ -270,7 +287,7 @@ Os links do feed são absolutos: no deploy, `SITE_URL` vem do endereço do GitHu
   build com o termômetro, o índice, o estágio e a data;
 - inclui **dados estruturados JSON-LD** (`WebSite`, `Organization`, `WebPage`, `Book` e `Dataset`, este com o feed
   RSS como distribuição);
-- gera `sitemap.xml` (com `lastmod` igual a `UPDATED_AT`), `robots.txt`, `site.webmanifest`, `favicon.svg` e os ícones
+- gera `sitemap.xml` (com `lastmod` igual a `updatedAt`), `robots.txt`, `site.webmanifest`, `favicon.svg` e os ícones
   `apple-touch-icon.png` e `icon-512.png`, todos na cor do estágio atual.
 
 Como o texto e a imagem saem do registro, cada atualização automática já publica os metadados novos. Todos os links
@@ -295,7 +312,7 @@ Depois da primeira publicação, para acelerar a indexação:
 Configuração: **Settings → Pages → Source: GitHub Actions.**
 
 `.github/workflows/validar-pr.yml` valida e gera o build em todo pull request. PRs abertos por agentes (branches
-`agente/`) só podem alterar `src/data/news.js`.
+`agente/`) só podem alterar `db/ocorrencias.json`.
 
 ## Atualização automática
 
@@ -312,7 +329,7 @@ e plataformas, com janela de 30 dias. Nenhuma mudança vai ao ar sem passar por 
    estava disponível e não entrou.
 2. **pesquisar** — um agente (no modelo mais capaz, por ser o passo que decide o que entra) revisa as ocorrências existentes,
    busca fatos dos últimos 7 dias **por ator** (Presidência, Congresso, tribunais, MP, polícias, TSE, Forças
-   Armadas, estados, partidos e militantes, plataformas e imprensa) e propõe mudanças em `src/data/news.js`
+   Armadas, estados, partidos e militantes, plataformas e imprensa) e propõe mudanças em `db/ocorrencias.json`
    (`.github/prompts/atualizar-registro.md`). Cotas: no máximo 5 ocorrências novas, 2 por esfera e 2 por enredo,
    com prioridade às esferas menos cobertas nos últimos 90 dias; o que não couber vai para a fila. O relatório traz
    uma tabela de cobertura por ator e a resposta ao **teste do espelho** (o mesmo ato, praticado pelo campo oposto,
@@ -335,9 +352,9 @@ e plataformas, com janela de 30 dias. Nenhuma mudança vai ao ar sem passar por 
 5. **publicar** — o deploy roda em seguida.
 
 Os jobs dos agentes rodam só com `contents: read` e sem `id-token`; apenas a consolidação tem `contents: write`.
-O pesquisador só tem permissão de escrita em `src/data/news.js` e `.agent/relatorio.md`, e cada verificador só no
+O pesquisador só tem permissão de escrita em `db/ocorrencias.json` e `.agent/relatorio.md`, e cada verificador só no
 próprio veredito, então nenhum deles consegue alterar scripts ou dependências antes de rodar os comandos
-permitidos. Como o candidato passa pelo carregador seguro antes de qualquer execução (ver
+permitidos. Como o registro é JSON, lido com `JSON.parse` e validado campo a campo antes de qualquer etapa (ver
 [Rodar localmente](#rodar-localmente)), um agente que obedeça a instruções injetadas por uma página só consegue
 fazer chegar à `main` dados, que os verificadores ainda votam.
 
@@ -381,12 +398,12 @@ node scripts/check-links.mjs links.md           # confere se as fontes do regist
 
 ## Como contribuir
 
-- **Nova ocorrência ou correção:** edite `src/data/news.js` seguindo as regras acima, atualize `UPDATED_AT`, rode
+- **Nova ocorrência ou correção:** edite `db/ocorrencias.json` seguindo as regras acima, atualize `updatedAt`, rode
   `node scripts/validate.mjs` e abra um pull request com as fontes.
-- **Mudança de critério:** altere a gravidade ou crie códigos em `src/data/rubric.js`, ajuste multiplicadores e o
-  teto em `src/data/indicators.js`, ou as faixas dos estágios em `src/data/levels.js`. Explique no PR o fundamento no
+- **Mudança de critério:** altere a gravidade ou crie códigos em `db/tabela.json`, ajuste multiplicadores e o
+  teto em `db/metodo.json`, ou as faixas dos estágios em `db/estagios.json`. Explique no PR o fundamento no
   livro; a mudança afeta todo o histórico de uma
-  vez, então registre o efeito no índice em `src/data/notes.js`. O exemplo de um código novo é genérico ou
+  vez, então registre o efeito no índice em `db/notas.json`. O exemplo de um código novo é genérico ou
   histórico, nunca o caso concreto que motivou a criação.
 - **Erro factual:** abra uma issue com o link da fonte que contradiz o registro.
 - **Sem conta no GitHub:** escreva para <TruthUncaged@proton.me> com o fato, a data, dois links e a posição dos

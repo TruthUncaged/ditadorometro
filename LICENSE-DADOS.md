@@ -2,9 +2,8 @@
 
 © 2026 TruthUncaged (Ditadorômetro).
 
-O registro de ocorrências (`src/data/news.js`), a tabela de classificação (`src/data/rubric.js`), as dimensões
-(`src/data/indicators.js`), a escala (`src/data/levels.js`), os precedentes históricos (`src/data/history.js`),
-as notas de método (`src/data/notes.js`) e os textos do site e dos prompts (`.github/prompts/`) estão licenciados
+O banco de dados em `db/` (registro de ocorrências, tabela de classificação, método, escala, precedentes
+históricos e notas de método) e os textos do site e dos prompts (`.github/prompts/`) estão licenciados
 sob a **Creative Commons Atribuição 4.0 Internacional (CC BY 4.0)**.
 
 Você pode copiar, redistribuir, adaptar e usar este material para qualquer fim, inclusive comercial, desde que:

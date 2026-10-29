@@ -9,25 +9,25 @@
 import { existsSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
 import { pathToFileURL } from 'node:url'
 import { Resvg } from '@resvg/resvg-js'
-import { loadNewsFile } from './lib/load-news.mjs'
-import { INDICATORS } from '../src/data/indicators.js'
-import { levelFor } from '../src/data/levels.js'
-import { computeScore } from '../src/lib/score.js'
+import { openDatabase } from '../src/services/repository.node.js'
+import { computeScore } from '../src/services/scoring.js'
+import { levelFor } from '../src/services/levels.js'
+import { updatedAtToIso } from '../src/services/dates.js'
 
-// Nunca importa o registro diretamente (ver scripts/lib/load-news.mjs).
-const { NEWS, UPDATED_AT } = loadNewsFile(new URL('../src/data/news.js', import.meta.url))
+const db = openDatabase()
+const NEWS = db.items
+const UPDATED_AT = db.updatedAt
+const INDICATORS = db.model.indicators
 
 const SSR_ENTRY = 'dist-ssr/entry-server.js'
 const site = (process.env.SITE_URL || 'http://localhost:4173/').replace(/\/?$/, '/')
 if (!process.env.SITE_URL) console.warn(`SITE_URL não definido; usando ${site}`)
 
-const MONTHS = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro']
-const [, d, mon, y] = /^(\d{1,2}) de (\S+) de (\d{4})$/.exec(UPDATED_AT.trim()) ?? []
-if (!d || MONTHS.indexOf(mon) < 0) throw new Error(`UPDATED_AT em formato inesperado: "${UPDATED_AT}"`)
-const updatedIso = `${y}-${String(MONTHS.indexOf(mon) + 1).padStart(2, '0')}-${d.padStart(2, '0')}`
+const updatedIso = updatedAtToIso(UPDATED_AT)
+if (!updatedIso) throw new Error(`updatedAt em formato inesperado: "${UPDATED_AT}"`)
 
-const { score, dimensions } = computeScore(NEWS)
-const level = levelFor(score)
+const { score, dimensions } = computeScore(NEWS, db.model)
+const level = levelFor(score, db.levels)
 const LEVEL_COLORS = ['#2f6b55', '#556f36', '#776715', '#9a5416', '#a0401c', '#84241d', '#4f1313']
 const color = LEVEL_COLORS[level.id]
 

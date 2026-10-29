@@ -1,27 +1,7 @@
-import { STATUS, SATURATION, INDICATORS } from '../data/indicators'
-import { NOTES } from '../data/notes'
-import { NEWS, POWERS } from '../data/news'
-import { itemContributions } from '../lib/score'
-
-// Cobertura do registro: quantas ocorrências e quantos pontos cada esfera e cada ano
-// trazem. Mostra o que o índice mede; não é meta.
-function coverage() {
-  const byPower = Object.fromEntries(Object.keys(POWERS).map((p) => [p, { n: 0, pts: 0 }]))
-  const byYear = {}
-  for (const n of NEWS) {
-    const pts = Object.values(itemContributions(n)).reduce((a, b) => a + b, 0)
-    byPower[n.power].n++
-    byPower[n.power].pts += pts
-    const y = n.sort.slice(0, 4)
-    byYear[y] = byYear[y] ?? { n: 0, pts: 0 }
-    byYear[y].n++
-    byYear[y].pts += pts
-  }
-  return { byPower, byYear }
-}
-
-export default function Method() {
-  const { byPower, byYear } = coverage()
+// Metodologia: recebe o modelo, as notas e a cobertura por props.
+export default function Method({ dimensions, status, powers, notes, coverage }) {
+  const { byPower, byYear } = coverage
+  const fmt = (x) => x.toFixed(1).replace('.', ',')
   return (
     <section id="metodo" className="section section--alt" aria-labelledby="metodo-title">
       <div className="wrap prose-grid">
@@ -42,9 +22,9 @@ export default function Method() {
           </p>
 
           <ol className="method-dims">
-            {INDICATORS.map((i) => (
+            {dimensions.map((i) => (
               <li key={i.id}>
-                <strong>{i.name}.</strong> {i.description} <span className="method-cap">Teto: {SATURATION[i.id]} pontos.</span>
+                <strong>{i.name}.</strong> {i.description} <span className="method-cap">Teto: {i.saturation} pontos.</span>
               </li>
             ))}
           </ol>
@@ -58,7 +38,7 @@ export default function Method() {
               </tr>
             </thead>
             <tbody>
-              {Object.entries(STATUS).map(([id, s]) => (
+              {Object.entries(status).map(([id, s]) => (
                 <tr key={id}>
                   <th scope="row">
                     <span className={`status status--${id}`}>{s.label}</span>
@@ -99,9 +79,9 @@ export default function Method() {
             <tbody>
               {Object.entries(byPower).map(([p, s]) => (
                 <tr key={p}>
-                  <th scope="row">{POWERS[p]}</th>
+                  <th scope="row">{powers[p]}</th>
                   <td className="num">{s.n}</td>
-                  <td className="num">{s.pts.toFixed(1).replace('.', ',')}</td>
+                  <td className="num">{fmt(s.pts)}</td>
                 </tr>
               ))}
             </tbody>
@@ -120,13 +100,13 @@ export default function Method() {
                 <tr key={y}>
                   <th scope="row">{y}</th>
                   <td className="num">{s.n}</td>
-                  <td className="num">{s.pts.toFixed(1).replace('.', ',')}</td>
+                  <td className="num">{fmt(s.pts)}</td>
                 </tr>
               ))}
             </tbody>
           </table>
 
-          {NOTES.length > 0 && (
+          {notes.length > 0 && (
             <>
               <h3>Notas de método</h3>
               <p>
@@ -134,7 +114,7 @@ export default function Method() {
                 acontecido. Elas ficam registradas aqui para que a série do índice seja lida com contexto.
               </p>
               <ol className="notes">
-                {NOTES.map((n, i) => (
+                {notes.map((n, i) => (
                   <li key={`${n.iso}-${i}`}>
                     <time dateTime={n.iso}>{n.date}</time>
                     <strong>{n.title}.</strong> {n.text}

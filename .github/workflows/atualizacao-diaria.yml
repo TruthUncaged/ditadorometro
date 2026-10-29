@@ -1,7 +1,7 @@
 name: Atualização periódica do registro
 
 # 1. pesquisar:   um agente revisa as fontes, busca novas ocorrências e propõe
-#                 mudanças em src/data/news.js.
+#                 mudanças em db/ocorrencias.json.
 # 2. verificar:   três agentes independentes (contextos separados, focos
 #                 diferentes) votam em cada mudança.
 # 3. consolidar:  só entram as mudanças com 2 aprovações, nenhum veto e pontos
@@ -58,7 +58,7 @@ jobs:
           echo "MODO=$modo" >> "$GITHUB_ENV"
           echo "score=$(node scripts/validate.mjs --score)" >> "$GITHUB_OUTPUT"
           mkdir -p .agent
-          git show HEAD:src/data/news.js > .agent/base-news.mjs
+          git show HEAD:db/ocorrencias.json > .agent/base-register.json
           # Pistas determinísticas (feeds oficiais, veículos por linha editorial, buscas por código) e
           # estatística de cobertura, para o pesquisador priorizar esferas sub-representadas e para os
           # verificadores conferirem o que estava disponível e não entrou.
@@ -80,12 +80,12 @@ jobs:
           claude_args: |
             --model claude-opus-5-5
             --max-turns 160
-            --allowedTools "Read,Glob,Grep,WebSearch,WebFetch,Edit(src/data/news.js),Edit(.agent/relatorio.md),Bash(node scripts/validate.mjs),Bash(npm run build)"
+            --allowedTools "Read,Glob,Grep,WebSearch,WebFetch,Edit(db/ocorrencias.json),Edit(.agent/relatorio.md),Bash(node scripts/validate.mjs),Bash(npm run build)"
 
       # O pesquisador só pode escrever no registro e no relatório (regras de permissão
       # acima); esta etapa é a segunda barreira, caso alguma escrita passe.
       - name: Descartar alterações fora do registro
-        run: git checkout -- . ':!src/data/news.js'
+        run: git checkout -- . ':!db/ocorrencias.json'
 
       - name: Validar proposta
         run: |
@@ -95,10 +95,10 @@ jobs:
       - name: Listar mudanças
         id: diff
         run: |
-          count=$(node scripts/diff-news.mjs .agent/base-news.mjs src/data/news.js .agent)
+          count=$(node scripts/diff-news.mjs .agent/base-register.json db/ocorrencias.json .agent)
           echo "count=$count" >> "$GITHUB_OUTPUT"
           echo "::notice::$count mudança(s) proposta(s)"
-          cp src/data/news.js .agent/cand-news.mjs
+          cp db/ocorrencias.json .agent/cand-register.json
           [ -f .agent/relatorio.md ] || echo "O pesquisador não gerou relatório." > .agent/relatorio.md
 
       - uses: actions/upload-artifact@v4
@@ -134,7 +134,7 @@ jobs:
           path: .agent
 
       - name: Aplicar proposta para leitura
-        run: cp .agent/cand-news.mjs src/data/news.js
+        run: cp .agent/cand-register.json db/ocorrencias.json
 
       - name: Agente verificador (${{ matrix.foco }})
         uses: anthropics/claude-code-action@v1
@@ -196,7 +196,7 @@ jobs:
       - name: Consolidar votos
         run: |
           echo "HOJE=$(TZ=America/Sao_Paulo date +%F)" >> "$GITHUB_ENV"
-          node scripts/apply-verdicts.mjs .agent/base-news.mjs .agent/cand-news.mjs .agent/vereditos
+          node scripts/apply-verdicts.mjs .agent/base-register.json .agent/cand-register.json .agent/vereditos
           cat .agent/consolidacao.md >> "$GITHUB_STEP_SUMMARY"
           # Fila do pesquisador e omissões dos verificadores, para a próxima execução.
           node scripts/pendencias.mjs .agent/relatorio.md .agent/vereditos data/pendencias.md
@@ -210,14 +210,14 @@ jobs:
         id: commit
         run: |
           git add data/pendencias.md
-          if git diff --quiet -- src/data/news.js && git diff --cached --quiet -- data/pendencias.md; then
+          if git diff --quiet -- db/ocorrencias.json && git diff --cached --quiet -- data/pendencias.md; then
             echo "committed=false" >> "$GITHUB_OUTPUT"
             echo "::notice::Nenhuma mudança aprovada pelos verificadores e nenhuma pendência nova."
             exit 0
           fi
           after=$(node scripts/validate.mjs --score)
           {
-            if git diff --quiet -- src/data/news.js; then
+            if git diff --quiet -- db/ocorrencias.json; then
               echo "Pendências: fila e omissões de $HOJE (registro inalterado, índice $after)"
             else
               echo "Registro: atualização de $HOJE (índice ${{ needs.pesquisar.outputs.score }} → $after)"
@@ -231,7 +231,7 @@ jobs:
           } > .agent/commit.txt
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add src/data/news.js data/pendencias.md
+          git add db/ocorrencias.json data/pendencias.md
           git commit -F .agent/commit.txt
           # Se a main avançou, rebase; um conflito interrompe sem sobrescrever nada.
           git fetch origin main

@@ -8,13 +8,14 @@ import History from './components/History.jsx'
 import Method from './components/Method.jsx'
 import About from './components/About.jsx'
 import GitHubIcon, { REPO_URL } from './components/GitHubIcon.jsx'
-import { NEWS, UPDATED_AT } from './data/news'
-import { computeScore } from './lib/score'
-import { levelFor } from './data/levels'
+import { db } from './app/database.js'
+import { buildSiteModel } from './app/view-model.js'
 
+// A página é uma função do banco: App monta o modelo de visão uma vez e passa
+// partes dele aos componentes, que não conhecem o banco nem os serviços.
 export default function App() {
-  const { score, dimensions } = useMemo(() => computeScore(NEWS), [])
-  const level = levelFor(score)
+  const site = useMemo(() => buildSiteModel(db), [])
+  const { score, level, dimensions, items, updatedAt, model, rubric, levels, notes, history, coverage } = site
 
   return (
     <>
@@ -23,7 +24,7 @@ export default function App() {
       <main id="conteudo">
         <section id="inicio" className="reading" aria-labelledby="reading-title">
           <div className="wrap">
-            <p className="kicker">Brasil · Leitura de {UPDATED_AT}</p>
+            <p className="kicker">Brasil · Leitura de {updatedAt}</p>
             <h1 id="reading-title" className="reading__title">
               Quão perto estamos de uma ditadura?
             </h1>
@@ -35,7 +36,7 @@ export default function App() {
             </p>
 
             <div className="reading__grid">
-              <Thermometer score={score} level={level} />
+              <Thermometer score={score} level={level} levels={levels} />
               <div className="reading__verdict">
                 <p className="verdict__label">Nível atual</p>
                 <p className="verdict__score">
@@ -55,10 +56,10 @@ export default function App() {
           </div>
         </section>
 
-        <NewsRegister news={NEWS} />
-        <Rubric news={NEWS} />
-        <History />
-        <Method />
+        <NewsRegister items={items} model={model} />
+        <Rubric items={items} rubric={rubric} indicators={model.indicators} />
+        <History cases={history} levels={levels} />
+        <Method dimensions={dimensions} status={model.status} powers={model.powers} notes={notes} coverage={coverage} />
         <About />
       </main>
       <footer className="footer">

@@ -1,0 +1,74 @@
+{
+  "cases": [
+    {
+      "country": "Itália",
+      "period": "1922–1926",
+      "level": 6,
+      "text": "Mussolini é nomeado primeiro-ministro pelo rei após a Marcha sobre Roma. Políticos tradicionais acreditam que podem controlá-lo. Em 1925–26, as “leis fascistíssimas” extinguem partidos e a imprensa livre.",
+      "lesson": "Abdicação dos guardiões: elites abrem a porta ao extremista."
+    },
+    {
+      "country": "Alemanha",
+      "period": "1933",
+      "level": 6,
+      "text": "Hitler chega à chancelaria por acordo com conservadores. Em semanas, o decreto do incêndio do Reichstag suspende garantias, e a Lei de Plenos Poderes permite governar sem o Parlamento.",
+      "lesson": "Uma crise é usada como pretexto para suspender direitos."
+    },
+    {
+      "country": "Argentina",
+      "period": "1946–1947",
+      "level": 3,
+      "text": "Perón promove o impeachment de três dos cinco ministros da Suprema Corte e nomeia aliados.",
+      "lesson": "Capturar os árbitros é o primeiro passo para governar sem freios."
+    },
+    {
+      "country": "Brasil",
+      "period": "1964–1968",
+      "level": 6,
+      "text": "O golpe de 1964 é apresentado como temporário. Quatro anos depois, o AI-5 fecha o Congresso, suspende o habeas corpus para crimes políticos e institui a censura prévia.",
+      "lesson": "Medidas “excepcionais” tendem a se tornar permanentes."
+    },
+    {
+      "country": "Chile",
+      "period": "1970–1973",
+      "level": 6,
+      "text": "A polarização extrema destrói a tolerância mútua entre governo e oposição. O golpe de 11 de setembro de 1973 inaugura 17 anos de ditadura.",
+      "lesson": "Sem tolerância mútua, cada lado passa a justificar o rompimento."
+    },
+    {
+      "country": "Peru",
+      "period": "1992",
+      "level": 6,
+      "text": "Eleito democraticamente, Alberto Fujimori dissolve o Congresso, suspende a Constituição e intervém no Judiciário em um autogolpe com amplo apoio popular.",
+      "lesson": "O autoritarismo pode vir de um governo eleito e popular."
+    },
+    {
+      "country": "Venezuela",
+      "period": "1999–2017",
+      "level": 5,
+      "text": "Chávez amplia o Tribunal Supremo de 20 para 32 cadeiras (2004), não renova a concessão da RCTV (2007) e aprova reeleição ilimitada (2009). Em 2017, uma Assembleia Constituinte esvazia o Parlamento eleito.",
+      "lesson": "A ruptura acontece aos poucos e com aparência de legalidade."
+    },
+    {
+      "country": "Turquia",
+      "period": "2010–2017",
+      "level": 5,
+      "text": "Reforma de 2010 reorganiza o Judiciário. Após a tentativa de golpe de 2016, expurgo de dezenas de milhares de servidores, juízes e jornalistas. Referendo de 2017 concentra poderes na Presidência.",
+      "lesson": "Uma ameaça real pode servir de justificativa para o desmonte."
+    },
+    {
+      "country": "Hungria",
+      "period": "2010–presente",
+      "level": 5,
+      "text": "Com maioria de dois terços, Orbán aprova nova Constituição, amplia a Corte Constitucional, cria um conselho de mídia controlado pelo governo e redesenha distritos eleitorais.",
+      "lesson": "Maioria parlamentar usada para reescrever as regras."
+    },
+    {
+      "country": "Polônia",
+      "period": "2015–2023",
+      "level": 3,
+      "text": "O governo do PiS altera o Tribunal Constitucional e o Conselho da Magistratura. Em 2023, a oposição vence as eleições e inicia a reversão das mudanças.",
+      "lesson": "O processo é reversível enquanto as eleições ainda são livres."
+    }
+  ]
+}

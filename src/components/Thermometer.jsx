@@ -1,7 +1,5 @@
-import { LEVELS } from '../data/levels'
-
-export default function Thermometer({ score, level }) {
-  const top = [...LEVELS].reverse()
+export default function Thermometer({ score, level, levels }) {
+  const top = [...levels].reverse()
 
   return (
     <figure className="thermo">

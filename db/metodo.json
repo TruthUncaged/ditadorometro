@@ -1,0 +1,98 @@
+{
+  "powers": {
+    "executivo": "Executivo",
+    "legislativo": "Legislativo",
+    "judiciario": "Judiciário e MP",
+    "eleicoes": "Eleições"
+  },
+  "indicators": [
+    {
+      "id": "regras",
+      "name": "Rejeição das regras do jogo",
+      "short": "Regras",
+      "description": "Rejeição ou compromisso fraco com as regras democráticas: tentativas de anular eleições, golpes, desrespeito à Constituição."
+    },
+    {
+      "id": "legitimidade",
+      "name": "Negação da legitimidade dos oponentes",
+      "short": "Legitimidade",
+      "description": "Tratar adversários como criminosos, traidores ou ameaças existenciais, sem base legal."
+    },
+    {
+      "id": "violencia",
+      "name": "Tolerância à violência",
+      "short": "Violência",
+      "description": "Encorajar, tolerar ou deixar de condenar violência política de aliados."
+    },
+    {
+      "id": "liberdades",
+      "name": "Restrição de liberdades civis e de imprensa",
+      "short": "Liberdades",
+      "description": "Censura, bloqueio de plataformas e veículos, processos e medidas seletivas contra críticos, vigilância de opositores, restrição a protestos."
+    },
+    {
+      "id": "arbitros",
+      "name": "Captura e abuso dos árbitros",
+      "short": "Árbitros",
+      "description": "De um lado, quem governa captura tribunais, Ministério Público, polícia e órgãos de controle (nomeações, empacotamento, expurgos, intimidação); de outro, os próprios árbitros agem sem freios (conflito de interesses, investigar e julgar, inquéritos sem objeto, sigilo)."
+    },
+    {
+      "id": "reserva",
+      "name": "Impunidade e quebra da reserva institucional",
+      "short": "Impunidade",
+      "description": "Casos graves que não são investigados, CPIs travadas, arquivamentos sem apuração, uso do cargo além do razoável."
+    }
+  ],
+  "status": {
+    "sem-apuracao": {
+      "label": "Sem apuração, apesar do dever de apurar",
+      "multiplier": 1.3
+    },
+    "arquivamento": {
+      "label": "Arquivado ou anulado sem exame do mérito",
+      "multiplier": 1.3
+    },
+    "travada": {
+      "label": "Apuração travada",
+      "multiplier": 1.2
+    },
+    "consumado": {
+      "label": "Ato de Estado cumprido",
+      "multiplier": 1
+    },
+    "em-curso": {
+      "label": "Em apuração",
+      "multiplier": 1
+    },
+    "declaracao": {
+      "label": "Declaração pública",
+      "multiplier": 0.8
+    },
+    "revisado": {
+      "label": "Revisto por outra instituição ou limitado",
+      "multiplier": 0.9
+    },
+    "revertido": {
+      "label": "Medida anulada ou desfeita",
+      "multiplier": 0.6
+    },
+    "responsabilizado": {
+      "label": "Responsabilização efetivada",
+      "multiplier": 0.7
+    },
+    "contexto": {
+      "label": "Contexto (não pontua)",
+      "multiplier": 0
+    }
+  },
+  "saturation": {
+    "regras": 20,
+    "legitimidade": 15,
+    "violencia": 12,
+    "liberdades": 30,
+    "arbitros": 30,
+    "reserva": 20
+  },
+  "secondDimensionWeight": 0.5,
+  "maxDimensionsPerItem": 2
+}

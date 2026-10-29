@@ -1,0 +1,70 @@
+{
+  "levels": [
+    {
+      "id": 0,
+      "name": "Democracia plena",
+      "summary": "Liberdade de expressão e de imprensa protegida. Árbitros (tribunais, Ministério Público, polícia, órgãos de controle) independentes de quem governa. Oposição tratada como adversária legítima, não como inimiga.",
+      "examples": []
+    },
+    {
+      "id": 1,
+      "name": "Grades de proteção desgastadas",
+      "summary": "As regras escritas seguem valendo, mas as não escritas — tolerância mútua e reserva institucional — enfraquecem. Polarização crescente; o adversário passa a ser visto como ameaça.",
+      "examples": [
+        "Chile, anos 1960–1973",
+        "Estados Unidos, anos 2010 (caso analisado no livro)"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Erosão das normas",
+      "summary": "As prerrogativas legais passam a ser usadas até o limite, por qualquer dos Poderes (“jogo duro constitucional”). Quebrar uma norma deixa de ter custo; os árbitros e os guardiões reagem pouco ou de forma seletiva.",
+      "examples": [
+        "Estados Unidos, 2017–2020",
+        "Equador, 2007–2010"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Captura dos árbitros",
+      "summary": "Tribunais, procuradoria, polícia e órgãos de controle passam a proteger aliados e mirar adversários. Quem deveria fiscalizar o poder fica imune à fiscalização.",
+      "examples": [
+        "Argentina, 1946–1947",
+        "Venezuela, 2004",
+        "Hungria, 2011–2013",
+        "Turquia, 2010"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Adversários fora de campo",
+      "summary": "Opositores, jornalistas e críticos são afastados, processados ou silenciados pelo aparato estatal. Censura indireta, multas e processos usados para calar. A autocensura se espalha.",
+      "examples": [
+        "Venezuela, 2007 (RCTV)",
+        "Turquia, 2016–2017",
+        "Rússia, anos 2000"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Regras reescritas",
+      "summary": "Constituição, sistema eleitoral e composição de cortes alterados para perpetuar o grupo no poder. Eleições continuam existindo, mas deixam de ser justas: autoritarismo competitivo.",
+      "examples": [
+        "Venezuela, 2009–2017",
+        "Hungria, 2011–presente",
+        "Nicarágua, 2007–2021"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Ditadura",
+      "summary": "Fechamento ou neutralização do Legislativo, suspensão de garantias individuais, censura prévia, presos políticos. Todos os direitos ficam sujeitos à vontade do Estado.",
+      "examples": [
+        "Brasil, AI-5 (1968)",
+        "Peru, autogolpe (1992)",
+        "Alemanha, 1933",
+        "Chile, 1973"
+      ]
+    }
+  ]
+}

@@ -1,14 +1,10 @@
-import { RUBRIC } from '../data/rubric'
-import { INDICATORS } from '../data/indicators'
-
-const GROUPS = [
-  ...INDICATORS.map((i, n) => ({ id: i.id, title: `${n + 1}. ${i.name}`, description: i.description })),
-  { id: null, title: 'Contexto — registrado, mas não pontua', description: 'Fatos relevantes para o debate público que, pelo critério do livro, não indicam ruptura democrática por si sós.' },
-]
-
-export default function Rubric({ news }) {
+export default function Rubric({ items, rubric, indicators }) {
   const usage = {}
-  for (const n of news) for (const c of n.cases) usage[c] = (usage[c] ?? 0) + 1
+  for (const n of items) for (const c of n.cases) usage[c] = (usage[c] ?? 0) + 1
+  const groups = [
+    ...indicators.map((i, n) => ({ id: i.id, title: `${n + 1}. ${i.name}`, description: i.description })),
+    { id: null, title: 'Contexto — registrado, mas não pontua', description: 'Fatos relevantes para o debate público que, pelo critério do livro, não indicam ruptura democrática por si sós.' },
+  ]
 
   return (
     <section id="criterios" className="section section--alt" aria-labelledby="criterios-title">
@@ -23,8 +19,8 @@ export default function Rubric({ news }) {
           </p>
         </header>
 
-        {GROUPS.map((g) => {
-          const rows = RUBRIC.filter((r) => r.dimension === g.id)
+        {groups.map((g) => {
+          const rows = rubric.filter((r) => r.dimension === g.id)
           return (
             <div key={g.id ?? 'contexto'} className="rubric-group">
               <h3 className="rubric-group__title">{g.title}</h3>

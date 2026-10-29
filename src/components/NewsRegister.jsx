@@ -1,15 +1,10 @@
 import { useState } from 'react'
-import { INDICATORS, STATUS } from '../data/indicators'
-import { RUBRIC_BY_CODE } from '../data/rubric'
-import { POWERS } from '../data/news'
-import { itemPoints, itemWeights } from '../lib/score'
 
-const byId = Object.fromEntries(INDICATORS.map((i) => [i.id, i]))
 const GRAVITY = ['', 'leve', 'moderada', 'grave']
 
-export default function NewsRegister({ news }) {
+export default function NewsRegister({ items, model }) {
   const [power, setPower] = useState('todos')
-  const sorted = [...news].sort((a, b) => b.sort.localeCompare(a.sort))
+  const sorted = [...items].sort((a, b) => b.sort.localeCompare(a.sort))
   const visible = power === 'todos' ? sorted : sorted.filter((n) => n.power === power)
 
   return (
@@ -27,11 +22,11 @@ export default function NewsRegister({ news }) {
 
         <div className="filters" role="group" aria-label="Filtrar por esfera">
           <button type="button" aria-pressed={power === 'todos'} onClick={() => setPower('todos')}>
-            Todos <span className="count">{news.length}</span>
+            Todos <span className="count">{items.length}</span>
           </button>
-          {Object.entries(POWERS).map(([id, label]) => (
+          {Object.entries(model.powers).map(([id, label]) => (
             <button key={id} type="button" aria-pressed={power === id} onClick={() => setPower(id)}>
-              {label} <span className="count">{news.filter((n) => n.power === id).length}</span>
+              {label} <span className="count">{items.filter((n) => n.power === id).length}</span>
             </button>
           ))}
         </div>
@@ -39,7 +34,7 @@ export default function NewsRegister({ news }) {
         <ol className="register" aria-live="polite">
           {visible.map((item) => (
             <li key={item.id}>
-              <Entry item={item} />
+              <Entry item={item} model={model} />
             </li>
           ))}
         </ol>
@@ -48,16 +43,16 @@ export default function NewsRegister({ news }) {
   )
 }
 
-function Entry({ item }) {
-  const weights = itemWeights(item)
-  const points = itemPoints(item)
+function Entry({ item, model }) {
+  const { weights, points } = item
+  const dimensionName = Object.fromEntries(model.indicators.map((i) => [i.id, i.short]))
   return (
     <article id={`ocorrencia-${item.id}`} className="entry" aria-labelledby={`t-${item.id}`}>
       <div className="entry__meta">
         <time className="entry__date">{item.when}</time>
-        <span className={`status status--${item.status}`}>{STATUS[item.status].label}</span>
+        <span className={`status status--${item.status}`}>{model.status[item.status].label}</span>
         <span className="entry__inst">
-          {POWERS[item.power]} · {item.institutions.join(', ')}
+          {model.powers[item.power]} · {item.institutions.join(', ')}
         </span>
       </div>
 
@@ -71,7 +66,7 @@ function Entry({ item }) {
         <p className="entry__codes">
           <span>Classificação:</span>{' '}
           {item.cases.map((c) => (
-            <a key={c} href={`#rubrica-${c}`} className="code" title={RUBRIC_BY_CODE[c].type}>
+            <a key={c} href={`#rubrica-${c}`} className="code" title={model.rubricByCode[c].type}>
               {c}
             </a>
           ))}
@@ -81,7 +76,7 @@ function Entry({ item }) {
           <dl className="entry__weights">
             {Object.entries(weights).map(([id, w]) => (
               <div key={id}>
-                <dt>{byId[id].short}</dt>
+                <dt>{dimensionName[id]}</dt>
                 <dd>{GRAVITY[w]}</dd>
               </div>
             ))}
