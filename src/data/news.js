@@ -351,7 +351,7 @@ export const NEWS = [
     summary:
       'Por 4 votos a 1, a Primeira Turma do STF condenou o ex-presidente e aliados por tentativa de golpe e outros quatro crimes ligados à tentativa de impedir a posse do governo eleito em 2022. A pena do ex-presidente foi de 27 anos e 3 meses.',
     response:
-      'A defesa nega os crimes e recorreu. O ministro Luiz Fux votou contra a condenação.',
+      'A defesa nega os crimes e recorreu. Luiz Fux votou pela incompetência do STF para julgar réus sem foro e pela absolvição, segundo o Poder360. O relatório da PF, com sigilo retirado em novembro de 2024, afirma que “a resistência dos Comandantes do Exército e da Aeronáutica impediu a consumação do ato” e que o Alto Comando do Exército não aderiu, atribuindo adesão ao comandante da Marinha, Almir Garnier, e ao ministro da Defesa, Paulo Sérgio Nogueira, segundo o SBT News e a CNN Brasil; a defesa de Garnier afirma que as provas são “falsas” e que ele não estava na reunião citada, segundo o Metrópoles.',
     institutions: ['STF'],
     status: 'responsabilizado',
     cases: ['A2', 'A3', 'C3'],
@@ -359,6 +359,10 @@ export const NEWS = [
       { outlet: 'Poder360', url: 'https://www.poder360.com.br/poder-justica/maioria-da-1a-turma-do-stf-condena-bolsonaro-por-tentativa-de-golpe/' },
       { outlet: 'Bloomberg Línea', url: 'https://www.bloomberglinea.com.br/brasil/jair-bolsonaro-e-considerado-culpado-pelo-stf-por-golpe-de-estado-e-mais-quatro-crimes/' },
       { outlet: 'Folha de Pernambuco', url: 'https://www.folhape.com.br/politica/por-4-a-1-stf-condena-bolsonaro-e-mais-sete-pela-trama-golpista/437340/' },
+      { outlet: 'Poder360', url: 'https://www.poder360.com.br/poder-justica/fux-vota-pela-anulacao-do-processo-contra-bolsonaro/' },
+      { outlet: 'SBT News', url: 'https://sbtnews.sbt.com.br/noticia/brasil/golpe-de-bolsonaro-nao-vingou-por-falta-de-apoio-do-comando-das-forcas-armadas-diz-pf' },
+      { outlet: 'CNN Brasil', url: 'https://www.cnnbrasil.com.br/politica/comandante-do-exercito-foi-determinante-para-golpe-nao-acontecer-diz-relatorio-da-pf/' },
+      { outlet: 'Metrópoles', url: 'https://www.metropoles.com/brasil/defesa-de-ex-chefe-da-marinha-diz-que-provas-contra-ele-sao-falsas' },
     ],
   },
   {
@@ -496,6 +500,34 @@ export const NEWS = [
     ],
   },
   {
+    id: 'stf-foro-oito-janeiro',
+    sort: '2023-04-24',
+    when: 'abr. 2023 – presente',
+    power: 'judiciario',
+    title: 'STF julga em instância originária mais de mil réus sem foro privilegiado pelos atos de 8 de janeiro, com divergência recorrente sobre a competência',
+    summary:
+      'Os inquéritos sobre os atos de 8 de janeiro de 2023 foram abertos no STF a pedido da PGR, em janeiro de 2023, sob relatoria de Alexandre de Moraes, segundo a Agência Estado. Em 24 de abril de 2023, o plenário recebeu as primeiras 100 denúncias por 8 votos a 2; Nunes Marques e André Mendonça votaram que os casos deveriam tramitar na Justiça Federal do Distrito Federal, e Moraes afirmou não haver dúvida sobre a competência da Corte, segundo a Folhapress. A divergência se repetiu nas levas seguintes (200 réus em 2 de maio de 2023, segundo o Poder360; 250 em 15 de maio, segundo a Conjur) e nas condenações: em abril de 2024, Nunes Marques disse que a questão “não precluiu” e que o juiz natural é “garantia fundamental”, segundo a Gazeta do Povo; em abril de 2025, os dois votaram pela absolvição de 17 réus e reiteraram que o STF não deveria processar e julgar as ações, segundo o Correio Braziliense. Após a Emenda Regimental 59/2023, as ações passaram às Turmas; em 25 de março de 2025, Moraes afirmou que o STF já havia reafirmado a competência em mais de 1.300 ações penais do 8 de janeiro, independentemente do foro dos réus, e Luiz Fux ficou vencido ao defender que a denúncia contra o ex-presidente fosse julgada pelo plenário, segundo o Estadão Conteúdo e o Migalhas. Em setembro de 2025, Fux votou pela incompetência absoluta do STF na ação da trama golpista (“Estamos julgando pessoas que não têm prerrogativa de foro”), segundo o Poder360. A OAB-PR, em carta de agosto de 2025, defendeu que réus sem foro sejam julgados na primeira instância e afirmou que a Corte ampliou sua competência pelo regimento interno “em detrimento da lei”, segundo o Estadão Conteúdo. Defesas e senadores de oposição pediram o afastamento de Moraes, relator, por ser ao mesmo tempo alvo dos atos e julgador; em fevereiro de 2024, o presidente Luís Roberto Barroso negou 192 pedidos nesse sentido, segundo a Agência Brasil. O balanço oficial do STF de abril de 2026 registra 1.878 denúncias e 1.402 réus responsabilizados.',
+    response:
+      'O STF sustenta a competência: segundo Moraes, a Corte a reafirmou em mais de 1.300 ações e o tratamento deve ser igual para todos os denunciados; a Primeira Turma rejeitou por maioria a preliminar de competência e, por unanimidade, as demais nulidades em março de 2025. Cármen Lúcia afirmou haver “todos os elementos suficientes para dizer que os juízes são imparciais”, segundo o Migalhas. Barroso escreveu que os fatos alegados “não caracterizam, minimamente, as situações legais que impossibilitam o exercício da jurisdição”, segundo a Agência Brasil. A PGR, autora dos pedidos de inquérito e das denúncias, ofereceu as acusações diretamente ao STF. Nenhuma outra instituição reviu o foro; a lei da dosimetria, aprovada pelo Congresso em 2025–2026, trata das penas, não da competência, e está em ocorrência própria.',
+    institutions: ['STF', 'PGR'],
+    status: 'consumado',
+    cases: ['E4'],
+    sources: [
+      { outlet: 'A Gazeta (Agência Estado)', url: 'https://www.agazeta.com.br/brasil/moraes-abre-tres-novos-inqueritos-para-apurar-crimes-de-8-de-janeiro-no-df-0123' },
+      { outlet: 'A Gazeta (Folhapress)', url: 'https://www.agazeta.com.br/brasil/por-8-a-2-stf-torna-reus-100-dos-denunciados-pelo-8-de-janeiro-0423' },
+      { outlet: 'Poder360', url: 'https://www.poder360.com.br/justica/mendonca-volta-a-divergir-de-moraes-em-denuncias-do-8-de-janeiro/' },
+      { outlet: 'Conjur', url: 'https://www.conjur.com.br/2023-mai-15/stf-maioria-tornar-reus-250-bolsonaristas-81/' },
+      { outlet: 'Gazeta do Povo', url: 'https://www.gazetadopovo.com.br/vida-e-cidadania/em-voto-contra-condenacao-de-reu-do-8-1-marques-e-mendonca-citam-incompetencia-do-stf/' },
+      { outlet: 'Correio Braziliense', url: 'https://www.correiobraziliense.com.br/politica/2025/04/7109022-stf-condena-17-pessoas-por-participacao-em-atos-antidemocraticos.html' },
+      { outlet: 'Folha de Pernambuco (Estadão Conteúdo)', url: 'https://www.folhape.com.br/politica/ministros-do-stf-ignoram-preliminares-e-atropelam-estrategia-das/400106/' },
+      { outlet: 'Migalhas', url: 'https://www.migalhas.com.br/quentes/427024/stf-1-turma-rejeita-preliminares-da-defesa-de-denuncia-de-bolsonaro' },
+      { outlet: 'Poder360', url: 'https://www.poder360.com.br/poder-justica/fux-vota-pela-anulacao-do-processo-contra-bolsonaro/' },
+      { outlet: 'IstoÉ (Estadão Conteúdo)', url: 'https://istoe.com.br/oab-pr-pede-autocritica-e-autocontencao-do-stf-para-evitar-desvios-autoritarios' },
+      { outlet: 'Agência Brasil (oficial)', url: 'https://agenciabrasil.ebc.com.br/politica/noticia/2024-02/barroso-mantem-moraes-frente-de-inquerito-sobre-golpe-de-estado' },
+      { outlet: 'STF (oficial)', url: 'https://noticias.stf.jus.br/postsnoticias/stf-divulga-balanco-atualizado-sobre-investigacoes-e-condenacoes-por-atos-antidemocraticos/' },
+    ],
+  },
+  {
     id: 'oito-de-janeiro',
     sort: '2023-01-08',
     when: '8 jan. 2023 – presente',
@@ -504,7 +536,7 @@ export const NEWS = [
     summary:
       'Em 8 de janeiro de 2023, uma semana após a posse do governo eleito, manifestantes invadiram e depredaram o Palácio do Planalto, o Congresso e o STF, em Brasília. Segundo a PGR, citada pelo O Povo, a invasão foi o “desfecho violento” de uma atuação coordenada para impedir a posse do presidente eleito. Balanço do gabinete do relator, ministro Alexandre de Moraes, publicado pelo STF em 29 de abril de 2026, registra 1.878 denúncias (1.160 contra incitadores, 628 contra executores e 31 contra integrantes dos núcleos principais), 1.402 réus responsabilizados, 552 acordos de não persecução penal e 190 presos, 169 deles em prisão definitiva. Em agosto de 2025, o Poder360 registrava 638 condenações e dez absolvições; em janeiro de 2026, o O Povo contava 1.039 condenados, 497 deles à prisão, com penas de um ano a 17 anos e seis meses. A reparação por dano moral coletivo foi fixada em R$ 30 milhões, a serem pagos solidariamente pelos condenados por crimes graves.',
     response:
-      'Os réus foram julgados individualmente e parte deles recorreu. Segundo o Poder360, os 552 acordos de não persecução penal homologados exigem confissão, prestação de serviços comunitários, multa de R$ 5 mil e participação em curso sobre democracia. A lei que reduz as penas desses condenados, aprovada pelo Congresso em 2025–2026, está registrada em ocorrência própria.',
+      'Os réus foram julgados individualmente e parte deles recorreu; os 552 acordos de não persecução penal exigem confissão, serviço comunitário, multa e curso sobre democracia, segundo o Poder360. As condenações têm contraponto documentado. Sobre a proporcionalidade: Débora Rodrigues dos Santos, que escreveu “Perdeu, mané” com batom na estátua A Justiça, foi condenada em abril de 2025 a 14 anos por cinco crimes; Luiz Fux votou por 1 ano e 6 meses, só por deterioração de patrimônio tombado, segundo o Diário do Nordeste; ela cumpre a pena em prisão domiciliar e obteve a progressão ao semiaberto em outubro de 2026, segundo a Agência Brasil. Nos votos vencidos, André Mendonça falou em “responsabilização objetiva” de acampados e Nunes Marques disse que “não é razoável imputar esse crime indistintamente a todos os acusados presos”, segundo o Correio Braziliense; a OAB-PR apontou “penas excessivas, especialmente para réus de baixa participação nos fatos”, segundo o Estadão Conteúdo; Luís Roberto Barroso afirmou que “algumas penas, sobretudo as dos executores que não eram mentores, ficaram elevadas”, segundo o SBT News. Sobre a natureza dos atos: a defesa de Jair Bolsonaro sustentou que ele agiu para desestimular “qualquer ato impetuoso de seus eleitores e apoiadores” e que as provas não configuram crime por ausência de “violência ou grave ameaça”, segundo a CNN Brasil; Fux chamou os atos de “turbas desordenadas” e disse não se poder “imputar ao réu a responsabilidade pelos crimes praticados por terceiros”; o presidente da Câmara, Hugo Motta, afirmou em fevereiro de 2025 que foram atos de “vândalos, baderneiros”, sem líder nem apoio das Forças Armadas, e não um golpe, segundo o Estado de Minas. Alexandre de Moraes respondeu que “não foi um passeio no parque, não foi um passeio na Disney, foi uma tentativa de golpe de Estado”, segundo a Folhapress. Em dezembro de 2025, a Câmara aprovou por 291 votos a 148 o projeto que reduz as penas, descrito pelo relator como meio-termo entre a anistia e as “penas consideradas excessivas”, segundo o SBT News (ver a ocorrência sobre a lei da dosimetria). A competência do STF para julgar réus sem foro está em ocorrência própria.',
     institutions: ['STF', 'PGR', 'Polícia Federal'],
     status: 'responsabilizado',
     cases: ['C3'],
@@ -512,6 +544,16 @@ export const NEWS = [
       { outlet: 'STF (oficial)', url: 'https://noticias.stf.jus.br/postsnoticias/stf-divulga-balanco-atualizado-sobre-investigacoes-e-condenacoes-por-atos-antidemocraticos/' },
       { outlet: 'O Povo', url: 'https://www.opovo.com.br/noticias/politica/2026/01/08/atos-de-8-de-janeiro-o-que-aconteceu-e-quem-foi-condenado.html' },
       { outlet: 'Poder360', url: 'https://www.poder360.com.br/poder-justica/stf-responsabiliza-1-190-por-atos-de-8-de-janeiro-638-foram-condenados/' },
+      { outlet: 'Diário do Nordeste', url: 'https://diariodonordeste.verdesmares.com.br/pontopoder/debora-rodrigues-cabeleireira-que-pichou-estatua-do-stf-e-condenada-a-14-anos-de-prisao-1.3644390' },
+      { outlet: 'A Gazeta (Agência Brasil)', url: 'https://www.agazeta.com.br/brasil/moraes-concede-regime-semiaberto-a-debora-do-batom-condenada-pelo-81-1026' },
+      { outlet: 'Correio Braziliense', url: 'https://www.correiobraziliense.com.br/politica/2025/04/7109022-stf-condena-17-pessoas-por-participacao-em-atos-antidemocraticos.html' },
+      { outlet: 'IstoÉ (Estadão Conteúdo)', url: 'https://istoe.com.br/oab-pr-pede-autocritica-e-autocontencao-do-stf-para-evitar-desvios-autoritarios' },
+      { outlet: 'SBT News', url: 'https://sbtnews.sbt.com.br/noticia/politica/barroso-diz-que-algumas-penas-do-8-de-janeiro-ficaram-elevadas-e-defende-revisoes' },
+      { outlet: 'CNN Brasil', url: 'https://www.cnnbrasil.com.br/politica/veja-5-argumentos-chave-que-bolsonaro-enviou-ao-stf-para-evitar-condenacao/' },
+      { outlet: 'CNN Brasil', url: 'https://www.cnnbrasil.com.br/politica/fux-vota-para-absolver-bolsonaro-de-todos-os-crimes/' },
+      { outlet: 'Estado de Minas', url: 'https://www.em.com.br/politica/2025/02/7055448-hugo-motta-diz-que-8-1-nao-foi-tentativa-de-golpe-em-aceno-para-anistia.html' },
+      { outlet: 'Banda B (Folhapress)', url: 'https://www.bandab.com.br/politica/nao-foram-baderneiros-desordenados-diz-moraes-rebater-fux/amp/' },
+      { outlet: 'SBT News', url: 'https://sbtnews.sbt.com.br/noticia/politica/camara-aprova-projeto-que-reduz-penas-de-condenados-pelos-atos-de-8-de-janeiro' },
     ],
   },
   {
