@@ -165,6 +165,10 @@ cite { font-style: italic; }
   text-decoration: none;
 }
 .nav a:hover { text-decoration: underline; }
+.nav__icon { display: flex; align-items: center; padding: 10px 10px; }
+.nav__icon:hover { text-decoration: none; opacity: 0.75; }
+.gh-icon { display: inline-block; vertical-align: -3px; }
+.footer__repo a { display: inline-flex; align-items: center; gap: 6px; }
 
 /* ---------- Reading (hero) ---------- */
 .reading {

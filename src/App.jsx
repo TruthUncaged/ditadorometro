@@ -7,6 +7,7 @@ import Rubric from './components/Rubric.jsx'
 import History from './components/History.jsx'
 import Method from './components/Method.jsx'
 import About from './components/About.jsx'
+import GitHubIcon, { REPO_URL } from './components/GitHubIcon.jsx'
 import { NEWS, UPDATED_AT } from './data/news'
 import { computeScore } from './lib/score'
 import { levelFor } from './data/levels'
@@ -68,6 +69,14 @@ export default function App() {
           <p>
             Para receber as atualizações do índice e do registro, assine o <a href="feed.xml" type="application/rss+xml">feed
             RSS</a> em qualquer leitor de feeds.
+          </p>
+          <p className="footer__repo">
+            <a href={REPO_URL} target="_blank" rel="noopener noreferrer">
+              <GitHubIcon size={16} /> Código, dados e critérios abertos no GitHub
+              <span className="visually-hidden"> (abre em nova aba)</span>
+            </a>
+            . Contribuições de código, dados e revisão são bem-vindas; dúvidas e sugestões por e-mail:{' '}
+            <a href="mailto:TruthUncaged@proton.me">TruthUncaged@proton.me</a>.
           </p>
           <p>
             As pessoas citadas não foram condenadas pelos fatos relatados, salvo quando indicado. Vale a presunção
