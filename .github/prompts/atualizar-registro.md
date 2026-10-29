@@ -38,6 +38,11 @@ apontadas em execuções anteriores).
    órgão citado (ou veículo público mantido por ele) prova que o ato existe, mas vale como “outro lado”, não como
    segunda fonte independente, quando a ocorrência trata da conduta desse órgão. Sites de partidos, de campanhas,
    entidades que são parte no caso e perfis em redes sociais nunca são base de fato.
+
+   A regra vale **afirmação por afirmação**, não só para a ocorrência: um detalhe que só um veículo de linha
+   editorial declarada traz (uma data, um número, um documento) fica fora até que uma fonte de outro grupo o
+   confirme, mesmo com atribuição (“segundo a Revista X”). Coluna ou texto de opinião de veículo generalista não
+   conta como fonte de fato. O verificador de fontes rejeita a mudança inteira se encontrar uma frase assim.
 5. **Verifique antes de citar.** Abra cada URL com WebFetch e confirme que a página existe e sustenta o que
    você escreveu. Não invente nem deduza URLs.
 6. **Linguagem descritiva.** Atribua as afirmações (“segundo a PF”, “de acordo com a reportagem”). Sem adjetivos

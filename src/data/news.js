@@ -45,7 +45,7 @@ export const NEWS = [
     power: 'legislativo',
     title: 'Intimado a entregar os passaportes, Flávio Bolsonaro não os entrega e deixa o país com o passaporte diplomático já cancelado',
     summary:
-      'Segundo a Exame, o senador disse ter recebido intimação para entregar os passaportes e que não poderia deixar o país. Ele não entregou os documentos, e a PF cancelou os passaportes comum e diplomático em 27 de outubro, segundo a Agência Brasil. De acordo com a CNN Brasil, Flávio cruzou para a Argentina com passaporte italiano e entrou nos Estados Unidos, por Miami, usando o passaporte diplomático já cancelado. Em 28 de outubro, segundo a Agência Brasil, a PF informou não ter registro oficial da passagem dele por nenhum posto migratório brasileiro e passou a investigar as circunstâncias da saída; de acordo com a PF, ele cruzou a fronteira com a Argentina em 27 de outubro e seguiu em avião particular para os Estados Unidos com a mulher e as filhas. Segundo a Revista Oeste, com base em registros alfandegários americanos, a família recebeu autorização humanitária temporária para permanecer nos Estados Unidos até 27 de outubro de 2027.',
+      'Segundo a Exame, o senador disse ter recebido intimação para entregar os passaportes e que não poderia deixar o país. Ele não entregou os documentos, e a PF cancelou os passaportes comum e diplomático em 27 de outubro, segundo a Agência Brasil. De acordo com a CNN Brasil, Flávio cruzou para a Argentina com passaporte italiano e entrou nos Estados Unidos, por Miami, usando o passaporte diplomático já cancelado. Em 28 de outubro, segundo a Agência Brasil, a PF informou não ter registro oficial da passagem dele por nenhum posto migratório brasileiro e passou a investigar as circunstâncias da saída; de acordo com a PF, ele cruzou a fronteira com a Argentina em 27 de outubro e seguiu em avião particular para os Estados Unidos com a mulher e as filhas. Segundo o Terra, com base em registros alfandegários obtidos pelo jornal O Globo, a família teria entrado com autorização humanitária temporária válida até 27 de outubro de 2027, sem que os EUA tivessem emitido vistos até então.',
     response:
       'As reportagens consultadas não trazem manifestação de Flávio Bolsonaro ou da defesa sobre a viagem nem sobre a não entrega dos documentos. Flávio contesta a base da decisão que determinou a retenção. A PF afirmou que restrições a documentos de viagem, por si sós, não tornam alguém foragido nem justificam prisão ou vigilância permanente.',
     institutions: ['Senado', 'STF', 'Polícia Federal'],
@@ -56,7 +56,7 @@ export const NEWS = [
       { outlet: 'CNN Brasil', url: 'https://www.cnnbrasil.com.br/internacional/flavio-bolsonaro-entrou-nos-eua-com-passaporte-diplomatico-que-pf-cancelou/' },
       { outlet: 'Exame', url: 'https://exame.com/brasil/flavio-bolsonaro-diz-recebeu-intimicao-para-entregar-passsaporte-e-nao-pode-deixar-o-pais/' },
       { outlet: 'Agência Brasil', url: 'https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/pf-investiga-circunstancias-da-fuga-de-flavio-bolsonaro-do-brasil' },
-      { outlet: 'Revista Oeste', url: 'https://revistaoeste.com/politica/flavio-recebe-autorizacao-humanitaria-para-ficar-nos-eua-por-um-ano/' },
+      { outlet: 'Terra', url: 'https://www.terra.com.br/noticias/eleicoes/flavio-recebe-autorizacao-humanitaria-de-1-ano-de-permanencia-nos-eua,1977465b0c6da684eff956297bc0334593tj5h76.html' },
     ],
   },
   {

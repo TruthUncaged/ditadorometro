@@ -25,8 +25,15 @@ Todos os verificadores conferem tudo, mas cada um aprofunda o seu **foco**, info
 
 - **fontes** — abra com WebFetch todas as URLs de cada ocorrência nova ou alterada. Cada afirmação do `summary`
   e do `response` precisa estar na página. Confira datas, números, nomes e cargos. Verifique se há duas fontes
-  válidas pelos grupos da regra 4 (oficial, generalista, especializado, linha declarada) e se nenhuma é parte
-  interessada ou a única base partidária.
+  válidas pelos grupos da regra 4 (oficial, generalista, especializado, linha declarada).
+
+  **Afirmação por afirmação, não só por ocorrência:** para cada frase, anote qual fonte a sustenta. Se a única
+  sustentação de uma afirmação for um veículo de linha editorial declarada (à esquerda ou à direita), uma entidade
+  que é parte no caso, uma coluna ou um texto de opinião, o voto é `rejeitar`, mesmo que a frase esteja atribuída
+  (“segundo a Revista X”) e mesmo que a ocorrência tenha outras fontes válidas para o restante. O motivo deve
+  indicar a frase e a correção: retirar a afirmação ou acrescentar fonte de outro grupo que a confirme. Um veículo
+  de linha declarada só pode ser usado para o que outra fonte, de outro grupo, também sustenta. Se a afirmação não
+  estiver em nenhuma fonte, o voto é `vetar`.
 - **classificacao** — confira se os códigos de `cases` correspondem ao fato, nem a mais nem a menos (um fato pode
   receber códigos de dimensões diferentes, por exemplo E1 e F5 na mesma decisão; códigos frequentemente omitidos:
   F5 em decisões monocráticas, E2 quando a PGR se manifestou contra, C1 quando houve agressão e silêncio); se o
