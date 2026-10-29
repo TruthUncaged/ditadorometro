@@ -1,8 +1,21 @@
 # Ditadorômetro (Brasil)
 
+**Site: <https://truthuncaged.github.io/ditadorometro/>**
+
 **Quão perto estamos de uma ditadura?** O Ditadorômetro é um medidor público, com fontes, dos sinais de erosão
 democrática descritos por Steven Levitsky e Daniel Ziblatt em *Como as Democracias Morrem*, aplicado ao governo
 federal, ao Congresso, ao Judiciário e ao processo eleitoral brasileiro.
+
+> **Projeto aberto e sem dinheiro.**
+>
+> - **Contribuições de código, dados e revisão são bem-vindas.** Abra um pull request com uma ocorrência nova e
+>   suas fontes, uma correção factual ou uma mudança de critério fundamentada no livro. O caminho está em
+>   [Como contribuir](#como-contribuir).
+> - **Não aceitamos dinheiro.** Nenhuma doação, patrocínio, anúncio ou financiamento, de pessoa, empresa, partido ou
+>   governo. A independência do medidor depende disso.
+> - **Faça seu fork à vontade.** O código é MIT e os dados e textos são CC BY 4.0: você pode copiar, adaptar e
+>   publicar a sua versão, inclusive com outros critérios. Pedimos só que a sua cópia aponte para o repositório
+>   original, para que quem a encontre possa comparar os registros e os critérios.
 
 O site é uma única página estática (React + Vite, sem backend). O nível do termômetro não é opinião de quem mantém
 o projeto: ele é **calculado** a partir de um registro de ocorrências, cada uma com pelo menos duas fontes, a posição
