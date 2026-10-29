@@ -11,6 +11,9 @@ federal, ao Congresso, ao Judiciário e ao processo eleitoral brasileiro.
 > - **Contribuições de código, dados e revisão são bem-vindas.** Abra um pull request com uma ocorrência nova e
 >   suas fontes, uma correção factual ou uma mudança de critério fundamentada no livro. O caminho está em
 >   [Como contribuir](#como-contribuir).
+> - **Não é desenvolvedor?** Dúvidas, sugestões, fontes e correções podem ser enviadas por e-mail para
+>   <TruthUncaged@proton.me>. Uma ocorrência bem documentada (o fato, a data, dois links e a posição dos
+>   citados) é tão útil quanto um pull request.
 > - **Não aceitamos dinheiro.** Nenhuma doação, patrocínio, anúncio ou financiamento, de pessoa, empresa, partido ou
 >   governo. A independência do medidor depende disso.
 > - **Faça seu fork à vontade.** O código é MIT e os dados e textos são CC BY 4.0: você pode copiar, adaptar e
@@ -385,3 +388,5 @@ node scripts/check-links.mjs links.md           # confere se as fontes do regist
   vez, então registre o efeito no índice em `src/data/notes.js`. O exemplo de um código novo é genérico ou
   histórico, nunca o caso concreto que motivou a criação.
 - **Erro factual:** abra uma issue com o link da fonte que contradiz o registro.
+- **Sem conta no GitHub:** escreva para <TruthUncaged@proton.me> com o fato, a data, dois links e a posição dos
+  citados; a ocorrência passa pelo mesmo processo de verificação.
