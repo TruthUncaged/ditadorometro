@@ -18,15 +18,36 @@ export const POWERS = {
 
 export const NEWS = [
   {
+    id: 'flavio-resultado',
+    sort: '2026-10-28',
+    when: '25 a 28 out. 2026',
+    power: 'eleicoes',
+    title: 'Derrotado no segundo turno, Flávio Bolsonaro acusa fraude sem apresentar provas e, já nos EUA, divulga carta em que se declara “verdadeiro presidente eleito”, termo depois trocado por “líder do Brasil”',
+    summary:
+      'Na noite de 25 de outubro, Flávio Bolsonaro disse que não aceitaria “que a regra do jogo tenha sido mudada em cima do jogo”, em referência à decisão do ministro Cristiano Zanin que prorrogou a votação até as 19h. Em vídeo no dia seguinte, afirmou que “não fui eu que perdi, foi o sistema que ganhou” e que a democracia “faliu”, disse que Lula usou dinheiro público para fazer “a maior compra de votos da história” e anunciou que pedirá a cassação da chapa vencedora. Em 28 de outubro, depois de chegar aos Estados Unidos, divulgou uma carta em que, segundo a Agência Brasil, se declarava o “verdadeiro presidente eleito do país”; cerca de meia hora depois, o termo foi trocado por “líder do Brasil”. Na versão publicada pela Gazeta do Povo, ele afirma ter visto “uma fraude eleitoral se concretizar”, diz que vai liderar a oposição a partir do exterior, agradece a Javier Milei e a Donald Trump e cita Juan Guaidó. As reportagens não registram provas apresentadas para as acusações; segundo a Agência Brasil, Lula teve 64 milhões de votos, e Flávio, pouco mais de 59 milhões.',
+    response:
+      'Flávio sustenta que a campanha de Lula cometeu abuso de poder político e econômico. O coordenador da campanha, senador Rogério Marinho (PL-RN), disse à Agência Brasil que “não há provas” de fraude, tratou a acusação como desabafo e atribuiu a troca de termos a “algum problema na confecção da carta”; o PL reconheceu o resultado. O cientista político Cláudio Couto, ouvido pelo Brasil de Fato, considera descabida a tese de que a prorrogação mudou as regras durante a disputa.',
+    institutions: ['TSE', 'STF'],
+    status: 'declaracao',
+    cases: ['A1', 'A2'],
+    sources: [
+      { outlet: 'Agência Brasil', url: 'https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/em-carta-golpista-flavio-agradece-milei-e-trump-por-apoio-para-fuga' },
+      { outlet: 'Gazeta do Povo', url: 'https://www.gazetadopovo.com.br/republica/leia-a-integra-da-carta-em-que-flavio-se-declara-lider-do-brasil-e-da-oposicao/' },
+      { outlet: 'Agência Brasil', url: 'https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/coordenador-de-campanha-do-pl-admite-nao-ter-prova-de-fraude-eleitoral' },
+      { outlet: 'Exame', url: 'https://exame.com/brasil/flavio-bolsonaro-diz-recebeu-intimicao-para-entregar-passsaporte-e-nao-pode-deixar-o-pais/' },
+      { outlet: 'Brasil de Fato', url: 'https://www.brasildefato.com.br/2026/10/26/pf-apreende-passaporte-de-flavio-bolsonaro-que-volta-a-questionar-resultado-das-urnas/' },
+    ],
+  },
+  {
     id: 'flavio-descumprimento',
     sort: '2026-10-27',
-    when: '26 e 27 out. 2026',
+    when: '26 a 28 out. 2026',
     power: 'legislativo',
     title: 'Intimado a entregar os passaportes, Flávio Bolsonaro não os entrega e deixa o país com o passaporte diplomático já cancelado',
     summary:
-      'Segundo a Exame, o senador disse ter recebido intimação para entregar os passaportes e que não poderia deixar o país. Ele não entregou os documentos, e a PF cancelou os passaportes comum e diplomático em 27 de outubro, segundo a Agência Brasil. De acordo com a CNN Brasil, Flávio cruzou para a Argentina com passaporte italiano e entrou nos Estados Unidos, por Miami, usando o passaporte diplomático já cancelado; a Agência Brasil registrou que não havia saída formal do país.',
+      'Segundo a Exame, o senador disse ter recebido intimação para entregar os passaportes e que não poderia deixar o país. Ele não entregou os documentos, e a PF cancelou os passaportes comum e diplomático em 27 de outubro, segundo a Agência Brasil. De acordo com a CNN Brasil, Flávio cruzou para a Argentina com passaporte italiano e entrou nos Estados Unidos, por Miami, usando o passaporte diplomático já cancelado. Em 28 de outubro, segundo a Agência Brasil, a PF informou não ter registro oficial da passagem dele por nenhum posto migratório brasileiro e passou a investigar as circunstâncias da saída; de acordo com a PF, ele cruzou a fronteira com a Argentina em 27 de outubro e seguiu em avião particular para os Estados Unidos com a mulher e as filhas. Segundo a Revista Oeste, com base em registros alfandegários americanos, a família recebeu autorização humanitária temporária para permanecer nos Estados Unidos até 27 de outubro de 2027.',
     response:
-      'As reportagens consultadas não trazem manifestação de Flávio Bolsonaro ou da defesa sobre a viagem nem sobre a não entrega dos documentos. Flávio contesta a base da decisão que determinou a retenção.',
+      'As reportagens consultadas não trazem manifestação de Flávio Bolsonaro ou da defesa sobre a viagem nem sobre a não entrega dos documentos. Flávio contesta a base da decisão que determinou a retenção. A PF afirmou que restrições a documentos de viagem, por si sós, não tornam alguém foragido nem justificam prisão ou vigilância permanente.',
     institutions: ['Senado', 'STF', 'Polícia Federal'],
     status: 'em-curso',
     cases: ['A4'],
@@ -34,24 +55,27 @@ export const NEWS = [
       { outlet: 'Agência Brasil', url: 'https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/policia-federal-cancela-passaportes-de-flavio-bolsonaro' },
       { outlet: 'CNN Brasil', url: 'https://www.cnnbrasil.com.br/internacional/flavio-bolsonaro-entrou-nos-eua-com-passaporte-diplomatico-que-pf-cancelou/' },
       { outlet: 'Exame', url: 'https://exame.com/brasil/flavio-bolsonaro-diz-recebeu-intimicao-para-entregar-passsaporte-e-nao-pode-deixar-o-pais/' },
+      { outlet: 'Agência Brasil', url: 'https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/pf-investiga-circunstancias-da-fuga-de-flavio-bolsonaro-do-brasil' },
+      { outlet: 'Revista Oeste', url: 'https://revistaoeste.com/politica/flavio-recebe-autorizacao-humanitaria-para-ficar-nos-eua-por-um-ano/' },
     ],
   },
   {
-    id: 'flavio-resultado',
+    id: 'zanin-impeachment-pedidos',
     sort: '2026-10-26',
     when: '25 e 26 out. 2026',
-    power: 'eleicoes',
-    title: 'Derrotado no segundo turno, Flávio Bolsonaro diz que “o sistema ganhou” e acusa compra de votos sem apresentar provas',
+    power: 'legislativo',
+    title: 'Depois da prorrogação da votação, parlamentares de oposição anunciam pedidos de impeachment de Cristiano Zanin, e um deputado protocola denúncia no Senado',
     summary:
-      'Na noite de 25 de outubro, Flávio Bolsonaro disse que não aceitaria “que a regra do jogo tenha sido mudada em cima do jogo”, em referência à decisão do ministro Cristiano Zanin que prorrogou a votação até as 19h. Em vídeo no dia seguinte, afirmou que “não fui eu que perdi, foi o sistema que ganhou” e que a democracia “faliu”, disse que Lula usou dinheiro público para fazer “a maior compra de votos da história” e anunciou que pedirá a cassação da chapa vencedora. As reportagens não registram provas apresentadas para as acusações.',
+      'Depois da decisão do ministro Cristiano Zanin que prorrogou a votação do segundo turno, o deputado e senador eleito Marcel van Hattem (Novo-RS) disse que apresentaria pedido de impeachment, e o senador Jorge Seif (PL-SC) afirmou ter determinado à sua equipe que preparasse um, segundo o Diario de Pernambuco; A Tarde registrou em 26 de outubro que a bancada de oposição anunciava o pedido. De acordo com O Fator, o deputado Junio Amaral (PL-MG) protocolou em 26 de outubro denúncia dirigida à Presidência do Senado que pede a perda do cargo de Zanin e sua inabilitação por oito anos. Os pedidos têm como objeto a decisão: segundo os autores, Zanin invadiu a competência da Justiça Eleitoral, decidiu sem ouvir a outra parte e deveria ter se declarado impedido por ter sido advogado de Lula. Cabe ao presidente do Senado, Davi Alcolumbre, decidir se dá andamento a pedidos desse tipo.',
     response:
-      'Flávio sustenta que a campanha de Lula cometeu abuso de poder político e econômico. O cientista político Cláudio Couto, ouvido pelo Brasil de Fato, considera descabida a tese de que a prorrogação mudou as regras durante a disputa.',
-    institutions: ['TSE', 'STF'],
-    status: 'declaracao',
-    cases: ['A1'],
+      'As reportagens consultadas não trazem manifestação de Zanin, do STF ou do presidente do Senado sobre os pedidos. Depois da decisão inicial, Zanin esclareceu que a prorrogação valia apenas para as seções que ainda estavam abertas.',
+    institutions: ['Senado', 'Câmara dos Deputados', 'STF'],
+    status: 'em-curso',
+    cases: ['E10'],
     sources: [
-      { outlet: 'Exame', url: 'https://exame.com/brasil/flavio-bolsonaro-diz-recebeu-intimicao-para-entregar-passsaporte-e-nao-pode-deixar-o-pais/' },
-      { outlet: 'Brasil de Fato', url: 'https://www.brasildefato.com.br/2026/10/26/pf-apreende-passaporte-de-flavio-bolsonaro-que-volta-a-questionar-resultado-das-urnas/' },
+      { outlet: 'Diario de Pernambuco', url: 'https://www.diariodepernambuco.com.br/politica/2026/10/11727681-oposicao-prepara-pedidos-de-impeachment-contra-zanin-apos-extensao-da-votacao.html' },
+      { outlet: 'A Tarde', url: 'https://atarde.com.br/policia/oposicao-pede-impeachment-de-zanin-apos-prorrogacao-de-votacao-1407180' },
+      { outlet: 'O Fator', url: 'https://ofator.com.br/?p=73892' },
     ],
   },
   {
@@ -757,22 +781,25 @@ export const NEWS = [
   {
     id: 'inquerito-4781',
     sort: '2019-03-14',
-    when: 'mar. 2019 – presente',
+    when: 'mar. 2019 – out. 2026',
     power: 'judiciario',
-    title: 'Inquérito das fake news: aberto de ofício pelo STF e prorrogado há mais de seis anos',
+    title: 'Inquérito das fake news: aberto de ofício pelo STF e prorrogado por mais de seis anos; em 2026, a Presidência do tribunal retira o relator e começa a arquivá-lo',
     summary:
-      'Instaurado pelo próprio tribunal, sem pedido do Ministério Público, com relator designado sem sorteio, para apurar ataques à própria Corte. Tramita sob sigilo e vem sendo prorrogado sucessivamente — a última prorrogação localizada, de 180 dias, é de dezembro de 2024. A reportagem da IstoÉ registra as críticas de objeto indefinido e de acúmulo das funções de investigar e julgar.',
+      'Instaurado pelo próprio tribunal, sem pedido do Ministério Público, com relator designado sem sorteio, para apurar ataques à própria Corte. Tramitou sob sigilo e foi prorrogado sucessivamente — a última prorrogação localizada, de 180 dias, é de dezembro de 2024. A reportagem da IstoÉ registra as críticas de objeto indefinido e de acúmulo das funções de investigar e julgar. Em 9 de setembro de 2026, o presidente do STF, Edson Fachin, revogou por portaria a designação de Alexandre de Moraes para conduzir o inquérito; segundo a Gazeta do Povo, a Presidência passou a analisar os fatos e a enviar os autos à PGR, as ações penais com denúncia já recebida continuaram com Moraes e os atos anteriores foram preservados. Em 9 de outubro, segundo o SBT News, Fachin disse que arquivará o inquérito depois de examinar 104 procedimentos vinculados. Em 27 de outubro, segundo a Agência Brasil, arquivou três investigações, contra Eduardo Bolsonaro, Silas Malafaia e Guilherme Fiuza, as duas últimas com parecer da PGR pelo arquivamento.',
     response:
-      'O Plenário do STF validou o inquérito em 2020, no julgamento da ADPF 572.',
-    institutions: ['STF'],
-    status: 'em-curso',
+      'O Plenário do STF validou o inquérito em 2020, no julgamento da ADPF 572. Fachin fundamentou a revogação da designação no mesmo modelo validado na ADPF 572, segundo o qual o presidente do STF pode encerrar a delegação a qualquer tempo. As reportagens consultadas não trazem manifestação de Moraes sobre a retirada da relatoria.',
+    institutions: ['STF', 'PGR'],
+    status: 'revisado',
     cases: ['E3', 'E2', 'E5'],
     sources: [
       { outlet: 'STF (oficial)', url: 'https://noticias.stf.jus.br/postsnoticias/stf-prorroga-inquerito-das-fake-news-por-180-dias/' },
       { outlet: 'Correio da Manhã', url: 'https://www.correiodamanha.com.br/politica/2024/12/173443-moraes-da-mais-180-dias-para-inquerito-das-fake-news.html' },
       { outlet: 'IstoÉ', url: 'https://istoe.com.br/os-seis-anos-do-inquerito-das-fake-news-e-o-comportamento-do-stf' },
+      { outlet: 'Gazeta do Povo', url: 'https://www.gazetadopovo.com.br/republica/fachin-tira-moraes-da-relatoria-do-inquerito-das-fake-news/' },
+      { outlet: 'SBT News', url: 'https://sbtnews.sbt.com.br/noticia/politica/fachin-se-compromete-a-arquivar-inquerito-das-fake-news' },
+      { outlet: 'Agência Brasil', url: 'https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/fachin-arquiva-tres-investigacoes-do-inquerito-das-fake-news' },
     ],
   },
 ]
 
-export const UPDATED_AT = '28 de outubro de 2026'
+export const UPDATED_AT = '29 de outubro de 2026'
