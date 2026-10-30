@@ -1,0 +1,452 @@
+{
+  "linhagem": [
+    {
+      "ref": "Juan J. Linz, The Breakdown of Democratic Regimes (1978)",
+      "papel": "Origem dos quatro indicadores de comportamento autoritário: a distinção entre oposição leal, semileal e desleal."
+    },
+    {
+      "ref": "Steven Levitsky e Lucan Way, Competitive Authoritarianism (2010)",
+      "papel": "Conceito de autoritarismo competitivo: eleições existem, mas deixam de ser justas. Base do estágio 5 da escala."
+    },
+    {
+      "ref": "Steven Levitsky e Daniel Ziblatt, Como as Democracias Morrem (2018)",
+      "papel": "Roteiro usado pelo projeto: os quatro indicadores, a captura dos árbitros, as grades de proteção (tolerância mútua e reserva institucional) e o jogo duro constitucional."
+    },
+    {
+      "ref": "Nancy Bermeo, On Democratic Backsliding (2016)",
+      "papel": "Formas modernas de retrocesso: engrandecimento do Executivo, manipulação estratégica de eleições e golpes promissórios. Fundamenta os códigos A e F."
+    },
+    {
+      "ref": "Tom Ginsburg e Aziz Huq, How to Save a Constitutional Democracy (2018)",
+      "papel": "Diagnóstico de erosão por etapas a partir de eleições competitivas, liberdades de expressão e associação e Estado de direito."
+    },
+    {
+      "ref": "Kim Lane Scheppele, Autocratic Legalism (2018); Ozan Varol, Stealth Authoritarianism (2015)",
+      "papel": "Erosão por meios formalmente legais. Fundamenta os códigos de jogo duro constitucional, captura por via legal e medidas seletivas."
+    }
+  ],
+  "aviso": "A estrutura das dimensões vem dessa literatura; as gravidades, os multiplicadores de situação, os tetos e a regra de soma são construção editorial do projeto, documentada no README. Os nomes de variáveis do V-Dem seguem o codebook das versões 14 e 15; confira no codebook vigente antes de comparar.",
+  "mapeamento": [
+    {
+      "dimensao": "regras",
+      "vdem": [
+        "v2elfrfair (eleições livres e justas)",
+        "v2exrescon (Executivo respeita a Constituição)",
+        "v2juhccomp (cumprimento das decisões da corte superior)",
+        "v2elembaut (autonomia do órgão eleitoral)"
+      ],
+      "wjp": [
+        "1.6 Transição legal do poder",
+        "1.2 Limites ao governo pelo Judiciário"
+      ]
+    },
+    {
+      "dimensao": "legitimidade",
+      "vdem": [
+        "v2cacamps (polarização política)",
+        "v2smpolhate (discurso de ódio de partidos)"
+      ],
+      "wjp": [
+        "Sem fator direto; ver 1.5 Controles não governamentais"
+      ]
+    },
+    {
+      "dimensao": "violencia",
+      "vdem": [
+        "v2caviol (violência política)",
+        "v2elintim (intimidação pelo governo em eleições)",
+        "v2elpeace (violência eleitoral por outros atores)"
+      ],
+      "wjp": [
+        "5.3 As pessoas não recorrem à violência"
+      ]
+    },
+    {
+      "dimensao": "liberdades",
+      "vdem": [
+        "v2mecenefm (censura governamental à mídia)",
+        "v2meharjrn (assédio a jornalistas)",
+        "v2mecenefi (censura na internet)",
+        "v2cldiscm e v2cldiscw (liberdade de discussão)",
+        "v2caassemb (liberdade de reunião)",
+        "v2csreprss (repressão a organizações civis)"
+      ],
+      "wjp": [
+        "4.4 Liberdade de opinião e expressão",
+        "4.7 Liberdade de reunião e associação",
+        "4.6 Proteção contra interferência arbitrária na privacidade"
+      ]
+    },
+    {
+      "dimensao": "arbitros",
+      "vdem": [
+        "v2juhcind (independência da corte superior)",
+        "v2juncind (independência das cortes inferiores)",
+        "v2jupack (empacotamento de cortes)",
+        "v2jupurge (expurgos judiciais)",
+        "v2juaccnt (responsabilização de juízes)"
+      ],
+      "wjp": [
+        "1.2 Limites ao governo pelo Judiciário",
+        "8.6 Justiça criminal livre de influência indevida do governo"
+      ]
+    },
+    {
+      "dimensao": "reserva",
+      "vdem": [
+        "v2lginvstp (Legislativo investiga o Executivo na prática)",
+        "v2lgqstexp (Legislativo questiona autoridades na prática)",
+        "v2x_horacc (prestação de contas horizontal)",
+        "v2exbribe (suborno e corrupção no Executivo)"
+      ],
+      "wjp": [
+        "1.1 Limites ao governo pelo Legislativo",
+        "1.3 Auditoria e controle independentes",
+        "1.4 Sanção por má conduta de agentes públicos"
+      ]
+    }
+  ],
+  "comparaveis": [
+    {
+      "nome": "V-Dem (Varieties of Democracy)",
+      "organizacao": "V-Dem Institute, Universidade de Gotemburgo",
+      "url": "https://v-dem.net/",
+      "descricao": "Centenas de indicadores codificados por especialistas, com intervalos de confiança; índices de democracia liberal, eleitoral, participativa; identifica episódios de autocratização. O padrão acadêmico."
+    },
+    {
+      "nome": "Freedom in the World",
+      "organizacao": "Freedom House",
+      "url": "https://freedomhouse.org/report/freedom-world",
+      "descricao": "Direitos políticos e liberdades civis, de 0 a 100; países classificados como livres, parcialmente livres ou não livres."
+    },
+    {
+      "nome": "Democracy Index",
+      "organizacao": "Economist Intelligence Unit",
+      "url": "https://www.eiu.com/n/campaigns/democracy-index/",
+      "descricao": "Sessenta indicadores em cinco categorias; democracia plena, imperfeita, regime híbrido ou autoritário."
+    },
+    {
+      "nome": "Rule of Law Index",
+      "organizacao": "World Justice Project",
+      "url": "https://worldjusticeproject.org/rule-of-law-index/",
+      "descricao": "Limites ao poder do governo, corrupção, direitos fundamentais, justiça civil e criminal, a partir de pesquisas com a população e com especialistas."
+    },
+    {
+      "nome": "World Press Freedom Index",
+      "organizacao": "Repórteres Sem Fronteiras",
+      "url": "https://rsf.org/en/index",
+      "descricao": "Liberdade de imprensa por país, com contexto político, legal, econômico, sociocultural e de segurança."
+    },
+    {
+      "nome": "Democratic Erosion Event Dataset",
+      "organizacao": "Democratic Erosion Consortium (universidades dos EUA)",
+      "url": "https://www.democratic-erosion.org/",
+      "descricao": "Eventos de erosão democrática codificados a partir de notícias, por tipo; o parente mais próximo do método deste projeto."
+    }
+  ],
+  "verificadoEm": "2026-10-29",
+  "indices": [
+    {
+      "id": "vdem-libdem",
+      "nome": "V-Dem · Índice de Democracia Liberal (v2x_libdem)",
+      "organizacao": "V-Dem Institute (Universidade de Gotemburgo)",
+      "escala": "0 a 1 (1 = mais democrático)",
+      "url": "https://v-dem.net/publications/democracy-reports/",
+      "versao": "Democracy Reports 2019–2026 (datasets v9–v16); cada ano vem da versão daquele relatório, e a V-Dem recalcula a série a cada versão",
+      "serie": [
+        {
+          "ano": 2018,
+          "valor": 0.563,
+          "nota": "posição 53, dataset v9",
+          "fonte": "https://v-dem.net/documents/16/dr_2019_CoXPbb1.pdf"
+        },
+        {
+          "ano": 2019,
+          "valor": 0.508,
+          "nota": "posição 60, dataset v10",
+          "fonte": "https://v-dem.net/documents/14/dr_2020_dqumD5e.pdf"
+        },
+        {
+          "ano": 2020,
+          "valor": 0.51,
+          "nota": "posição 56, dataset v11",
+          "fonte": "https://v-dem.net/documents/12/dr_2021.pdf"
+        },
+        {
+          "ano": 2021,
+          "valor": 0.51,
+          "nota": "posição 59, dataset v12",
+          "fonte": "https://v-dem.net/documents/19/dr_2022_ipyOpLP.pdf"
+        },
+        {
+          "ano": 2022,
+          "valor": 0.53,
+          "nota": "posição 58, dataset v13",
+          "fonte": "https://v-dem.net/documents/29/V-dem_democracyreport2023_lowres.pdf"
+        },
+        {
+          "ano": 2023,
+          "valor": 0.69,
+          "nota": "posição 32, dataset v14",
+          "fonte": "https://v-dem.net/documents/43/v-dem_dr2024_lowres.pdf"
+        },
+        {
+          "ano": 2024,
+          "valor": 0.71,
+          "nota": "posição 29, dataset v15",
+          "fonte": "https://v-dem.net/documents/61/v-dem-dr__2025_lowres_v2.pdf"
+        },
+        {
+          "ano": 2025,
+          "valor": 0.7,
+          "nota": "posição 28, dataset v16",
+          "fonte": "https://v-dem.net/documents/75/V-Dem_Institute_Democracy_Report_2026_lowres.pdf"
+        }
+      ]
+    },
+    {
+      "id": "vdem-polyarchy",
+      "nome": "V-Dem · Índice de Democracia Eleitoral (v2x_polyarchy)",
+      "organizacao": "V-Dem Institute (Universidade de Gotemburgo)",
+      "escala": "0 a 1 (1 = mais democrático)",
+      "url": "https://v-dem.net/publications/democracy-reports/",
+      "versao": "Democracy Reports 2019–2026 (datasets v9–v16); série heterogênea entre versões",
+      "serie": [
+        {
+          "ano": 2018,
+          "valor": 0.742,
+          "nota": "posição 48, dataset v9",
+          "fonte": "https://v-dem.net/publications/democracy-reports/"
+        },
+        {
+          "ano": 2019,
+          "valor": 0.674,
+          "nota": "posição 60, dataset v10",
+          "fonte": "https://v-dem.net/publications/democracy-reports/"
+        },
+        {
+          "ano": 2020,
+          "valor": 0.69,
+          "nota": "posição 56, dataset v11",
+          "fonte": "https://v-dem.net/publications/democracy-reports/"
+        },
+        {
+          "ano": 2021,
+          "valor": 0.66,
+          "nota": "posição 59, dataset v12",
+          "fonte": "https://v-dem.net/publications/democracy-reports/"
+        },
+        {
+          "ano": 2022,
+          "valor": 0.68,
+          "nota": "posição 58, dataset v13",
+          "fonte": "https://v-dem.net/publications/democracy-reports/"
+        },
+        {
+          "ano": 2023,
+          "valor": 0.78,
+          "nota": "posição 36, dataset v14",
+          "fonte": "https://v-dem.net/publications/democracy-reports/"
+        },
+        {
+          "ano": 2024,
+          "valor": 0.8,
+          "nota": "posição 30, dataset v15",
+          "fonte": "https://v-dem.net/publications/democracy-reports/"
+        },
+        {
+          "ano": 2025,
+          "valor": 0.78,
+          "nota": "posição 32, dataset v16",
+          "fonte": "https://v-dem.net/publications/democracy-reports/"
+        }
+      ]
+    },
+    {
+      "id": "freedom-house-fiw",
+      "nome": "Freedom House · Freedom in the World (pontuação total)",
+      "organizacao": "Freedom House",
+      "escala": "0 a 100 (100 = mais livre); status Free / Partly Free / Not Free",
+      "url": "https://freedomhouse.org/country/brazil/freedom-world/2026",
+      "versao": "edições 2018–2026; o ano é o da edição, que cobre o ano anterior",
+      "serie": [
+        {
+          "ano": 2018,
+          "valor": 78,
+          "nota": "edição 2018, eventos de 2017",
+          "fonte": "https://freedomhouse.org/country/brazil/freedom-world/2018"
+        },
+        {
+          "ano": 2019,
+          "valor": 75,
+          "nota": "edição 2019, eventos de 2018",
+          "fonte": "https://freedomhouse.org/country/brazil/freedom-world/2019"
+        },
+        {
+          "ano": 2020,
+          "valor": 75,
+          "nota": "edição 2020, eventos de 2019",
+          "fonte": "https://freedomhouse.org/country/brazil/freedom-world/2020"
+        },
+        {
+          "ano": 2021,
+          "valor": 74,
+          "nota": "edição 2021, eventos de 2020",
+          "fonte": "https://freedomhouse.org/country/brazil/freedom-world/2021"
+        },
+        {
+          "ano": 2022,
+          "valor": 73,
+          "nota": "edição 2022, eventos de 2021",
+          "fonte": "https://freedomhouse.org/country/brazil/freedom-world/2022"
+        },
+        {
+          "ano": 2023,
+          "valor": 72,
+          "nota": "edição 2023, eventos de 2022",
+          "fonte": "https://freedomhouse.org/country/brazil/freedom-world/2023"
+        },
+        {
+          "ano": 2024,
+          "valor": 72,
+          "nota": "edição 2024, eventos de 2023",
+          "fonte": "https://freedomhouse.org/country/brazil/freedom-world/2024"
+        },
+        {
+          "ano": 2025,
+          "valor": 72,
+          "nota": "edição 2025, eventos de 2024",
+          "fonte": "https://freedomhouse.org/country/brazil/freedom-world/2025"
+        },
+        {
+          "ano": 2026,
+          "valor": 73,
+          "nota": "edição 2026, relatório abreviado",
+          "fonte": "https://freedomhouse.org/countries/freedom-world/scores"
+        }
+      ]
+    },
+    {
+      "id": "wjp-rule-of-law",
+      "nome": "World Justice Project · Rule of Law Index (pontuação geral)",
+      "organizacao": "World Justice Project",
+      "escala": "0 a 1 (1 = maior adesão ao Estado de Direito)",
+      "url": "https://worldjusticeproject.org/rule-of-law-index/country/2026/Brazil",
+      "versao": "edições 2017–18 a 2026; CSV oficial; posições de 2023 e 2024 confirmadas em PDF, as demais calculadas a partir do CSV",
+      "serie": [
+        {
+          "ano": 2018,
+          "valor": 0.538,
+          "nota": "posição não confirmada em página",
+          "fonte": "https://worldjusticeproject.org/rule-of-law-index/country/2026/Brazil"
+        },
+        {
+          "ano": 2019,
+          "valor": 0.531,
+          "nota": "posição não confirmada em página",
+          "fonte": "https://worldjusticeproject.org/rule-of-law-index/country/2026/Brazil"
+        },
+        {
+          "ano": 2020,
+          "valor": 0.515,
+          "nota": "posição não confirmada em página",
+          "fonte": "https://worldjusticeproject.org/rule-of-law-index/country/2026/Brazil"
+        },
+        {
+          "ano": 2021,
+          "valor": 0.5,
+          "nota": "posição não confirmada em página",
+          "fonte": "https://worldjusticeproject.org/rule-of-law-index/country/2026/Brazil"
+        },
+        {
+          "ano": 2022,
+          "valor": 0.494,
+          "nota": "posição não confirmada em página",
+          "fonte": "https://worldjusticeproject.org/rule-of-law-index/country/2026/Brazil"
+        },
+        {
+          "ano": 2023,
+          "valor": 0.49,
+          "nota": "posição 83/142",
+          "fonte": "https://worldjusticeproject.org/rule-of-law-index/downloads/WJPInsights2023.pdf:"
+        },
+        {
+          "ano": 2024,
+          "valor": 0.497,
+          "nota": "posição 80/142",
+          "fonte": "https://worldjusticeproject.org/rule-of-law-index/downloads/WJPInsights2024.pdf:"
+        },
+        {
+          "ano": 2025,
+          "valor": 0.503,
+          "nota": "posição não confirmada em página",
+          "fonte": "https://worldjusticeproject.org/rule-of-law-index/country/2026/Brazil"
+        },
+        {
+          "ano": 2026,
+          "valor": 0.505,
+          "nota": "posição não confirmada em página",
+          "fonte": "https://worldjusticeproject.org/rule-of-law-index/country/2026/Brazil"
+        }
+      ]
+    },
+    {
+      "id": "rsf-press-freedom",
+      "nome": "Repórteres Sem Fronteiras · World Press Freedom Index",
+      "organizacao": "Reporters Without Borders (RSF)",
+      "escala": "Pontuação 0 a 100 (100 = mais livre); posição entre 180 países",
+      "url": "https://rsf.org/en/index",
+      "versao": "edições 2020–2026; a RSF mudou a metodologia de pontuação em 2022, então as pontuações anteriores não são comparáveis",
+      "serie": [
+        {
+          "ano": 2020,
+          "valor": 65.95,
+          "nota": "posição 107/180",
+          "fonte": "https://rsf.org/en/index?year=2020"
+        },
+        {
+          "ano": 2021,
+          "valor": 63.75,
+          "nota": "posição 111/180",
+          "fonte": "https://rsf.org/en/index?year=2021"
+        },
+        {
+          "ano": 2022,
+          "valor": 55.36,
+          "nota": "posição 110/180; metodologia nova a partir de 2022",
+          "fonte": "https://rsf.org/en/index?year=2022"
+        },
+        {
+          "ano": 2023,
+          "valor": 58.67,
+          "nota": "posição 92/180",
+          "fonte": "https://rsf.org/en/index?year=2023"
+        },
+        {
+          "ano": 2024,
+          "valor": 58.59,
+          "nota": "posição 82/180",
+          "fonte": "https://rsf.org/en/index?year=2024"
+        },
+        {
+          "ano": 2025,
+          "valor": 63.8,
+          "nota": "posição 63/180",
+          "fonte": "https://rsf.org/en/index?year=2025"
+        },
+        {
+          "ano": 2026,
+          "valor": 66.37,
+          "nota": "posição 52/180",
+          "fonte": "https://rsf.org/en/index"
+        }
+      ]
+    }
+  ],
+  "naoVerificados": [
+    {
+      "id": "eiu-democracy-index",
+      "motivo": "relatório mediante cadastro; não acessível ao coletor"
+    }
+  ]
+}

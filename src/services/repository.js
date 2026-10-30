@@ -3,7 +3,7 @@
 // quem lê arquivos (Node) ou importa JSON (site) injeta os documentos aqui.
 import { createModel } from './model.js'
 
-export const COLLECTIONS = ['ocorrencias', 'tabela', 'metodo', 'estagios', 'notas', 'historia']
+export const COLLECTIONS = ['ocorrencias', 'tabela', 'metodo', 'estagios', 'notas', 'historia', 'comparaveis']
 
 export function createRepository(docs) {
   for (const c of COLLECTIONS) if (!docs[c] || typeof docs[c] !== 'object') throw new Error(`coleção "${c}" ausente no banco`)
@@ -17,6 +17,7 @@ export function createRepository(docs) {
     levels: docs.estagios.levels,
     notes: docs.notas.notes,
     history: docs.historia.cases,
+    comparables: docs.comparaveis,
     model,
   })
 }

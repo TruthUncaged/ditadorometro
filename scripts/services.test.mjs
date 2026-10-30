@@ -53,6 +53,8 @@ test('JSON inválido ou sem lista é recusado sem executar nada', () => {
 
 test('repositório exige todas as coleções', () => {
   assert.throws(() => createRepository({ ocorrencias: { items: [] } }), /coleção/)
+  assert.ok(db.comparables.mapeamento.length === model.indicators.length)
+  assert.ok(db.comparables.mapeamento.every((m) => model.indicators.some((i) => i.id === m.dimensao)))
 })
 
 // ---------- cálculo ----------

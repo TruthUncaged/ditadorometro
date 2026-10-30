@@ -1,5 +1,6 @@
 // Metodologia: recebe o modelo, as notas e a cobertura por props.
-export default function Method({ dimensions, status, powers, notes, coverage }) {
+export default function Method({ dimensions, status, powers, notes, coverage, comparables }) {
+  const dimName = Object.fromEntries(dimensions.map((d) => [d.id, d.short]))
   const { byPower, byYear } = coverage
   const fmt = (x) => x.toFixed(1).replace('.', ',')
   return (
@@ -60,6 +61,77 @@ export default function Method({ dimensions, status, powers, notes, coverage }) 
             O índice é uma ferramenta editorial, não uma medição científica. A classificação de cada caso está
             aberta e pode ser contestada; os critérios valem para qualquer pessoa, partido ou Poder.
           </p>
+
+          <h3>Linhagem e comparáveis</h3>
+          <p>
+            A estrutura das dimensões vem de uma literatura conhecida; as gravidades, os multiplicadores, os tetos e a
+            regra de soma são construção editorial do projeto. Para quem quiser comparar, a tabela aponta, para cada
+            dimensão, os indicadores correspondentes de dois índices internacionais de referência.
+          </p>
+          <ul className="lineage">
+            {comparables.linhagem.map((l) => (
+              <li key={l.ref}>
+                <strong>{l.ref}.</strong> {l.papel}
+              </li>
+            ))}
+          </ul>
+          <div className="table-scroll" role="region" aria-label="Mapeamento para índices internacionais" tabIndex={0}>
+            <table className="weights mapping">
+              <caption>Dimensão do Ditadorômetro e indicadores correspondentes</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Dimensão</th>
+                  <th scope="col">V-Dem (variáveis)</th>
+                  <th scope="col">WJP Rule of Law (fatores)</th>
+                </tr>
+              </thead>
+              <tbody>
+                {comparables.mapeamento.map((m) => (
+                  <tr key={m.dimensao}>
+                    <th scope="row">{dimName[m.dimensao]}</th>
+                    <td>{m.vdem.join('; ')}</td>
+                    <td>{m.wjp.join('; ')}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="legal__note">{comparables.aviso}</p>
+
+          {comparables.indices.length > 0 && (
+            <>
+              <h3>O Brasil nos índices internacionais</h3>
+              <p>
+                Contexto, não parte do cálculo: avaliações externas julgam os mesmos fatos que o registro documenta, e
+                por isso entram só como referência (código N5). Valores lidos nas páginas oficiais em{' '}
+                {comparables.verificadoEm}.
+              </p>
+              <div className="table-scroll" role="region" aria-label="Índices internacionais" tabIndex={0}>
+                <table className="weights mapping">
+                  <caption>Séries recentes do Brasil</caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">Índice</th>
+                      <th scope="col">Escala</th>
+                      <th scope="col">Série</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {comparables.indices.map((i) => (
+                      <tr key={i.id}>
+                        <th scope="row">
+                          <a href={i.url} target="_blank" rel="noopener noreferrer">{i.nome}</a>
+                          <span className="method-cap"> {i.organizacao}{i.versao ? ` · ${i.versao}` : ''}</span>
+                        </th>
+                        <td>{i.escala}</td>
+                        <td>{i.serie.map((s) => `${s.ano}: ${s.valor}${s.nota ? ` (${s.nota})` : ''}`).join(' · ')}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </>
+          )}
 
           <h3>O que o registro cobre</h3>
           <p>

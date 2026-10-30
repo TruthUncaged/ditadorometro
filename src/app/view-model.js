@@ -19,6 +19,7 @@ export function buildSiteModel(db) {
     levels: db.levels,
     notes: db.notes,
     history: db.history,
+    comparables: db.comparables,
     coverage: coverageStats(db.items, db.model),
   }
 }

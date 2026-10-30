@@ -7,6 +7,7 @@ import metodo from '../../db/metodo.json'
 import estagios from '../../db/estagios.json'
 import notas from '../../db/notas.json'
 import historia from '../../db/historia.json'
+import comparaveis from '../../db/comparaveis.json'
 import { createRepository } from '../services/repository.js'
 
-export const db = createRepository({ ocorrencias, tabela, metodo, estagios, notas, historia })
+export const db = createRepository({ ocorrencias, tabela, metodo, estagios, notas, historia, comparaveis })

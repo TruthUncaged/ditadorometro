@@ -15,7 +15,7 @@ import { buildSiteModel } from './app/view-model.js'
 // partes dele aos componentes, que não conhecem o banco nem os serviços.
 export default function App() {
   const site = useMemo(() => buildSiteModel(db), [])
-  const { score, level, dimensions, items, updatedAt, model, rubric, levels, notes, history, coverage } = site
+  const { score, level, dimensions, items, updatedAt, model, rubric, levels, notes, history, coverage, comparables } = site
 
   return (
     <>
@@ -59,7 +59,7 @@ export default function App() {
         <NewsRegister items={items} model={model} />
         <Rubric items={items} rubric={rubric} indicators={model.indicators} />
         <History cases={history} levels={levels} />
-        <Method dimensions={dimensions} status={model.status} powers={model.powers} notes={notes} coverage={coverage} />
+        <Method dimensions={dimensions} status={model.status} powers={model.powers} notes={notes} coverage={coverage} comparables={comparables} />
         <About />
       </main>
       <footer className="footer">

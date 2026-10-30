@@ -156,6 +156,40 @@ node scripts/saturacao.mjs                  # fatores 0,6, 0,8, 1 e 1,2 sobre os
 node scripts/saturacao.mjs regras=10 violencia=8   # tetos específicos
 ```
 
+### Linhagem e comparáveis
+
+A estrutura das dimensões vem de uma literatura conhecida; as gravidades, os multiplicadores de situação, os tetos
+e a regra de soma são construção editorial do projeto, documentada acima.
+
+| Referência | O que o projeto toma dela |
+| --- | --- |
+| Juan J. Linz, *The Breakdown of Democratic Regimes* (1978) | Origem dos quatro indicadores de comportamento autoritário: oposição leal, semileal e desleal. |
+| Levitsky e Way, *Competitive Authoritarianism* (2010) | Autoritarismo competitivo: eleições existem, mas deixam de ser justas (estágio 5). |
+| Levitsky e Ziblatt, *Como as Democracias Morrem* (2018) | O roteiro: quatro indicadores, captura dos árbitros, grades de proteção, jogo duro constitucional. |
+| Nancy Bermeo, "On Democratic Backsliding" (2016) | Engrandecimento do Executivo, manipulação de eleições, golpes promissórios (códigos A e F). |
+| Ginsburg e Huq, *How to Save a Constitutional Democracy* (2018) | Diagnóstico de erosão por etapas: eleições, liberdades de expressão e associação, Estado de direito. |
+| Scheppele, "Autocratic Legalism" (2018); Varol, "Stealth Authoritarianism" (2015) | Erosão por meios formalmente legais (jogo duro, captura por via legal, medidas seletivas). |
+
+Índices quantitativos com dados anuais sobre o Brasil, para comparação: **V-Dem** (Universidade de Gotemburgo; o
+padrão acadêmico), **Freedom in the World** (Freedom House), **Democracy Index** (EIU), **Rule of Law Index**
+(World Justice Project), **World Press Freedom Index** (RSF) e o **Democratic Erosion Event Dataset** (consórcio de
+universidades, que codifica eventos a partir de notícias e é o parente mais próximo deste método).
+
+Mapeamento indicativo de cada dimensão para os indicadores correspondentes (variáveis do codebook do V-Dem, versões
+14 e 15; fatores do WJP):
+
+| Dimensão | V-Dem | WJP |
+| --- | --- | --- |
+| Regras do jogo | v2elfrfair, v2exrescon, v2juhccomp, v2elembaut | 1.6 transição legal do poder; 1.2 limites pelo Judiciário |
+| Legitimidade | v2cacamps, v2smpolhate | sem fator direto (1.5 controles não governamentais) |
+| Violência | v2caviol, v2elintim, v2elpeace | 5.3 as pessoas não recorrem à violência |
+| Liberdades | v2mecenefm, v2meharjrn, v2mecenefi, v2cldiscm/v2cldiscw, v2caassemb, v2csreprss | 4.4 expressão; 4.7 reunião e associação; 4.6 privacidade |
+| Árbitros | v2juhcind, v2juncind, v2jupack, v2jupurge, v2juaccnt | 1.2 limites pelo Judiciário; 8.6 justiça criminal sem influência do governo |
+| Impunidade | v2lginvstp, v2lgqstexp, v2x_horacc, v2exbribe | 1.1 limites pelo Legislativo; 1.3 auditoria; 1.4 sanção a agentes |
+
+Tudo isso está em `db/comparaveis.json` e aparece na seção de método do site, junto com as séries recentes do Brasil
+nesses índices, lidas nas páginas oficiais e exibidas como contexto (código N5), sem entrar no cálculo.
+
 ### Auditoria de imparcialidade
 
 Em 28 de outubro de 2026, três auditores independentes revisaram as regras e o registro: um com o mandato de provar
@@ -191,7 +225,8 @@ qualitativos por dimensão, além da média; campo `actors[]` separado da arena.
 │   ├── metodo.json               esferas, dimensões, situações e multiplicadores, tetos, regra da 2ª dimensão
 │   ├── estagios.json             os sete estágios
 │   ├── notas.json                notas de método (recalibrações)
-│   └── historia.json             precedentes históricos
+│   ├── historia.json             precedentes históricos
+│   └── comparaveis.json          linhagem do método, mapeamento para V-Dem e WJP, séries do Brasil em índices internacionais
 ├── src/
 │   ├── services/                 camada de domínio, pura e testável (sem React, sem IO)
 │   │   ├── model.js              monta o modelo de cálculo a partir de metodo.json e tabela.json
