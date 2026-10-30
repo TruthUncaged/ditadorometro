@@ -375,6 +375,14 @@
       "type": "Pedido de medida à Justiça ainda não decidido",
       "book": "Pedir ao árbitro é o caminho legal; pontua o que o árbitro decide, não o que a parte pede.",
       "example": "Campanha pede ao tribunal eleitoral a remoção de publicações; o pedido aguarda decisão."
+    },
+    {
+      "code": "N5",
+      "dimension": null,
+      "gravity": 0,
+      "type": "Avaliação ou medida internacional sobre instituições brasileiras (índice, relatório, sanção, nota diplomática)",
+      "book": "O índice mede condutas documentadas das instituições brasileiras; o juízo de terceiros sobre essas condutas é contexto, não fato novo.",
+      "example": "Índice internacional de democracia rebaixa a classificação do país; governo estrangeiro sanciona uma autoridade; organização publica relatório sobre liberdade de imprensa."
     }
   ]
 }

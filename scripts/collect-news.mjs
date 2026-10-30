@@ -58,6 +58,14 @@ const OUTLETS = {
     'O Antagonista': 'https://oantagonista.com.br/feed/',
     'Crusoé': 'https://crusoe.com.br/feed/',
   },
+  'Imprensa internacional de referência': {
+    'BBC News Brasil': 'https://feeds.bbci.co.uk/portuguese/rss.xml',
+    'The Guardian · Americas': 'https://www.theguardian.com/world/americas/rss',
+    'The New York Times · Americas': 'https://rss.nytimes.com/services/xml/rss/nyt/Americas.xml',
+    'El País Brasil': 'https://feeds.elpais.com/mrss-s/pages/ep/site/brasil.elpais.com/portada',
+    'Deutsche Welle Brasil': 'https://rss.dw.com/xml/rss-br-all',
+    'The Economist · The Americas': 'https://www.economist.com/the-americas/rss.xml',
+  },
   'Entidades (parte interessada em casos de imprensa)': {
     'Fenaj': 'https://fenaj.org.br/feed/',
     'ANJ': 'https://www.anj.org.br/feed/',

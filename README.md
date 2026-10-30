@@ -86,7 +86,7 @@ estado das instituições (os “árbitros” e as “grades de proteção”). 
 
 ## Tabela de classificação
 
-`db/tabela.json` traz 47 tipos genéricos de caso, pensados para classificar qualquer ocorrência futura com o
+`db/tabela.json` traz 48 tipos genéricos de caso, pensados para classificar qualquer ocorrência futura com o
 mesmo critério, independentemente de partido ou Poder. Cada código tem dimensão, gravidade (0 a 3; os códigos N valem
 0), a passagem correspondente do livro e um exemplo genérico ou histórico, nunca o caso concreto que motivou o
 código. Todo código descreve uma **conduta, não um ator**: para cada conduta típica de tribunais ou do Ministério
@@ -102,7 +102,7 @@ situação.
 | D1–D12 | Liberdades | Remoção de conteúdo sem decisão fundamentada; suspensão de plataforma; busca e apreensão por opinião; órgão do Estado para definir a verdade; assédio judicial a jornalistas; medida seletiva contra opositor; retaliação administrativa a crítico; restrição a protesto; vigilância de críticos. |
 | E1–E10 | Árbitros | Conflito de interesses de julgador; tribunal investiga e julga; inquérito de ofício sem prazo; nomeação de advogado pessoal ou subordinado; empacotamento; expurgos; vazamento seletivo; ameaça a tribunais pelo conteúdo de decisões. |
 | F1–F8 | Impunidade | CPI com assinaturas não instalada; arquivamento sem mérito decidido; citado decide sobre o próprio caso; decisão individual sem referendo; jogo duro constitucional; Executivo obstrui fiscalização; Casa legislativa blinda membros. |
-| N1–N4 | Contexto (não pontua) | Promessa não cumprida; declaração falsa de autoridade; irregularidade investigada pelo caminho normal; pedido à Justiça ainda não decidido. |
+| N1–N5 | Contexto (não pontua) | Promessa não cumprida; declaração falsa de autoridade; irregularidade investigada pelo caminho normal; pedido à Justiça ainda não decidido; avaliação ou medida internacional sobre instituições brasileiras. |
 
 Os códigos N valem zero de propósito: o livro trata de erosão das instituições, não de mau governo. Promessas
 quebradas e declarações falsas ficam registradas como contexto e podem ganhar peso, se assim se decidir, alterando a
@@ -378,7 +378,13 @@ node scripts/check-links.mjs links.md           # confere se as fontes do regist
 
 - Cada ocorrência precisa de pelo menos duas fontes de linhas editoriais diferentes, ou uma fonte oficial e um
   veículo, pelos grupos definidos na regra 4 de `.github/prompts/atualizar-registro.md` (oficial, generalista,
-  especializado, linha declarada à esquerda, linha declarada à direita). Sites partidários, entidades que são parte
+  especializado, imprensa internacional de referência, linha declarada à esquerda, linha declarada à direita).
+  Reportagens de veículos como The New York Times, The Wall Street Journal, The Washington Post, Financial Times,
+  The Economist, Reuters, AP e BBC valem como fonte de fato e formam par com qualquer veículo brasileiro de outro
+  grupo; editoriais e colunas deles continuam sendo opinião.
+- Avaliações e medidas internacionais sobre as instituições brasileiras (índices de democracia, relatórios, sanções)
+  entram no registro como contexto (código N5), sem pontuar: o índice mede condutas documentadas, e um juízo
+  externo sobre as mesmas condutas não é fato novo. Sites partidários, entidades que são parte
   no caso e fonte oficial do próprio órgão citado nunca são a única base.
 - Toda ocorrência traz a posição dos citados (`response`).
 - Relatar o que as fontes dizem, sem concluir o que elas não concluíram, sem adjetivos de juízo e sem frases que

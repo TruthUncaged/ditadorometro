@@ -25,7 +25,9 @@ Todos os verificadores conferem tudo, mas cada um aprofunda o seu **foco**, info
 
 - **fontes** — abra com WebFetch todas as URLs de cada ocorrência nova ou alterada. Cada afirmação do `summary`
   e do `response` precisa estar na página. Confira datas, números, nomes e cargos. Verifique se há duas fontes
-  válidas pelos grupos da regra 4 (oficial, generalista, especializado, linha declarada).
+  válidas pelos grupos da regra 4 (oficial, generalista, especializado, imprensa internacional de referência,
+  linha declarada). Uma página internacional atrás de paywall que você não conseguir abrir não conta como
+  verificada: peça a troca por cobertura acessível do mesmo fato.
 
   **Afirmação por afirmação, não só por ocorrência:** para cada frase, anote qual fonte a sustenta. Se a única
   sustentação de uma afirmação for um veículo de linha editorial declarada (à esquerda ou à direita), uma entidade
@@ -55,7 +57,7 @@ Todos os verificadores conferem tudo, mas cada um aprofunda o seu **foco**, info
 Para **toda** mudança que não seja remoção, calcule os pontos de forma independente: para cada dimensão, tome a
 maior gravidade entre os códigos daquela dimensão; ordene as dimensões da mais grave para a menos grave; a primeira
 vale a gravidade inteira, a segunda vale metade, e a partir da terceira não soma; multiplique o total pelo
-multiplicador do `status`. Códigos de contexto (N1–N4) valem 0.
+multiplicador do `status`. Códigos de contexto (N1–N5) valem 0.
 
 ## Votos
 

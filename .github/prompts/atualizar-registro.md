@@ -28,13 +28,20 @@ apontadas em execuções anteriores).
      O Povo, Zero Hora, Diário de Pernambuco, Gazeta do Povo na cobertura noticiosa).
    - **Especializados:** Conjur, JOTA, Migalhas (jurídico); Teletime, Núcleo (tecnologia); Aos Fatos, Lupa
      (checagem).
+   - **Imprensa internacional de referência:** The New York Times, The Wall Street Journal, The Washington Post,
+     Financial Times, The Economist, The Guardian, BBC (inclusive BBC News Brasil), Reuters, Associated Press,
+     AFP, Bloomberg, Le Monde, El País, Deutsche Welle, The New Yorker, Foreign Policy. Valem como grupo
+     próprio: uma reportagem internacional mais uma brasileira de qualquer outro grupo formam par. Editoriais e
+     colunas de opinião desses veículos continuam sendo opinião, não fato. Só cite uma página que você conseguiu
+     abrir e ler com WebFetch; se o texto estiver atrás de paywall, prefira a cobertura da mesma agência ou
+     veículo que esteja acessível (Reuters, AP, BBC costumam estar).
    - **Linha editorial declarada à esquerda:** CartaCapital, Brasil de Fato, Intercept Brasil, Revista Fórum,
      Diário do Centro do Mundo, Brasil 247, ICL Notícias, Opera Mundi, Mídia Ninja, O Cafezinho.
    - **Linha editorial declarada à direita:** Revista Oeste, O Antagonista, Crusoé, Pleno.News, Jornal da Cidade
      Online, Terra Brasil Notícias, Brasil Sem Medo, Renova Mídia, Gazeta do Povo nas seções de opinião.
 
-   Valem como par: oficial + qualquer reportagem; duas reportagens de grupos diferentes; duas da imprensa
-   generalista de veículos distintos. **Não valem como par:** duas fontes do mesmo grupo de linha declarada; uma
+   Valem como par: oficial + qualquer reportagem; duas reportagens de grupos diferentes (inclusive internacional
+   + brasileira); duas da imprensa generalista de veículos distintos. **Não valem como par:** duas fontes do mesmo grupo de linha declarada; uma
    fonte de linha declarada com uma fonte oficial do órgão cuja conduta é o objeto da ocorrência. Fonte oficial do
    órgão citado (ou veículo público mantido por ele) prova que o ato existe, mas vale como “outro lado”, não como
    segunda fonte independente, quando a ocorrência trata da conduta desse órgão. Sites de partidos, de campanhas,
@@ -107,7 +114,9 @@ com o vocabulário de quem critica o ato e outra com o vocabulário de quem o de
 
 Inclua um caso novo somente se:
 
-- for um fato relevante para pelo menos um código da tabela (incluindo os de contexto N1–N4);
+- for um fato relevante para pelo menos um código da tabela (incluindo os de contexto N1–N5; avaliações e medidas
+  internacionais sobre instituições brasileiras, como índices, relatórios e sanções, entram como N5, registradas
+  sem pontuar: o índice mede condutas, não juízos de terceiros);
 - cumprir as regras de fontes acima;
 - não duplicar uma ocorrência existente (se for desdobramento, atualize a existente).
 
@@ -131,7 +140,7 @@ Siga o formato das existentes:
   `judiciario` (inclui MP e polícias judiciárias) ou `eleicoes` (campanhas, partidos, candidatos e militantes).
 - `cases`: os códigos da tabela que se aplicam. Use só o que o fato sustenta; lembre que um fato pode receber códigos
   de dimensões diferentes (por exemplo E1 e F5 numa mesma decisão). Pedido de parte à Justiça ainda não decidido é
-  `N4`, não um código que pontua.
+  `N4`, e avaliação ou medida internacional é `N5`; nenhum dos dois pontua.
 - `status`: escolha em `status` de `db/metodo.json` a situação atual. A linha de base é `consumado` (ato de
   Estado cumprido) ou `em-curso` (em apuração). `sem-apuracao` só com dever legal de apurar e inércia documentada
   no `summary`; `arquivamento` só depois de decisão de arquivar ou anular sem exame do mérito; `revisado` só quando
