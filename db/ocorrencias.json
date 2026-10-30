@@ -7,7 +7,7 @@
       "when": "25 a 28 out. 2026",
       "power": "eleicoes",
       "title": "Derrotado no segundo turno, Flávio Bolsonaro acusa fraude sem apresentar provas e, já nos EUA, divulga carta em que se declara “verdadeiro presidente eleito”, termo depois trocado por “líder do Brasil”",
-      "summary": "Na noite de 25 de outubro, Flávio Bolsonaro disse que não aceitaria “que a regra do jogo tenha sido mudada em cima do jogo”, em referência à decisão do ministro Cristiano Zanin que prorrogou a votação até as 19h. Em vídeo no dia seguinte, afirmou que “não fui eu que perdi, foi o sistema que ganhou” e que a democracia “faliu”, disse que Lula usou dinheiro público para fazer “a maior compra de votos da história” e anunciou que pedirá a cassação da chapa vencedora. Em 28 de outubro, depois de chegar aos Estados Unidos, divulgou uma carta em que, segundo a Agência Brasil, se declarava o “verdadeiro presidente eleito do país”; cerca de meia hora depois, o termo foi trocado por “líder do Brasil”. Na versão publicada pela Gazeta do Povo, ele afirma ter visto “uma fraude eleitoral se concretizar”, diz que vai liderar a oposição a partir do exterior, agradece a Javier Milei e a Donald Trump e cita Juan Guaidó. As reportagens não registram provas apresentadas para as acusações; segundo a Agência Brasil, Lula teve 64 milhões de votos, e Flávio, pouco mais de 59 milhões.",
+      "summary": "Na noite de 25 de outubro, Flávio Bolsonaro disse que não aceitaria “que a regra do jogo tenha sido mudada em cima do jogo”, em referência à decisão do ministro Cristiano Zanin que prorrogou a votação até as 19h. Em vídeo no dia seguinte, afirmou que “não fui eu que perdi, foi o sistema que ganhou” e que a democracia “faliu”, disse que Lula usou dinheiro público para fazer “a maior compra de votos da história” e anunciou que pedirá a cassação da chapa vencedora. Em 28 de outubro, depois de chegar aos Estados Unidos, divulgou uma carta em que, segundo a Agência Brasil, se declarava o “verdadeiro presidente eleito do país”; cerca de meia hora depois, o termo foi trocado por “líder do Brasil”. Na versão publicada pela Gazeta do Povo, ele afirma ter visto “uma fraude eleitoral se concretizar”, diz que vai liderar a oposição a partir do exterior, agradece a Javier Milei e a Donald Trump e cita Juan Guaidó. As reportagens não registram provas apresentadas para as acusações; segundo a Agência Brasil, Lula teve 64 milhões de votos, e Flávio, pouco mais de 59 milhões. Em 29 de outubro, segundo a Gazeta do Povo, Donald Trump disse a jornalistas que a eleição no Brasil foi “uma vergonha”, afirmou que falaria com Lula e não respondeu quem considera o vencedor; segundo a Agência Brasil, União Brasil e MDB divulgaram notas afirmando que o resultado deve ser respeitado, e o governador Tarcísio de Freitas (Republicanos-SP) disse que “a eleição acabou e agora é preciso olhar para a frente”.",
       "response": "Flávio sustenta que a campanha de Lula cometeu abuso de poder político e econômico. O coordenador da campanha, senador Rogério Marinho (PL-RN), disse à Agência Brasil que “não há provas” de fraude, tratou a acusação como desabafo e atribuiu a troca de termos a “algum problema na confecção da carta”; o PL reconheceu o resultado. O cientista político Cláudio Couto, ouvido pelo Brasil de Fato, considera descabida a tese de que a prorrogação mudou as regras durante a disputa.",
       "institutions": [
         "TSE",
@@ -38,6 +38,46 @@
         {
           "outlet": "Brasil de Fato",
           "url": "https://www.brasildefato.com.br/2026/10/26/pf-apreende-passaporte-de-flavio-bolsonaro-que-volta-a-questionar-resultado-das-urnas/"
+        },
+        {
+          "outlet": "Gazeta do Povo",
+          "url": "https://www.gazetadopovo.com.br/mundo/trump-diz-que-eleicoes-no-brasil-foram-uma-vergonha/"
+        },
+        {
+          "outlet": "Agência Brasil",
+          "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/fuga-e-carta-golpista-ampliam-isolamento-de-flavio-bolsonaro"
+        }
+      ]
+    },
+    {
+      "id": "alcolumbre-indulto-anistia",
+      "sort": "2026-10-28",
+      "when": "28 e 29 out. 2026",
+      "power": "legislativo",
+      "title": "Presidente do Senado discute indulto ou anistia a Jair Bolsonaro em troca de apoio da direita à sua reeleição, segundo aliados; a contrapartida incluiria deixar de pressionar pelo impeachment de ministros do STF",
+      "summary": "Segundo reportagem da Folhapress publicada em 28 de outubro, Davi Alcolumbre (União-AP) planeja propor um indulto ou uma anistia a Jair Bolsonaro, condenado a 27 anos e 3 meses por tentativa de golpe de Estado e preso desde 2025, em troca do apoio da direita à sua reeleição para a presidência do Senado em fevereiro de 2027. De acordo com dois aliados ouvidos pela agência, ele pretende pedir a Lula um “perdão humanitário” depois que a eleição “decantar” e, se o presidente recusar, trabalhar pela aprovação de uma anistia no Congresso, modulada para alcançar só a parte penal, sem devolver a elegibilidade; a contrapartida seria o compromisso da direita de não pressionar pelo impeachment de ministros do STF e de se concentrar numa reforma do Judiciário. O Metrópoles registrou em 29 de outubro que, segundo interlocutores do senador, não há proposta definida nem acordo entre os envolvidos, e que integrantes do governo participam das conversas; a CNN Brasil informou que Alcolumbre tem defendido junto aos três Poderes uma “pacificação nacional” e que não há articulação fechada. Senadores do PL disseram ao Metrópoles que o acordo precisaria ser concluído ainda em 2026 para se converter em votos. A lei da dosimetria, que reduz as penas dos condenados pelo 8 de janeiro, está suspensa pelo STF desde maio e consta em ocorrência própria.",
+      "response": "Alcolumbre não se manifestou publicamente nas reportagens consultadas; segundo a Folhapress, o tema não foi tratado na conversa que ele teve com Lula em 26 de outubro. Lula já declarou ser contra beneficiar Bolsonaro, segundo o Metrópoles, e o STF anulou em 2023, por desvio de finalidade, a graça individual concedida a Daniel Silveira. A oposição cobra a votação do perdão ainda nesta legislatura e trabalha por candidatura própria (Rogério Marinho ou Tereza Cristina) contra Alcolumbre.",
+      "institutions": [
+        "Senado",
+        "Presidência da República",
+        "STF"
+      ],
+      "status": "declaracao",
+      "cases": [
+        "A7"
+      ],
+      "sources": [
+        {
+          "outlet": "O Tempo (Folhapress)",
+          "url": "https://www.otempo.com.br/politica/congresso/2026/10/28/alcolumbre-planeja-indulto-ou-anistia-a-bolsonaro-em-busca-de-votos-da-direita-para-se-reeleger"
+        },
+        {
+          "outlet": "Metrópoles",
+          "url": "https://www.metropoles.com/brasil/alcolumbre-busca-acordo-para-perdoar-bolsonaro-e-atrair-votos-no-senado"
+        },
+        {
+          "outlet": "CNN Brasil",
+          "url": "https://www.cnnbrasil.com.br/politica/alcolumbre-defende-pacificacao-e-considera-indulto-a-bolsonaro-e-anistia/"
         }
       ]
     },
@@ -116,11 +156,11 @@
     {
       "id": "flavio-passaporte",
       "sort": "2026-10-25",
-      "when": "25 out. 2026",
+      "when": "23 a 29 out. 2026",
       "power": "judiciario",
       "title": "Na noite da apuração, Moraes autoriza, a pedido da PF, a retenção dos passaportes de Flávio Bolsonaro",
-      "summary": "O pedido da Polícia Federal, de 16 páginas, foi assinado às 21h16 de 25 de outubro, sete minutos depois de o TSE oficializar a derrota de Flávio Bolsonaro (PL-RJ) no segundo turno. O ministro Alexandre de Moraes concedeu a medida na mesma noite, sem consulta prévia à Procuradoria-Geral da República, e ela foi cumprida na manhã seguinte. A PF citou um inquérito sigiloso sobre lavagem de dinheiro atribuída ao advogado Willer Tomaz, em que Flávio aparece como usuário master de uma conta de empresa de Tomaz em Portugal até maio de 2025, e uma declaração de Eduardo Bolsonaro, em 23 de outubro, de que seria a favor de o irmão deixar o país se perdesse a eleição. Segundo a PF, Tomaz está em Miami desde agosto. Flávio não entregou os documentos, e a PF cancelou os passaportes comum e diplomático em 27 de outubro. Segundo a CNN Brasil, ele cruzou para a Argentina com passaporte italiano e entrou nos Estados Unidos, por Miami, com o passaporte diplomático já cancelado; a Agência Brasil registrou que não havia saída formal do país.",
-      "response": "Flávio Bolsonaro contesta a base da decisão e pergunta se a medida seria tomada caso ele tivesse vencido; integrantes da campanha falam em retaliação política. O STF não informou quando a decisão, sob sigilo, foi assinada. As reportagens consultadas não trazem manifestação de Flávio ou da defesa sobre a viagem.",
+      "summary": "O pedido da Polícia Federal, de 16 páginas, foi assinado às 21h16 de 25 de outubro, sete minutos depois de o TSE oficializar a derrota de Flávio Bolsonaro (PL-RJ) no segundo turno. O ministro Alexandre de Moraes concedeu a medida na mesma noite, sem consulta prévia à Procuradoria-Geral da República, e ela foi cumprida na manhã seguinte. A PF citou um inquérito sigiloso sobre lavagem de dinheiro atribuída ao advogado Willer Tomaz, em que Flávio aparece como usuário master de uma conta de empresa de Tomaz em Portugal até maio de 2025, e uma declaração de Eduardo Bolsonaro, em 23 de outubro, de que seria a favor de o irmão deixar o país se perdesse a eleição. Segundo a PF, Tomaz está em Miami desde agosto. Flávio não entregou os documentos, e a PF cancelou os passaportes comum e diplomático em 27 de outubro. Segundo a CNN Brasil, ele cruzou para a Argentina com passaporte italiano e entrou nos Estados Unidos, por Miami, com o passaporte diplomático já cancelado; a Agência Brasil registrou que não havia saída formal do país. Em 23 de outubro, dois dias antes da votação, Moraes já havia determinado, segundo a Agência Brasil, o bloqueio de até R$ 6 bilhões de Willer Tomaz, a quebra de seus sigilos bancário, fiscal e cambial, a suspensão de seus passaportes e a paralisação das atividades de suas empresas, depois de a PF apontar que ele viajara a Miami após ser alvo de busca na Operação Sem Desconto; Flávio disse ter apenas relação pessoal com Tomaz. Em 29 de outubro, segundo a CNN Brasil, a defesa de Flávio anunciou que pedirá ao presidente do STF, Edson Fachin, a saída de Moraes da relatoria: por prevenção, por entender que o juiz natural seria André Mendonça, relator da Operação Sem Desconto, de onde a investigação derivou; e por suspeição, porque o relatório da PF cita uma empresa com cotas da mesma aeronave usada por Moraes, cedida no contrato do escritório de sua esposa com Daniel Vorcaro.",
+      "response": "Flávio Bolsonaro contesta a base da decisão e pergunta se a medida seria tomada caso ele tivesse vencido; integrantes da campanha falam em retaliação política. O STF não informou quando a decisão, sob sigilo, foi assinada. As reportagens consultadas não trazem manifestação de Flávio ou da defesa sobre a viagem, nem manifestação de Fachin ou do STF sobre os pedidos anunciados contra a relatoria de Moraes.",
       "institutions": [
         "STF",
         "Polícia Federal",
@@ -146,17 +186,25 @@
         {
           "outlet": "CNN Brasil",
           "url": "https://www.cnnbrasil.com.br/internacional/flavio-bolsonaro-entrou-nos-eua-com-passaporte-diplomatico-que-pf-cancelou/"
+        },
+        {
+          "outlet": "Agência Brasil",
+          "url": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/moraes-determina-bloqueio-de-ate-r-6-bilhoes-do-advogado-willer-tomaz"
+        },
+        {
+          "outlet": "CNN Brasil",
+          "url": "https://www.cnnbrasil.com.br/politica/flavio-pedira-ao-stf-que-moraes-saia-de-investigacao-sobre-willer-tomaz/"
         }
       ]
     },
     {
       "id": "zanin-prorrogacao",
       "sort": "2026-10-25",
-      "when": "25 out. 2026",
+      "when": "25 a 28 out. 2026",
       "power": "eleicoes",
       "title": "Por decisão individual, STF prorroga a votação do segundo turno até as 19h, a pedido da campanha de Lula, depois de o TSE não decidir sobre falhas no transporte",
-      "summary": "Em reclamação apresentada ao STF pela coligação de Lula, que apontou redução da frota de ônibus em cidades da Bahia e de São Paulo e descumprimento da ADPF 1.013 (transporte público gratuito no dia da eleição), o ministro Cristiano Zanin prorrogou a votação em duas horas em todas as seções do país; depois, restringiu a medida aos locais com problemas. O pedido havia sido feito antes ao TSE, cujo presidente, Nunes Marques, pediu esclarecimentos às prefeituras sem decidir até o fim do horário. Segundo a CNN Brasil, ministros do TSE viram na decisão interferência em atribuição do tribunal, mas descartaram um terceiro turno. Zanin foi advogado pessoal de Lula na Lava Jato.",
-      "response": "Especialistas ouvidos pela Conjur afirmam que a decisão estava dentro da competência do STF, por garantir uma decisão anterior da Corte, e que a omissão do TSE justificava a intervenção; Lenio Streck avaliou que Zanin decidiu fora de hora e foi além do pedido. Segundo a Conjur, 34,3 mil eleitores votaram depois das 17h, número que não muda o resultado. A campanha de Flávio Bolsonaro também havia pedido prorrogação ao TSE, por causa de chuvas em São Paulo e no Sul.",
+      "summary": "Em reclamação apresentada ao STF pela coligação de Lula, que apontou redução da frota de ônibus em cidades da Bahia e de São Paulo e descumprimento da ADPF 1.013 (transporte público gratuito no dia da eleição), o ministro Cristiano Zanin prorrogou a votação em duas horas em todas as seções do país; depois, restringiu a medida aos locais com problemas. O pedido havia sido feito antes ao TSE, cujo presidente, Nunes Marques, pediu esclarecimentos às prefeituras sem decidir até o fim do horário. Segundo a CNN Brasil, ministros do TSE viram na decisão interferência em atribuição do tribunal, mas descartaram um terceiro turno. Zanin foi advogado pessoal de Lula na Lava Jato. Na declaração de encerramento da apuração, em 25 de outubro, Nunes Marques disse que nenhuma norma autorizava a prorrogação, que milhares de urnas já estavam encerradas e não podiam ser reabertas e que “somente por este fato poderia ter havido comprometimento de toda a eleição brasileira”, segundo a Gazeta do Povo; ao confirmar o resultado, afirmou que “prorrogar uma eleição é possível, mas tem que ser pensada, tem que ser calculada e estruturada”, segundo o Correio da Manhã. Em 28 de outubro, após a carta de Flávio Bolsonaro, ele declarou que as eleições “transcorreram dentro da mais absoluta normalidade”; segundo a Agência Brasil, as duas horas extras registraram 34.393 votos.",
+      "response": "Especialistas ouvidos pela Conjur afirmam que a decisão estava dentro da competência do STF, por garantir uma decisão anterior da Corte, e que a omissão do TSE justificava a intervenção; Lenio Streck avaliou que Zanin decidiu fora de hora e foi além do pedido. Segundo a Conjur, 34,3 mil eleitores votaram depois das 17h, número que não muda o resultado. A campanha de Flávio Bolsonaro também havia pedido prorrogação ao TSE, por causa de chuvas em São Paulo e no Sul. Nunes Marques disse que o processo não foi prejudicado e que a equipe técnica resolveu a maior parte dos problemas.",
       "institutions": [
         "STF",
         "TSE"
@@ -173,6 +221,46 @@
         {
           "outlet": "Conjur",
           "url": "https://conjur.com.br/2026-out-26/zanin-agiu-dentro-de-suas-competencias-ao-estender-horario-da-votacao/"
+        },
+        {
+          "outlet": "Gazeta do Povo",
+          "url": "https://www.gazetadopovo.com.br/eleicoes/nunes-marques-prorrogacao-votacao-comprometer-toda-eleicao/"
+        },
+        {
+          "outlet": "Correio da Manhã",
+          "url": "https://www.correiodamanha.com.br/politica/2026/10/329931-nunes-marques-confirma-resultado-das-eleicoes-e-parabeniza-lula-por-reeleicao.html"
+        },
+        {
+          "outlet": "Agência Brasil",
+          "url": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/presidente-do-tse-diz-que-eleicoes-ocorreram-dentro-da-normalidade"
+        }
+      ]
+    },
+    {
+      "id": "salvador-onibus",
+      "sort": "2026-10-25",
+      "when": "25 e 26 out. 2026",
+      "power": "executivo",
+      "title": "No dia do segundo turno, TRE-BA manda prender em flagrante o secretário de Mobilidade de Salvador por retenção de ônibus nas garagens e revoga a ordem no dia seguinte; a apuração continua",
+      "summary": "Em 25 de outubro, a Federação Brasil da Esperança (PT, PCdoB e PV) relatou ao TRE-BA que a frota de ônibus de Salvador circulava mais de 50% abaixo do normal, dificultando o deslocamento de eleitores, segundo o Correio da Manhã; uma fiscalização do Procon-BA encontrou 55 ônibus aptos parados na garagem da empresa OT Trans, segundo a Folha de S.Paulo citada pela reportagem. O presidente do tribunal, desembargador Maurício Kertzman Szporer, determinou a prisão em flagrante do secretário municipal de Mobilidade, Pablo Souza, que estava em Paris em missão oficial, a restauração imediata da frota com tarifa gratuita e multa de R$ 1 milhão por hora de descumprimento para a prefeitura e para cada empresa, com comunicação à Procuradoria Regional Eleitoral e à Polícia Federal. Em 26 de outubro, o mesmo desembargador revogou a ordem de prisão, por entender que ela perdera o objeto imediato com o fim da votação e que o Ministério Público Eleitoral não havia pedido cautelar; segundo o Diario de Pernambuco, a revogação “não representa absolvição nem encerra a apuração de possíveis crimes”, e a prefeitura, a secretaria e as empresas tiveram 48 horas para preservar e entregar escalas, ordens de serviço, dados de monitoramento e comunicações internas. Registro de contexto: a investigação sobre quem ordenou a redução e com que finalidade segue pelo caminho normal; se concluir por descumprimento deliberado de ordem judicial, a ocorrência deve ser reclassificada. O pedido da campanha de Lula ao STF sobre o transporte no dia da eleição está na ocorrência sobre a prorrogação da votação.",
+      "response": "O prefeito Bruno Reis (União Brasil) negou ter ordenado redução da frota, admitiu que 75 veículos ficaram retidos pela manhã e atribuiu o atraso à retirada de adesivos de propaganda eleitoral colados nos ônibus por sindicalistas, versão não verificada de forma independente, segundo o Correio da Manhã; disse que a prefeitura autorizou a saída dos veículos mesmo com a propaganda e que o secretário se apresentaria às autoridades ao voltar ao Brasil. Pablo Souza pediu desculpas pelos atrasos antes da ordem de prisão e disse ter orientado a liberação dos ônibus. Rui Costa (PT), coordenador da campanha de Lula, acusou a prefeitura de dificultar o acesso às urnas.",
+      "institutions": [
+        "Prefeitura de Salvador",
+        "TRE-BA",
+        "Procon-BA"
+      ],
+      "status": "contexto",
+      "cases": [
+        "N3"
+      ],
+      "sources": [
+        {
+          "outlet": "Correio da Manhã",
+          "url": "https://www.correiodamanha.com.br/politica/2026/10/329673-justica-eleitoral-manda-prender-secretario-de-salvador-apos-retencao-de-onibus-no-segundo-turno.html"
+        },
+        {
+          "outlet": "Diario de Pernambuco",
+          "url": "https://www.diariodepernambuco.com.br/politica/2026/10/11727662-tre-ba-revoga-prisao-de-secretario-de-salvador-mas-mantem-investigacao-sobre-onibus.html"
         }
       ]
     },
@@ -257,11 +345,11 @@
     {
       "id": "master-relatorio-pf",
       "sort": "2026-09-15",
-      "when": "set. 2026",
+      "when": "set.–out. 2026",
       "power": "judiciario",
       "title": "Relatório da PF aponta 187 interações entre Alexandre de Moraes e Daniel Vorcaro; PGR pede a nulidade do documento",
-      "summary": "O relatório, entregue em 27 de agosto e tornado público em 1º de setembro, registra 187 interações e indícios de ao menos seis encontros entre o ministro do STF e o controlador do Banco Master. O procurador-geral Paulo Gonet e o diretor-geral da PF também são citados nas mensagens. O relator, ministro André Mendonça, abriu vista à PGR e propôs levar o material ao Plenário. O pedido de nulidade partiu da PGR, cujo chefe é citado no mesmo material. Em 15 de setembro, o Plenário do STF discutiu por mais de seis horas a validade das ordens de Mendonça e se os processos seriam julgados em conjunto; o ministro Flávio Dino pediu vista, com prazo de até 90 dias, e o mérito não foi decidido. Segundo O Povo, a votação preliminar estava em 4 a 3 pela separação dos processos, e Nunes Marques e Dias Toffoli se declararam impedidos.",
-      "response": "A PF ressalva que não concluiu que o ministro tenha cometido crime, interferido em apurações ou atendido a pedidos de Vorcaro. A PGR sustenta que o relatório foi produzido de forma irregular. Em manifestação a Edson Fachin, Moraes chamou a investigação conduzida por Mendonça de “inconstitucional e ilegal”, disse que ela foi ordenada sem pedido da PGR ou da PF e sem aval do Plenário, e negou ter favorecido Vorcaro.",
+      "summary": "O relatório, entregue em 27 de agosto e tornado público em 1º de setembro, registra 187 interações e indícios de ao menos seis encontros entre o ministro do STF e o controlador do Banco Master. O procurador-geral Paulo Gonet e o diretor-geral da PF também são citados nas mensagens. O relator, ministro André Mendonça, abriu vista à PGR e propôs levar o material ao Plenário. O pedido de nulidade partiu da PGR, cujo chefe é citado no mesmo material. Em 15 de setembro, o Plenário do STF discutiu por mais de seis horas a validade das ordens de Mendonça e se os processos seriam julgados em conjunto; o ministro Flávio Dino pediu vista, com prazo de até 90 dias, e o mérito não foi decidido. Segundo O Povo, a votação preliminar estava em 4 a 3 pela separação dos processos, e Nunes Marques e Dias Toffoli se declararam impedidos. Em 12 de setembro, os inquéritos das operações Sem Desconto (INSS) e Compliance Zero (Master) haviam sido enviados à Presidência do STF, depois de Moraes representar contra Mendonça por suposto abuso de autoridade na condução das operações. Em 29 de outubro, segundo o STF e a Gazeta do Povo, Fachin devolveu a Operação Sem Desconto a Mendonça, por não haver menção concreta a autoridade com foro na Corte, e manteve provisoriamente na Presidência os procedimentos do Master, por até 90 dias contados de 12 de setembro e só para medidas urgentes, porque a PF identificou menção a autoridade sujeita ao Plenário; a decisão será submetida a referendo, e a PGR já havia se manifestado contra o pedido de Moraes para investigar Mendonça. No mesmo dia, a defesa de Vorcaro, indiciado pela PF em 28 de outubro com outras 14 pessoas por gestão fraudulenta, organização criminosa e lavagem, entregou ao STF laudo particular segundo o qual 657 arquivos do celular apreendido foram modificados e 436 criados depois da apreensão, e pediu acesso aos dados brutos; o perito não afirma que houve adulteração humana, segundo a Gazeta do Povo, e a PF não respondeu até a publicação.",
+      "response": "A PF ressalva que não concluiu que o ministro tenha cometido crime, interferido em apurações ou atendido a pedidos de Vorcaro. A PGR sustenta que o relatório foi produzido de forma irregular. Em manifestação a Edson Fachin, Moraes chamou a investigação conduzida por Mendonça de “inconstitucional e ilegal”, disse que ela foi ordenada sem pedido da PGR ou da PF e sem aval do Plenário, e negou ter favorecido Vorcaro e ter recebido as mensagens listadas no relatório. Fachin afirmou que a devolução dos inquéritos não antecipa juízo sobre o mérito nem fixa definitivamente a competência. A defesa de Vorcaro sustenta que a alteração de arquivos sob custódia estatal compromete as provas e nega prejuízo ao BRB.",
       "institutions": [
         "STF",
         "PGR",
@@ -291,6 +379,22 @@
         {
           "outlet": "Correio da Manhã",
           "url": "https://www.correiodamanha.com.br/politica/2026/09/316129-fachin-levara-caso-moraes-vorcaro-ao-plenario-do-stf-apos-revelacoes-da-pf.html"
+        },
+        {
+          "outlet": "STF (oficial)",
+          "url": "https://noticias.stf.jus.br/postsnoticias/presidente-do-stf-devolve-operacao-sem-desconto-a-relator-e-mantem-provisoriamente-compliance-zero/"
+        },
+        {
+          "outlet": "Gazeta do Povo",
+          "url": "https://www.gazetadopovo.com.br/republica/fachin-devolve-inqueritos-do-inss-a-mendonca-mas-mantem-caso-master/"
+        },
+        {
+          "outlet": "Gazeta do Povo",
+          "url": "https://www.gazetadopovo.com.br/republica/defesa-de-vorcaro-contesta-provas-com-laudo-que-pode-favorecer-moraes/"
+        },
+        {
+          "outlet": "Agência Brasil",
+          "url": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/defesa-diz-que-arquivos-do-celular-de-vorcaro-foram-modificados"
         }
       ]
     },
@@ -300,7 +404,7 @@
       "when": "jan. 2023 – jun. 2026",
       "power": "eleicoes",
       "title": "Balanços de promessas da campanha de 2022 apontam compromissos não cumpridos",
-      "summary": "Levantamentos jornalísticos divergem conforme o critério: um balanço até junho de 2026 conta 26 de 36 promessas cumpridas; outro, com 103 promessas, aponta 28% cumpridas e 17% paralisadas. Entre as pendências citadas estão o Ministério da Segurança Pública e a reorganização do sistema penitenciário. Em pesquisa Quaest de junho de 2025, 70% disseram que o presidente não cumpre o que prometeu.",
+      "summary": "Levantamentos jornalísticos divergem conforme o critério: o balanço do g1, que acompanha 36 promessas e cobre o período de 1º de janeiro de 2023 a 30 de junho de 2026, conta 26 cumpridas, 4 parcialmente cumpridas e 6 pendentes, segundo republicação do Boca Notícias; o da Folha de S.Paulo, com 103 promessas, apontava na metade do mandato (janeiro de 2025) 28% cumpridas, 29% em andamento, 25% em execução lenta e 17% paradas, segundo a Gazeta do Povo. Entre as pendências citadas estão o Ministério da Segurança Pública, a reorganização do sistema penitenciário e a fila de exames e cirurgias represada na pandemia. Em pesquisa Quaest de junho de 2025, 70% disseram que o presidente não cumpre o que prometeu.",
       "response": "O presidente afirma que cumprirá os compromissos até o fim do mandato.",
       "institutions": [
         "Presidência da República"
@@ -311,8 +415,12 @@
       ],
       "sources": [
         {
+          "outlet": "Boca Notícias (g1)",
+          "url": "https://www.boca.com.br/politica/lula-cumpre-26-das-36-promessas-feitas-em-2022"
+        },
+        {
           "outlet": "Gazeta do Povo",
-          "url": "https://www.gazetadopovo.com.br/ideias/lula-disse-mas-nao-fez-balanco-mandato-furadas/"
+          "url": "https://www.gazetadopovo.com.br/republica/lula-metade-mandato-28-promessas-cumpridas/"
         },
         {
           "outlet": "Folha de Pernambuco",
@@ -327,10 +435,10 @@
     {
       "id": "master-cpi",
       "sort": "2026-06-01",
-      "when": "jan.–jun. 2026",
+      "when": "jan.–set. 2026",
       "power": "legislativo",
       "title": "CPI do Banco Master reúne assinaturas no Senado e na Câmara, mas não é instalada",
-      "summary": "Os requerimentos superaram o mínimo exigido nas duas Casas — no Senado, 53 assinaturas segundo a Band, para um mínimo de 27. Os presidentes Davi Alcolumbre (Senado) e Hugo Motta (Câmara) não instalaram as comissões. Senadores recorreram ao STF para obrigar a instalação.",
+      "summary": "Os requerimentos superaram o mínimo exigido nas duas Casas — no Senado, 53 assinaturas segundo a Band, para um mínimo de 27. Os presidentes Davi Alcolumbre (Senado) e Hugo Motta (Câmara) não instalaram as comissões. Senadores recorreram ao STF para obrigar a instalação. Em 22 de setembro de 2026, o ministro Cristiano Zanin negou a liminar pedida pelo senador Alessandro Vieira (MDB-SE) no mandado de segurança 41.085, por entender que os documentos não demonstravam, “neste momento processual”, omissão ilegal de Alcolumbre, e pediu informações ao Senado; o requerimento, de março, tinha 41 assinaturas, e o mérito segue pendente, segundo o Congresso em Foco e o Diário do Grande ABC.",
       "response": "Hugo Motta afirmou que seguiria o regimento e a fila de pedidos de CPI, sem prazo definido. Reportagens associam o impasse ao calendário eleitoral de 2026.",
       "institutions": [
         "Senado",
@@ -352,6 +460,14 @@
         {
           "outlet": "NSC Total",
           "url": "https://www.nsctotal.com.br/economia/cpi-banco-master-congresso-impasse"
+        },
+        {
+          "outlet": "Congresso em Foco",
+          "url": "https://www.congressoemfoco.com.br/noticia/122496/zanin-nega-liminar-para-obrigar-alcolumbre-a-instalar-cpi-do-master"
+        },
+        {
+          "outlet": "Diário do Grande ABC",
+          "url": "https://www.dgabc.com.br/Noticia/4348552/zanin-nega-pedido-para-obrigar-senado-a-instalar-cpi-do-banco-master"
         }
       ]
     },
@@ -498,7 +614,7 @@
       "when": "dez. 2025",
       "power": "judiciario",
       "title": "Escritório da esposa de Alexandre de Moraes tinha contrato de R$ 129 milhões com o Banco Master",
-      "summary": "O contrato de três anos com o escritório Barci de Moraes, comandado por Viviane Barci de Moraes e que tem dois filhos do casal entre os integrantes, foi encontrado pela PF no celular de Daniel Vorcaro. O texto não especificava causas: previa representar o banco “onde for necessário”. A PGR admitiu a existência do contrato. A Transparência Internacional criticou o caso. O contrato foi localizado pela PF no material do caso Master, sobre o qual a PGR se manifestou (ver a ocorrência sobre o relatório da PF, de set. 2026).",
+      "summary": "O contrato de três anos com o escritório Barci de Moraes, comandado por Viviane Barci de Moraes e que tem dois filhos do casal entre os integrantes, foi encontrado pela PF no celular de Daniel Vorcaro. O texto não especificava causas: previa representar o banco “onde for necessário”. A PGR admitiu a existência do contrato e, em dezembro de 2025, o procurador-geral Paulo Gonet arquivou pedido do advogado Enio Martins Murad para investigar Moraes pelo contrato, por entender que não se vislumbrava, “a priori, qualquer ilicitude” e que não havia indícios de que o ministro tivesse pressionado alguém em favor do banco, segundo o Correio da Manhã. A Transparência Internacional criticou o caso. O contrato foi localizado pela PF no material do caso Master, sobre o qual a PGR se manifestou (ver a ocorrência sobre o relatório da PF, de set. 2026).",
       "response": "O escritório afirma que nunca conduziu causa do Banco Master no STF; a defesa diz que o ministro jamais julgou processo envolvendo o banco. Em nova proposta de delação (jun. 2026), Vorcaro negou que o ministro tenha cometido crime ligado ao contrato.",
       "institutions": [
         "STF",
@@ -599,8 +715,8 @@
       "when": "11 set. 2025",
       "power": "executivo",
       "title": "STF condena o ex-presidente Jair Bolsonaro e outros sete réus por tentativa de golpe de Estado",
-      "summary": "Por 4 votos a 1, a Primeira Turma do STF condenou o ex-presidente e aliados por tentativa de golpe e outros quatro crimes ligados à tentativa de impedir a posse do governo eleito em 2022. A pena do ex-presidente foi de 27 anos e 3 meses.",
-      "response": "A defesa nega os crimes e recorreu. Luiz Fux votou pela incompetência do STF para julgar réus sem foro e pela absolvição, segundo o Poder360. O relatório da PF, com sigilo retirado em novembro de 2024, afirma que “a resistência dos Comandantes do Exército e da Aeronáutica impediu a consumação do ato” e que a maioria do Alto Comando do Exército não aderiu, atribuindo adesão ao comandante da Marinha, Almir Garnier, e ao então ministro da Defesa, Paulo Sérgio Nogueira, segundo o SBT News e a CNN Brasil; a defesa de Garnier afirma que as provas são “falsas” e que ele não estava na reunião citada, segundo o Metrópoles.",
+      "summary": "Por 4 votos a 1, a Primeira Turma do STF condenou o ex-presidente e aliados por tentativa de golpe e outros quatro crimes ligados à tentativa de impedir a posse do governo eleito em 2022. A pena do ex-presidente foi de 27 anos e 3 meses. Em 25 de novembro de 2025, o STF certificou o trânsito em julgado da condenação de Bolsonaro, Alexandre Ramagem e Anderson Torres, sem recursos pendentes, segundo o Poder360.",
+      "response": "A defesa nega os crimes; recorreu e não apresentou novos recursos antes do fim do prazo, em 24 de novembro de 2025, segundo o Poder360. Luiz Fux votou pela incompetência do STF para julgar réus sem foro e pela absolvição, segundo o Poder360. O relatório da PF, com sigilo retirado em novembro de 2024, afirma que “a resistência dos Comandantes do Exército e da Aeronáutica impediu a consumação do ato” e que a maioria do Alto Comando do Exército não aderiu, atribuindo adesão ao comandante da Marinha, Almir Garnier, e ao então ministro da Defesa, Paulo Sérgio Nogueira, segundo o SBT News e a CNN Brasil; a defesa de Garnier afirma que as provas são “falsas” e que ele não estava na reunião citada, segundo o Metrópoles.",
       "institutions": [
         "STF"
       ],
@@ -638,6 +754,10 @@
         {
           "outlet": "Metrópoles",
           "url": "https://www.metropoles.com/brasil/defesa-de-ex-chefe-da-marinha-diz-que-provas-contra-ele-sao-falsas"
+        },
+        {
+          "outlet": "Poder360",
+          "url": "https://www.poder360.com.br/poder-justica/stf-encerra-processo-e-bolsonaro-ja-pode-cumprir-pena/"
         }
       ]
     },
@@ -856,7 +976,7 @@
         },
         {
           "outlet": "Poder360",
-          "url": "https://www.poder360.com.br/justica/alexandre-de-moraes-ameaca-tirar-telegram-do-ar"
+          "url": "https://www.poder360.com.br/justica/alexandre-de-moraes-ameaca-tirar-telegram-do-ar/"
         },
         {
           "outlet": "Poder360",
@@ -1080,7 +1200,7 @@
       "power": "eleicoes",
       "title": "Empresários são alvo de busca e apreensão por mensagens em grupo privado de WhatsApp; caso é arquivado um ano depois",
       "summary": "Às vésperas da eleição de 2022, Moraes autorizou operação da PF, com bloqueio de contas, contra oito empresários a partir de reportagem sobre mensagens em um grupo fechado. A PGR considerou a operação ilegal, por violar o sistema acusatório, e pediu a anulação; o pedido foi negado. Em agosto de 2023, a investigação contra seis deles foi arquivada por ausência de justa causa: as mensagens não ultrapassaram os limites da manifestação de opinião.",
-      "response": "A decisão original apontou indícios de apoio a atos antidemocráticos. A apuração sobre um dos empresários continuou.",
+      "response": "A decisão original apontou indícios de apoio a atos antidemocráticos. A apuração sobre dois dos empresários, Luciano Hang e Meyer Nigri, continuou, segundo as reportagens.",
       "institutions": [
         "STF",
         "PGR",
@@ -1357,7 +1477,7 @@
       "when": "mar. 2019 – out. 2026",
       "power": "judiciario",
       "title": "Inquérito das fake news: aberto de ofício pelo STF e prorrogado por mais de seis anos; em 2026, a Presidência do tribunal retira o relator e começa a arquivá-lo",
-      "summary": "Instaurado pelo próprio tribunal, sem pedido do Ministério Público, com relator designado sem sorteio, para apurar ataques à própria Corte. Tramitou sob sigilo e foi prorrogado sucessivamente — a última prorrogação localizada, de 180 dias, é de dezembro de 2024. A reportagem da IstoÉ registra as críticas de objeto indefinido e de acúmulo das funções de investigar e julgar. Em 9 de setembro de 2026, o presidente do STF, Edson Fachin, revogou por portaria a designação de Alexandre de Moraes para conduzir o inquérito; segundo a Gazeta do Povo, a Presidência passou a analisar os fatos e a enviar os autos à PGR, as ações penais com denúncia já recebida continuaram com Moraes e os atos anteriores foram preservados. Em 9 de outubro, segundo o SBT News, Fachin disse que arquivará o inquérito depois de examinar 104 procedimentos vinculados. Em 27 de outubro, segundo a Agência Brasil, arquivou três investigações, contra Eduardo Bolsonaro, Silas Malafaia e Guilherme Fiuza, as duas últimas com parecer da PGR pelo arquivamento.",
+      "summary": "Instaurado pelo próprio tribunal, sem pedido do Ministério Público, com relator designado sem sorteio, para apurar ataques à própria Corte. Tramitou sob sigilo e foi prorrogado sucessivamente — a última prorrogação localizada, de 180 dias, é de dezembro de 2024. A reportagem da IstoÉ registra as críticas de objeto indefinido e de acúmulo das funções de investigar e julgar. Em 9 de setembro de 2026, o presidente do STF, Edson Fachin, revogou por portaria a designação de Alexandre de Moraes para conduzir o inquérito; segundo a Gazeta do Povo, a Presidência passou a analisar os fatos e a enviar os autos à PGR, as ações penais com denúncia já recebida continuaram com Moraes e os atos anteriores foram preservados. Em 9 de outubro, segundo o SBT News, Fachin disse que arquivará o inquérito depois de examinar 104 procedimentos vinculados. Em 27 de outubro, segundo a Agência Brasil, arquivou três investigações, contra Eduardo Bolsonaro, Silas Malafaia e Guilherme Fiuza, as duas últimas com parecer da PGR pelo arquivamento; no caso de Malafaia, revogou as cautelares, inclusive a proibição de deixar o país, segundo a CNN Brasil. Em 29 de outubro, segundo o STF e a Agência Brasil, arquivou mais cinco, todas com parecer da PGR: a de Rui Costa Pimenta (PCO), por prescrição; as do ex-ministro do Turismo Gilson Machado e de Flávia Cordeiro Magalhães, por falta de indícios, com revogação da prisão preventiva desta; a do deputado estadual Alex Brasil (SC), por já ter sido investigado pelos mesmos fatos, com desbloqueio de suas redes; e a de um grupo do Telegram cujos administradores não puderam ser identificados. O sigilo das decisões foi levantado.",
       "response": "O Plenário do STF validou o inquérito em 2020, no julgamento da ADPF 572. Fachin fundamentou a revogação da designação no mesmo modelo validado na ADPF 572, segundo o qual o presidente do STF pode encerrar a delegação a qualquer tempo. As reportagens consultadas não trazem manifestação de Moraes sobre a retirada da relatoria.",
       "institutions": [
         "STF",
@@ -1393,6 +1513,18 @@
         {
           "outlet": "Agência Brasil",
           "url": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/fachin-arquiva-tres-investigacoes-do-inquerito-das-fake-news"
+        },
+        {
+          "outlet": "CNN Brasil",
+          "url": "https://www.cnnbrasil.com.br/politica/fachin-revoga-cautelares-contra-silas-malafaia-e-arquiva-investigacao/"
+        },
+        {
+          "outlet": "STF (oficial)",
+          "url": "https://noticias.stf.jus.br/postsnoticias/stf-determina-arquivamento-de-mais-cinco-investigacoes-ligadas-ao-inquerito-das-fake-news/"
+        },
+        {
+          "outlet": "Agência Brasil",
+          "url": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/fachin-arquiva-mais-cinco-investigacoes-do-inquerito-das-fake-news"
         }
       ]
     }
