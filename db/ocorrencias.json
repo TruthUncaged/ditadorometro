@@ -1,5 +1,5 @@
 {
-  "updatedAt": "29 de outubro de 2026",
+  "updatedAt": "1 de novembro de 2026",
   "items": [
     {
       "id": "flavio-resultado",
@@ -55,7 +55,7 @@
       "when": "28 e 29 out. 2026",
       "power": "legislativo",
       "title": "Presidente do Senado discute indulto ou anistia a Jair Bolsonaro em troca de apoio da direita à sua reeleição, segundo aliados; a contrapartida incluiria deixar de pressionar pelo impeachment de ministros do STF",
-      "summary": "Segundo reportagem da Folhapress publicada em 28 de outubro, Davi Alcolumbre (União-AP) planeja propor um indulto ou uma anistia a Jair Bolsonaro, condenado a 27 anos e 3 meses por tentativa de golpe de Estado e preso desde 2025, em troca do apoio da direita à sua reeleição para a presidência do Senado em fevereiro de 2027. De acordo com dois aliados ouvidos pela agência, ele pretende pedir a Lula um “perdão humanitário” depois que a eleição “decantar” e, se o presidente recusar, trabalhar pela aprovação de uma anistia no Congresso, modulada para alcançar só a parte penal, sem devolver a elegibilidade; a contrapartida seria o compromisso da direita de não pressionar pelo impeachment de ministros do STF e de se concentrar numa reforma do Judiciário. O Metrópoles registrou em 29 de outubro que, segundo interlocutores do senador, não há proposta definida nem acordo entre os envolvidos, e que integrantes do governo participam das conversas; a CNN Brasil informou que Alcolumbre tem defendido junto aos três Poderes uma “pacificação nacional” e que não há articulação fechada. Senadores do PL disseram ao Metrópoles que o acordo precisaria ser concluído ainda em 2026 para se converter em votos. A lei da dosimetria, que reduz as penas dos condenados pelo 8 de janeiro, está suspensa pelo STF desde maio e consta em ocorrência própria.",
+      "summary": "Segundo reportagem da Folhapress publicada em 28 de outubro, Davi Alcolumbre (União-AP) planeja propor um indulto ou uma anistia a Jair Bolsonaro, condenado a 27 anos e 3 meses por tentativa de golpe de Estado e preso desde 2025, em troca do apoio da direita à sua reeleição para a presidência do Senado em fevereiro de 2027. De acordo com dois aliados ouvidos pela agência, ele pretende pedir a Lula um “perdão humanitário” depois que a eleição “decantar” e, se o presidente recusar, trabalhar pela aprovação de uma anistia no Congresso, modulada para alcançar só a parte penal, sem devolver a elegibilidade; a contrapartida seria o compromisso da direita de não pressionar pelo impeachment de ministros do STF e de se concentrar numa reforma do Judiciário. O Metrópoles registrou em 29 de outubro que, segundo interlocutores do senador, não há proposta definida nem acordo entre os envolvidos, e que integrantes do governo participam das conversas; a CNN Brasil informou que Alcolumbre tem defendido junto aos três Poderes uma “pacificação nacional” e que não há articulação fechada. Senadores do PL disseram ao Metrópoles que o acordo precisaria ser concluído ainda em 2026 para se converter em votos. Em 28 de outubro, segundo o g1, reproduzido pelo Imirante, o presidente da CCJ do Senado, Otto Alencar (PSD-BA), aliado de Lula, defendeu avançar com a anistia aos condenados pelo 8 de janeiro, o que alcançaria Jair Bolsonaro, disse ter conversado sobre o tema com Alcolumbre e afirmou que “o grande esforço é que se possa agora ter um entendimento para a pacificação nacional”. A lei da dosimetria, que reduz as penas dos condenados pelo 8 de janeiro, está suspensa pelo STF desde maio e consta em ocorrência própria.",
       "response": "Alcolumbre não se manifestou publicamente nas reportagens consultadas; segundo a Folhapress, o tema não foi tratado na conversa que ele teve com Lula em 26 de outubro. Lula já declarou ser contra beneficiar Bolsonaro, segundo o Metrópoles, e o STF anulou em 2023, por desvio de finalidade, a graça individual concedida a Daniel Silveira. A oposição cobra a votação do perdão ainda nesta legislatura e trabalha por candidatura própria (Rogério Marinho ou Tereza Cristina) contra Alcolumbre.",
       "institutions": [
         "Senado",
@@ -78,6 +78,10 @@
         {
           "outlet": "CNN Brasil",
           "url": "https://www.cnnbrasil.com.br/politica/alcolumbre-defende-pacificacao-e-considera-indulto-a-bolsonaro-e-anistia/"
+        },
+        {
+          "outlet": "Imirante (com informações do g1)",
+          "url": "https://m.imirante.com/noticias/brasil/2026/10/28/ipolitica-otto-alencar-defende-anistia-condenados-8-janeiro"
         }
       ]
     },
