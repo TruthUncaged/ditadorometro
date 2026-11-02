@@ -1,5 +1,5 @@
 {
-  "updatedAt": "1 de novembro de 2026",
+  "updatedAt": "2 de novembro de 2026",
   "items": [
     {
       "id": "flavio-resultado",
@@ -163,8 +163,8 @@
       "when": "23 a 29 out. 2026",
       "power": "judiciario",
       "title": "Na noite da apuração, Moraes autoriza, a pedido da PF, a retenção dos passaportes de Flávio Bolsonaro",
-      "summary": "O pedido da Polícia Federal, de 16 páginas, foi assinado às 21h16 de 25 de outubro, sete minutos depois de o TSE oficializar a derrota de Flávio Bolsonaro (PL-RJ) no segundo turno. O ministro Alexandre de Moraes concedeu a medida na mesma noite, sem consulta prévia à Procuradoria-Geral da República, e ela foi cumprida na manhã seguinte. A PF citou um inquérito sigiloso sobre lavagem de dinheiro atribuída ao advogado Willer Tomaz, em que Flávio aparece como usuário master de uma conta de empresa de Tomaz em Portugal até maio de 2025, e uma declaração de Eduardo Bolsonaro, em 23 de outubro, de que seria a favor de o irmão deixar o país se perdesse a eleição. Segundo a PF, Tomaz está em Miami desde agosto. Flávio não entregou os documentos, e a PF cancelou os passaportes comum e diplomático em 27 de outubro. Segundo a CNN Brasil, ele cruzou para a Argentina com passaporte italiano e entrou nos Estados Unidos, por Miami, com o passaporte diplomático já cancelado; a Agência Brasil registrou que não havia saída formal do país. Em 23 de outubro, dois dias antes da votação, Moraes já havia determinado, segundo a Agência Brasil, o bloqueio de até R$ 6 bilhões de Willer Tomaz, a quebra de seus sigilos bancário, fiscal e cambial, a suspensão de seus passaportes e a paralisação das atividades de suas empresas, depois de a PF apontar que ele viajara a Miami após ser alvo de busca na Operação Sem Desconto; Flávio disse ter apenas relação pessoal com Tomaz. Em 29 de outubro, segundo a CNN Brasil, a defesa de Flávio anunciou que pedirá ao presidente do STF, Edson Fachin, a saída de Moraes da relatoria: por prevenção, por entender que o juiz natural seria André Mendonça, relator da Operação Sem Desconto, de onde a investigação derivou; e por suspeição, porque o relatório da PF cita uma empresa com cotas da mesma aeronave usada por Moraes, cedida no contrato do escritório de sua esposa com Daniel Vorcaro.",
-      "response": "Flávio Bolsonaro contesta a base da decisão e pergunta se a medida seria tomada caso ele tivesse vencido; integrantes da campanha falam em retaliação política. O STF não informou quando a decisão, sob sigilo, foi assinada. As reportagens consultadas não trazem manifestação de Flávio ou da defesa sobre a viagem, nem manifestação de Fachin ou do STF sobre os pedidos anunciados contra a relatoria de Moraes.",
+      "summary": "O pedido da Polícia Federal, de 16 páginas, foi assinado às 21h16 de 25 de outubro, sete minutos depois de o TSE oficializar a derrota de Flávio Bolsonaro (PL-RJ) no segundo turno. O ministro Alexandre de Moraes concedeu a medida na mesma noite, sem consulta prévia à Procuradoria-Geral da República, e ela foi cumprida na manhã seguinte. A PF citou um inquérito sigiloso sobre lavagem de dinheiro atribuída ao advogado Willer Tomaz, em que Flávio aparece como usuário master de uma conta de empresa de Tomaz em Portugal até maio de 2025, e uma declaração de Eduardo Bolsonaro, em 23 de outubro, de que seria a favor de o irmão deixar o país se perdesse a eleição. Segundo a PF, Tomaz está em Miami desde agosto. Flávio não entregou os documentos, e a PF cancelou os passaportes comum e diplomático em 27 de outubro. Segundo a CNN Brasil, ele cruzou para a Argentina com passaporte italiano e entrou nos Estados Unidos, por Miami, com o passaporte diplomático já cancelado; a Agência Brasil registrou que não havia saída formal do país. Em 23 de outubro, dois dias antes da votação, Moraes já havia determinado, segundo a Agência Brasil, o bloqueio de até R$ 6 bilhões de Willer Tomaz, a quebra de seus sigilos bancário, fiscal e cambial, a suspensão de seus passaportes e a paralisação das atividades de suas empresas, depois de a PF apontar que ele viajara a Miami após ser alvo de busca na Operação Sem Desconto; Flávio disse ter apenas relação pessoal com Tomaz. Em 29 de outubro, segundo a CNN Brasil, a defesa de Flávio anunciou que pedirá ao presidente do STF, Edson Fachin, a saída de Moraes da relatoria: por prevenção, por entender que o juiz natural seria André Mendonça, relator da Operação Sem Desconto, de onde a investigação derivou; e por suspeição, porque o relatório da PF cita uma empresa com cotas da mesma aeronave usada por Moraes, cedida no contrato do escritório de sua esposa com Daniel Vorcaro. Segundo a Gazeta do Povo, a petição foi encaminhada a Fachin em 1º de novembro: pede que Moraes seja declarado impedido, com redistribuição a Mendonça, ou, se o impedimento não for reconhecido, suspeito, e a revogação das cautelares (cancelamento dos passaportes, entrega do passaporte italiano e proibição de contato com Willer Tomaz); a defesa contesta o risco de fuga baseado em declarações de terceiros e a imposição das medidas na noite da eleição sem manifestação prévia da PGR. Segundo a defesa, citada pela Gazeta do Povo, o banco negou que Flávio fosse “usuário master” de contas ligadas a Tomaz.",
+      "response": "Flávio Bolsonaro contesta a base da decisão e pergunta se a medida seria tomada caso ele tivesse vencido; integrantes da campanha falam em retaliação política. O STF não informou quando a decisão, sob sigilo, foi assinada. O escritório de Viviane Barci de Moraes nega a relação comercial apontada pela defesa, e Flávio e Willer Tomaz negam irregularidades, segundo a Gazeta do Povo. As reportagens consultadas não trazem manifestação de Moraes, de Fachin ou da PGR sobre os pedidos.",
       "institutions": [
         "STF",
         "Polícia Federal",
@@ -198,6 +198,14 @@
         {
           "outlet": "CNN Brasil",
           "url": "https://www.cnnbrasil.com.br/politica/flavio-pedira-ao-stf-que-moraes-saia-de-investigacao-sobre-willer-tomaz/"
+        },
+        {
+          "outlet": "Gazeta do Povo",
+          "url": "https://www.gazetadopovo.com.br/republica/defesa-de-flavio-bolsonaro-pede-afastamento-de-moraes-de-investigacao/"
+        },
+        {
+          "outlet": "O Antagonista",
+          "url": "https://oantagonista.com.br/brasil/defesa-flavio-bolsonaro-recorre-stf-reaver-passaportes/"
         }
       ]
     },
@@ -321,6 +329,37 @@
       ]
     },
     {
+      "id": "tse-exercito-do-lula",
+      "sort": "2026-10-11",
+      "when": "11 a 23 out. 2026",
+      "power": "eleicoes",
+      "title": "A pedido da campanha de Flávio Bolsonaro, presidente do TSE manda suspender por decisão individual o canal de WhatsApp “Exército do Lula”; o corregedor revoga a medida e o canal volta ao ar",
+      "summary": "Em 11 de outubro, segundo o Correio (BA), o presidente do TSE, Nunes Marques, atendeu a pedido da campanha de Flávio Bolsonaro e determinou à Meta, em até três horas e sob pena de multa, a suspensão do canal criado pelo deputado André Janones, que tinha 3,3 milhões de inscritos; na prática, segundo o jornal, a ordem impedia novas atualizações e a entrada de seguidores até a homologação do resultado do segundo turno. O pedido havia sido feito antes ao corregedor-geral eleitoral, Ricardo Villas Bôas Cueva, relator da ação, que pedira informações complementares. Segundo o Congresso em Foco, Cueva revogou a medida por considerar as provas “insuficientes” e questionou a competência da Presidência do TSE para decidir administrativamente; um relatório técnico não encontrou, nas publicações analisadas, as mensagens apontadas como falsas pela campanha de Flávio, com a ressalva de que conteúdos apagados ou modificados limitaram a verificação. Em 13 de outubro, segundo o Congresso em Foco, Nunes Marques manteve restrições por falta de registro do canal na Justiça Eleitoral e condicionou a retomada a uma espera de 48 horas; em 14 de outubro, depois do registro e com a concordância da campanha de Flávio, determinou a reativação imediata, com preservação de registros e fiscalização das publicações, e dispensou a espera de 48 horas por uma alteração regulamentar ainda sujeita ao referendo do plenário do TSE. Em 22 de outubro, segundo O Povo, ele determinou, a novo pedido da campanha de Flávio, um “pente-fino” nas publicações, com 24 horas para a Meta apresentar relatório; em 23 de outubro, o ministro Floriano de Azevedo Marques, em mandado de segurança da campanha de Lula, decidiu que o canal não pode ser suspenso nem restringido novamente por decisão individual, só pelo plenário.",
+      "response": "Nunes Marques fundamentou a suspensão na “utilização de estrutura de transmissão a milhões de pessoas, sob comando único”, segundo o Correio (BA). Em nota de 23 de outubro, o TSE afirmou que “não determinou a retirada de nenhum canal de WhatsApp do ar”; segundo O Povo, Google, Meta e X disseram não ter encontrado indícios de irregularidades no canal. Lula classificou a suspensão como “um absurdo”. Flávio Bolsonaro concordou com a reativação, condicionada à manutenção da fiscalização, e a campanha de Lula pediu tratamento igual ao do canal “Tropa do Flávio”, segundo o Congresso em Foco.",
+      "institutions": [
+        "TSE"
+      ],
+      "status": "revertido",
+      "cases": [
+        "D2",
+        "F5"
+      ],
+      "sources": [
+        {
+          "outlet": "Correio (BA)",
+          "url": "https://www.correio24horas.com.br/eleicoes/nunes-marques-manda-suspender-canal-exercito-do-lula-no-whatsapp-1026"
+        },
+        {
+          "outlet": "Congresso em Foco",
+          "url": "https://www.congressoemfoco.com.br/noticia/123265/nunes-marques-libera-volta-do-exercito-do-lula-apos-impasse-no-tse"
+        },
+        {
+          "outlet": "O Povo",
+          "url": "https://mais.opovo.com.br/jornal/politica/2026/10/24/ministro-do-tse-proibe-suspensao-do-canal-exercito-do-lula.html"
+        }
+      ]
+    },
+    {
       "id": "lula-fascismo-ato",
       "sort": "2026-10-09",
       "when": "9 out. 2026",
@@ -347,13 +386,45 @@
       ]
     },
     {
+      "id": "trf1-newton-ramos-master",
+      "sort": "2026-09-24",
+      "when": "jan. 2024 – set. 2026",
+      "power": "judiciario",
+      "title": "Desembargador do TRF-1 vota em processo de usina em que o Banco Master depois atuou; seis meses depois, a esposa e o filho fecham com o banco contrato de honorários de até R$ 427 milhões, e o CNJ abre sindicância",
+      "summary": "Segundo reportagem do Estadão republicada pelo Diario de Pernambuco, o desembargador Newton Pereira Ramos Neto, da 11ª Turma do TRF-1, votou em janeiro e em junho de 2024, em sessões virtuais, em processo da Usina Cansanção de Sinimbu (AL), que pede indenização da União: no primeiro, a Turma acolheu recurso da usina e limitou a perícia aos critérios originais; no segundo, rejeitou recursos da União. O Banco Master passou a atuar no caso com a usina. Em dezembro de 2024, a esposa do desembargador, a advogada Camilla Ramos, e o filho, Gabriel Ramos, assinaram procurações, e o escritório Queiroga, Vieira, Queiroz & Ramos tinha contrato com o banco para 12 processos sobre precatórios do setor sucroalcooleiro, com honorários de êxito de 5% que poderiam chegar a R$ 427 milhões, segundo o Poder360. Segundo o Poder360, o desembargador aparece em mensagens extraídas pela PF do celular de Daniel Vorcaro, nas quais é apontado como integrante da “Turma do KN”. Em 22 de setembro de 2026, o corregedor nacional de Justiça, Benedito Gonçalves, abriu sindicância, com prazo inicial de 60 dias, a partir de reclamação disciplinar do advogado Alex Ferreira Borralho, segundo o Metrópoles; em 24 de setembro, a PF cumpriu diligência no gabinete por determinação do corregedor, que não determinou o afastamento, segundo o Poder360. O CNJ afirma que ainda não foi comprovada relação entre o crédito analisado pelo desembargador e o Banco Master, nem a participação do escritório no processo.",
+      "response": "Ao Estadão, Newton Ramos afirmou que o primeiro julgamento foi feito “em bloco, em sessão virtual com aproximadamente 300 processos”, que não havia nos autos indicação de interesse do Banco Master, cujo ingresso ocorreu depois, e que o impedimento legal está anotado no processo. Seu gabinete disse que ele “permanece no pleno exercício de sua jurisdição” e que a correição buscava “levantar informações em processos que envolvem o setor sucroalcooleiro”. O gabinete do ministro Nunes Marques, de quem Newton Ramos foi juiz auxiliar, afirmou que ele “nunca votou a favor de Daniel Vorcaro, nunca trocou mensagens com ele e nem pediu nada ao banqueiro”. Camilla Ramos não se manifestou até a publicação das reportagens.",
+      "institutions": [
+        "TRF-1",
+        "CNJ",
+        "Polícia Federal"
+      ],
+      "status": "em-curso",
+      "cases": [
+        "E1"
+      ],
+      "sources": [
+        {
+          "outlet": "Diario de Pernambuco (Estadão Conteúdo)",
+          "url": "https://www.diariodepernambuco.com.br/politica/2026/09/11724628-desembargador-beneficiou-master-6-meses-antes-de-sua-mulher-fechar-contrato-com-vorcaro.html"
+        },
+        {
+          "outlet": "Poder360",
+          "url": "https://www.poder360.com.br/poder-justica/cnj-realiza-operacao-contra-ex-juiz-auxiliar-de-nunes-marques/"
+        },
+        {
+          "outlet": "Metrópoles",
+          "url": "https://www.metropoles.com/brasil/cnj-abre-sindicancia-contra-desembargador-newton-ramos"
+        }
+      ]
+    },
+    {
       "id": "master-relatorio-pf",
       "sort": "2026-09-15",
       "when": "set.–out. 2026",
       "power": "judiciario",
       "title": "Relatório da PF aponta 187 interações entre Alexandre de Moraes e Daniel Vorcaro; PGR pede a nulidade do documento",
-      "summary": "O relatório, entregue em 27 de agosto e tornado público em 1º de setembro, registra 187 interações e indícios de ao menos seis encontros entre o ministro do STF e o controlador do Banco Master. O procurador-geral Paulo Gonet e o diretor-geral da PF também são citados nas mensagens. O relator, ministro André Mendonça, abriu vista à PGR e propôs levar o material ao Plenário. O pedido de nulidade partiu da PGR, cujo chefe é citado no mesmo material. Em 15 de setembro, o Plenário do STF discutiu por mais de seis horas a validade das ordens de Mendonça e se os processos seriam julgados em conjunto; o ministro Flávio Dino pediu vista, com prazo de até 90 dias, e o mérito não foi decidido. Segundo O Povo, a votação preliminar estava em 4 a 3 pela separação dos processos, e Nunes Marques e Dias Toffoli se declararam impedidos. Em 12 de setembro, os inquéritos das operações Sem Desconto (INSS) e Compliance Zero (Master) haviam sido enviados à Presidência do STF, depois de Moraes representar contra Mendonça por suposto abuso de autoridade na condução das operações. Em 29 de outubro, segundo o STF e a Gazeta do Povo, Fachin devolveu a Operação Sem Desconto a Mendonça, por não haver menção concreta a autoridade com foro na Corte, e manteve provisoriamente na Presidência os procedimentos do Master, por até 90 dias contados de 12 de setembro e só para medidas urgentes, porque a PF identificou menção a autoridade sujeita ao Plenário; a decisão será submetida a referendo, e a PGR já havia se manifestado contra o pedido de Moraes para investigar Mendonça. No mesmo dia, a defesa de Vorcaro, indiciado pela PF em 28 de outubro com outras 14 pessoas por gestão fraudulenta, organização criminosa e lavagem, entregou ao STF laudo particular segundo o qual 657 arquivos do celular apreendido foram modificados e 436 criados depois da apreensão, e pediu acesso aos dados brutos; o perito não afirma que houve adulteração humana, segundo a Gazeta do Povo, e a PF não respondeu até a publicação.",
-      "response": "A PF ressalva que não concluiu que o ministro tenha cometido crime, interferido em apurações ou atendido a pedidos de Vorcaro. A PGR sustenta que o relatório foi produzido de forma irregular. Em manifestação a Edson Fachin, Moraes chamou a investigação conduzida por Mendonça de “inconstitucional e ilegal”, disse que ela foi ordenada sem pedido da PGR ou da PF e sem aval do Plenário, e negou ter favorecido Vorcaro e ter recebido as mensagens listadas no relatório. Fachin afirmou que a devolução dos inquéritos não antecipa juízo sobre o mérito nem fixa definitivamente a competência. A defesa de Vorcaro sustenta que a alteração de arquivos sob custódia estatal compromete as provas e nega prejuízo ao BRB.",
+      "summary": "O relatório, entregue em 27 de agosto e tornado público em 1º de setembro, registra 187 interações e indícios de ao menos seis encontros entre o ministro do STF e o controlador do Banco Master. O procurador-geral Paulo Gonet e o diretor-geral da PF também são citados nas mensagens. O relator, ministro André Mendonça, abriu vista à PGR e propôs levar o material ao Plenário. O pedido de nulidade partiu da PGR, cujo chefe é citado no mesmo material. Em 15 de setembro, o Plenário do STF discutiu por mais de seis horas a validade das ordens de Mendonça e se os processos seriam julgados em conjunto; o ministro Flávio Dino pediu vista, com prazo de até 90 dias, e o mérito não foi decidido. Segundo O Povo, a votação preliminar estava em 4 a 3 pela separação dos processos, e Nunes Marques e Dias Toffoli se declararam impedidos. Em 12 de setembro, os inquéritos das operações Sem Desconto (INSS) e Compliance Zero (Master) haviam sido enviados à Presidência do STF, depois de Moraes representar contra Mendonça por suposto abuso de autoridade na condução das operações. Em 29 de outubro, segundo o STF e a Gazeta do Povo, Fachin devolveu a Operação Sem Desconto a Mendonça, por não haver menção concreta a autoridade com foro na Corte, e manteve provisoriamente na Presidência os procedimentos do Master, por até 90 dias contados de 12 de setembro e só para medidas urgentes, porque a PF identificou menção a autoridade sujeita ao Plenário; a decisão será submetida a referendo, e a PGR já havia se manifestado contra o pedido de Moraes para investigar Mendonça. No mesmo dia, a defesa de Vorcaro, indiciado pela PF em 28 de outubro com outras 14 pessoas por gestão fraudulenta, organização criminosa e lavagem, entregou ao STF laudo particular segundo o qual 657 arquivos do celular apreendido foram modificados e 436 criados depois da apreensão, e pediu acesso aos dados brutos; o perito não afirma que houve adulteração humana, segundo a Gazeta do Povo, e a PF não respondeu até a publicação. Em 25 de setembro, o Conselho Superior do MPF arquivou, por 5 votos a 4, o pedido de investigação sobre a conduta de Gonet aberto depois de a PF encontrar mensagens que o citam, e rejeitou por unanimidade afastá-lo dos processos do Master no STF, por entender que a decisão não cabe ao Conselho; Gonet não participou da sessão, presidida pelo vice-presidente, Nicolao Dino, segundo o Poder360 e o Migalhas.",
+      "response": "A PF ressalva que não concluiu que o ministro tenha cometido crime, interferido em apurações ou atendido a pedidos de Vorcaro. A PGR sustenta que o relatório foi produzido de forma irregular. Em manifestação a Edson Fachin, Moraes chamou a investigação conduzida por Mendonça de “inconstitucional e ilegal”, disse que ela foi ordenada sem pedido da PGR ou da PF e sem aval do Plenário, e negou ter favorecido Vorcaro e ter recebido as mensagens listadas no relatório. Fachin afirmou que a devolução dos inquéritos não antecipa juízo sobre o mérito nem fixa definitivamente a competência. A defesa de Vorcaro sustenta que a alteração de arquivos sob custódia estatal compromete as provas e nega prejuízo ao BRB. No Conselho Superior do MPF, o relator, Francisco Sanseverino, afirmou que “não houve nenhum contato direto, nem indireto dele, solicitação direta ou indireta de vantagem” por parte de Gonet e que a suposta “amizade íntima” com Vorcaro “não tem confirmação na prova existente nos autos”, segundo o Poder360 e o Migalhas.",
       "institutions": [
         "STF",
         "PGR",
@@ -399,6 +470,14 @@
         {
           "outlet": "Agência Brasil",
           "url": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/defesa-diz-que-arquivos-do-celular-de-vorcaro-foram-modificados"
+        },
+        {
+          "outlet": "Poder360",
+          "url": "https://www.poder360.com.br/poder-justica/conselho-do-mpf-rejeita-abrir-investigacao-contra-gonet/"
+        },
+        {
+          "outlet": "Migalhas",
+          "url": "https://www.migalhas.com.br/quentes/465288/conselho-do-mpf-nega-investigar-gonet-e-o-mantem-no-caso-master"
         }
       ]
     },
