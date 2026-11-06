@@ -258,7 +258,7 @@ qualitativos por dimensão, além da média; campo `actors[]` separado da arena.
 │   ├── diff-news.mjs             lista as mudanças entre duas versões do registro
 │   └── apply-verdicts.mjs        consolida os votos dos verificadores e grava o registro
 └── .github/
-    ├── workflows/                deploy, atualização a cada 3 dias, validação de PR
+    ├── workflows/                deploy, atualização a cada 5 dias, validação de PR
     └── prompts/                  instruções dos agentes pesquisador e verificadores
 ```
 
@@ -351,7 +351,7 @@ Configuração: **Settings → Pages → Source: GitHub Actions.**
 
 ## Atualização automática
 
-`.github/workflows/atualizacao-diaria.yml` roda a cada 3 dias às 06:00 (Brasília), nos dias 1, 4, 7 e assim por diante
+`.github/workflows/atualizacao-diaria.yml` roda a cada 5 dias às 06:00 (Brasília), nos dias 1, 6, 11 e assim por diante
 de cada mês, com agentes de IA executados pelo
 GitHub Actions, e aos domingos às 07:00 numa **execução de
 rebalanceamento**, que ignora o Judiciário e busca só atos de Executivo, Congresso, Forças Armadas, estados, partidos

@@ -10,7 +10,7 @@ name: Atualização periódica do registro
 
 on:
   schedule:
-    - cron: '0 9 */5 * *' # 06:00 em Brasília, a cada 3 dias (dias 1, 4, 7… de cada mês): atualização regular
+    - cron: '0 9 */5 * *' # 06:00 em Brasília, a cada 5 dias (dias 1, 6, 11… de cada mês): atualização regular
     - cron: '0 10 * * 0' # domingo, 07:00 em Brasília: varredura de rebalanceamento (só Executivo, Congresso, FA, estados, partidos, plataformas)
   workflow_dispatch:
     inputs:
