@@ -1,14 +1,118 @@
 {
-  "updatedAt": "6 de novembro de 2026",
+  "updatedAt": "23 de novembro de 2026",
   "items": [
+    {
+      "id": "fachin-arquiva-relatorio-proprio",
+      "sort": "2026-11-19",
+      "when": "18 a 20 nov. 2026",
+      "power": "judiciario",
+      "title": "Presidente do STF, relator provisório do caso Master, arquiva sob sigilo os relatórios da PF sobre menções a seis ministros no celular de Daniel Vorcaro, entre eles o que trata dele próprio, e envia à PGR os de outros quatro",
+      "summary": "Em 18 de novembro, a direção da Polícia Federal entregou ao presidente do STF, Edson Fachin, relator provisório do caso Banco Master, relatórios sobre menções a ministros da Corte em conversas encontradas no celular de Daniel Vorcaro. Em 19 de novembro, segundo a Agência Brasil e a Conjur, Fachin encaminhou à Procuradoria-Geral da República os relatórios sobre Alexandre de Moraes, André Mendonça, Kassio Nunes Marques e Dias Toffoli e arquivou os relatórios sobre Luiz Fux, Cármen Lúcia, Gilmar Mendes, Flávio Dino, Cristiano Zanin e o próprio Fachin. A decisão está sob segredo de Justiça, e os fundamentos do arquivamento não foram divulgados; o conteúdo dos relatórios também é sigiloso, de modo que não se conhecem o contexto das menções nem o grau de relação de cada ministro com Vorcaro ou seus associados, segundo as reportagens. Em 20 de novembro, segundo a Conjur, Fachin levantou o sigilo dos relatórios sobre Mendonça, a pedido do próprio ministro. Caberá ao procurador-geral, Paulo Gonet, pedir o arquivamento ou a abertura de investigação, que depende de autorização prévia do plenário do STF. A retirada da chefia dos delegados que fizeram a primeira versão dos relatórios consta em ocorrência própria, e o relatório anterior da PF sobre Moraes e Vorcaro, na ocorrência sobre o caso Master.",
+      "response": "As reportagens não trazem manifestação de Fachin ou do STF sobre os fundamentos do arquivamento. As reportagens não atribuem irregularidade a nenhum dos ministros citados. Segundo a Gazeta do Povo, o diretor-geral da PF, Andrei Rodrigues, disse ao Senado que os documentos foram pedidos pessoalmente por Fachin e têm caráter descritivo, não de investigação formal.",
+      "institutions": [
+        "STF",
+        "PGR",
+        "Polícia Federal"
+      ],
+      "status": "consumado",
+      "cases": [
+        "F4"
+      ],
+      "sources": [
+        {
+          "outlet": "Agência Brasil",
+          "url": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-11/caso-master-fachin-encaminha-pgr-citacoes-quatro-ministros-do-stf"
+        },
+        {
+          "outlet": "Conjur",
+          "url": "https://conjur.com.br/2026-nov-20/fachin-encaminha-a-pgr-citacoes-a-quatro-ministros-do-stf-no-caso-master/"
+        },
+        {
+          "outlet": "Gazeta do Povo",
+          "url": "https://gazetadopovo.com.br/republica/senadores-acusam-chefe-da-pf-de-alterar-relatorios-para-proteger-ministros-do-stf"
+        }
+      ]
+    },
+    {
+      "id": "pf-delegados-master",
+      "sort": "2026-11-09",
+      "when": "9 a 18 nov. 2026",
+      "power": "judiciario",
+      "title": "Direção da PF retira da chefia os dois delegados que coordenavam o caso Master depois de eles entregarem relatórios que citavam ministros do STF e manda refazer os documentos",
+      "summary": "Em 9 de novembro, segundo o Metrópoles, os delegados Daniel Mostardeiro Cola e Wedson Cajé Lopes deixaram cargos de chefia na Coordenação de Inquéritos nos Tribunais Superiores (Cinq), em uma reestruturação interna; segundo o jornal, relatórios preliminares pedidos pelo presidente do STF, Edson Fachin, sobre menções a ministros no material do caso Master citavam Kassio Nunes Marques, Alexandre de Moraes e Dias Toffoli, e o diretor-geral, Andrei Rodrigues, mandou refazê-los. Segundo a Agência O Globo, publicada pela InfoMoney, a saída ocorreu dois dias depois da entrega dos relatórios, e Andrei escreveu ao Ministério da Justiça que houve “quebra na fundamental relação de confiança mútua” com os delegados; afirmou que a equipe citou só três ministros, e não “todas as menções encontradas sem exceção”, e que, por terem ido além do “caráter estritamente descritivo”, os relatórios passaram por um “saneamento da diligência”. Segundo a Gazeta do Povo, as novas versões incluíram André Mendonça, Luiz Fux e Gilmar Mendes, descritos como alvos de aproximações sem indício de crime. Em audiência no Senado em 18 de novembro, segundo o Diario de Pernambuco, Andrei afirmou que os relatórios “extrapolaram as balizas estabelecidas pela Corte”, que foram inseridos no sistema sem revisão da direção e que a PF abriu investigação sobre o vazamento dos documentos à imprensa. O senador Alessandro Vieira (MDB-SE) afirmou, segundo a Gazeta do Povo, que os dados vieram de investigação real, a Operação Compliance Zero, e que o diretor-geral não tem poder legal para revisar relatórios técnicos.",
+      "response": "A PF afirmou que as mudanças são “atos de gestão” de uma reestruturação, que não comenta trocas de chefia e que as equipes de investigação dos casos Master e do INSS foram mantidas, segundo o Metrópoles. Andrei negou interferência nas investigações e disse que “nenhum deles foi punido, afastado, demitido do cargo, removido”, apenas perderam funções de chefia. O ministro da Justiça, Wellington César Lima e Silva, disse ao Senado que a pasta supervisiona mas não dirige a PF e que a não renovação dos cargos de confiança foi decisão discricionária da corporação, segundo o SBT News.",
+      "institutions": [
+        "Polícia Federal",
+        "Ministério da Justiça",
+        "STF"
+      ],
+      "status": "consumado",
+      "cases": [
+        "E8"
+      ],
+      "sources": [
+        {
+          "outlet": "Metrópoles",
+          "url": "https://www.metropoles.com/colunas/manoela-alcantara/pf-afasta-delegados-caso-master"
+        },
+        {
+          "outlet": "InfoMoney (Agência O Globo)",
+          "url": "https://www.infomoney.com.br/mercados/diretor-da-pf-diz-que-afastou-delegados-do-caso-master-por-relatorios-fora-do-padrao/"
+        },
+        {
+          "outlet": "Gazeta do Povo",
+          "url": "https://gazetadopovo.com.br/republica/senadores-acusam-chefe-da-pf-de-alterar-relatorios-para-proteger-ministros-do-stf"
+        },
+        {
+          "outlet": "Diario de Pernambuco",
+          "url": "https://www.diariodepernambuco.com.br/politica/2026/11/11729461-andrei-rodrigues-diz-que-relatorios-da-pf-sobre-ministros-do-stf-extrapolaram-balizas-da-corte.html"
+        },
+        {
+          "outlet": "SBT News",
+          "url": "https://sbtnews.sbt.com.br/noticia/politica/m-inistro-da-justica-diz-que-pasta-nao-dirige-a-pf"
+        }
+      ]
+    },
+    {
+      "id": "casa-civil-sigilo-mps",
+      "sort": "2026-10-29",
+      "when": "29 out. a 17 nov. 2026",
+      "power": "executivo",
+      "title": "Casa Civil nega, sem prazo para o fim do sigilo, acesso aos pareceres e estudos que embasaram as medidas provisórias da proibição das bets e do Desenrola 3.0, editadas antes do primeiro turno",
+      "summary": "Segundo reportagem da BBC News Brasil de 3 de novembro, republicada por A Gazeta, a BBC pediu pela Lei de Acesso à Informação, em 25 e 28 de setembro, os documentos preparatórios das medidas provisórias do Desenrola 3.0 e da proibição das apostas de quota fixa (bets), anunciadas em 25 de setembro, nove dias antes do primeiro turno. Em 29 de outubro, quatro dias depois do segundo turno, a Casa Civil negou os dois pedidos com base no sigilo profissional entre advogado e cliente previsto no Estatuto da Advocacia, estendido aos estudos técnicos que subsidiaram os pareceres, sem fixar prazo para o fim da restrição; a reportagem registra que o Decreto 7.724/2012 assegura acesso a documentos preparatórios depois de editado o ato e que a BBC obteve documentos semelhantes em anos anteriores. Segundo a Gazeta do Povo, o Ministério da Fazenda negou pedido do Estadão sobre os documentos preparatórios da MP 1.394/2026, das bets, inclusive pareceres da Procuradoria-Geral da Fazenda Nacional, com base no sigilo profissional da advocacia pública, embora tenha liberado em maio documentos equivalentes da chamada “MP das blusinhas”; o Ministério da Justiça classificou como reservados por cinco anos documentos ligados à elaboração da medida, em termo assinado em 24 de setembro, com a justificativa de risco à segurança da população e à estabilidade financeira. As reportagens não registram recurso à CGU nem revisão das negativas.",
+      "response": "Em nota à BBC, a Casa Civil afirmou que o sigilo profissional protege o assessoramento jurídico de atos normativos e administrativos, incluindo medidas provisórias, projetos de lei, sanções e vetos; o Planalto não respondeu às perguntas da reportagem. A Fazenda disse que analisa as restrições de acesso “caso a caso”, segundo a Gazeta do Povo. Bruno Morassutti, da Fiquem Sabendo, falou em “sigilo eterno”, e Marina Atoji, da Transparência Brasil, chamou a posição de “uma aberração”, segundo a BBC.",
+      "institutions": [
+        "Casa Civil",
+        "Ministério da Fazenda",
+        "Ministério da Justiça"
+      ],
+      "status": "consumado",
+      "cases": [
+        "F7"
+      ],
+      "sources": [
+        {
+          "outlet": "A Gazeta (BBC News Brasil)",
+          "url": "https://www.agazeta.com.br/mundo/governo-lula-impoe-sigilo-a-documentos-do-pacote-de-bondades-lancado-nas-eleicoes-1126"
+        },
+        {
+          "outlet": "Gazeta do Povo",
+          "url": "https://gazetadopovo.com.br/republica/governo-lula-mantem-sob-sigilo-documentos-que-embasaram-proibicao-das-bets"
+        },
+        {
+          "outlet": "O Tempo",
+          "url": "https://www.otempo.com.br/politica/congresso/2026/11/4/governo-lula-coloca-sigilo-em-documentos-sobre-proibicao-de-bets-e-desenrola-3-0"
+        }
+      ]
+    },
     {
       "id": "flavio-resultado",
       "sort": "2026-10-28",
-      "when": "25 out. a 5 nov. 2026",
+      "when": "25 out. a 22 nov. 2026",
       "power": "eleicoes",
       "title": "Derrotado no segundo turno, Flávio Bolsonaro acusa fraude sem apresentar provas e, já nos EUA, divulga carta em que se declara “verdadeiro presidente eleito”, termo depois trocado por “líder do Brasil”",
-      "summary": "Na noite de 25 de outubro, Flávio Bolsonaro disse que não aceitaria “que a regra do jogo tenha sido mudada em cima do jogo”, em referência à decisão do ministro Cristiano Zanin que prorrogou a votação até as 19h. Em vídeo no dia seguinte, afirmou que “não fui eu que perdi, foi o sistema que ganhou” e que a democracia “faliu”, disse que Lula usou dinheiro público para fazer “a maior compra de votos da história” e anunciou que pedirá a cassação da chapa vencedora. Em 28 de outubro, depois de chegar aos Estados Unidos, divulgou uma carta em que, segundo a Agência Brasil, se declarava o “verdadeiro presidente eleito do país”; cerca de meia hora depois, o termo foi trocado por “líder do Brasil”. Na versão publicada pela Gazeta do Povo, ele afirma ter visto “uma fraude eleitoral se concretizar”, diz que vai liderar a oposição a partir do exterior, agradece a Javier Milei e a Donald Trump e cita Juan Guaidó. As reportagens não registram provas apresentadas para as acusações; segundo a Agência Brasil, Lula teve 64 milhões de votos, e Flávio, pouco mais de 59 milhões. Em 29 de outubro, segundo a Gazeta do Povo, Donald Trump disse a jornalistas que a eleição no Brasil foi “uma vergonha”, afirmou que falaria com Lula e não respondeu quem considera o vencedor; segundo a Agência Brasil, União Brasil e MDB divulgaram notas afirmando que o resultado deve ser respeitado, e o governador Tarcísio de Freitas (Republicanos-SP) disse que “a eleição acabou e agora é preciso olhar para a frente”. Em entrevista ao The New York Times reproduzida pelo Congresso em Foco em 5 de novembro, Flávio classificou a derrota como “matematicamente impossível”, sem apresentar provas, e disse que pretende contestar o resultado na Justiça, embora considere pequenas as chances de êxito.",
-      "response": "Flávio sustenta que a campanha de Lula cometeu abuso de poder político e econômico. O coordenador da campanha, senador Rogério Marinho (PL-RN), disse à Agência Brasil que “não há provas” de fraude, tratou a acusação como desabafo e atribuiu a troca de termos a “algum problema na confecção da carta”; o PL reconheceu o resultado. O cientista político Cláudio Couto, ouvido pelo Brasil de Fato, considera descabida a tese de que a prorrogação mudou as regras durante a disputa.",
+      "summary": "Na noite de 25 de outubro, Flávio Bolsonaro contestou a decisão do ministro Cristiano Zanin que prorrogou a votação até as 19h. Em vídeo no dia seguinte, afirmou que “não fui eu que perdi, foi o sistema que ganhou” e que a democracia “faliu”, disse que Lula usou dinheiro público para fazer “a maior compra de votos da história” e anunciou que pedirá a cassação da chapa vencedora. Em 28 de outubro, depois de chegar aos Estados Unidos, divulgou uma carta em que, segundo a Agência Brasil, se declarava o “verdadeiro presidente eleito do país”; cerca de meia hora depois, o termo foi trocado por “líder do Brasil”. Na versão publicada pela Gazeta do Povo, ele afirma ter visto “uma fraude eleitoral se concretizar”, diz que vai liderar a oposição a partir do exterior, agradece a Javier Milei e a Donald Trump e cita Juan Guaidó. As reportagens não registram provas apresentadas para as acusações; segundo a Agência Brasil, Lula teve 64 milhões de votos, e Flávio, pouco mais de 59 milhões. Em 29 de outubro, segundo a Gazeta do Povo, Donald Trump disse a jornalistas que a eleição no Brasil foi “uma vergonha”, afirmou que falaria com Lula e não respondeu quem considera o vencedor; segundo a Agência Brasil, União Brasil e MDB divulgaram notas afirmando que o resultado deve ser respeitado, e o governador Tarcísio de Freitas (Republicanos-SP) disse que “a eleição acabou e agora é preciso olhar para a frente”. Em entrevista ao The New York Times reproduzida pelo Congresso em Foco em 5 de novembro, Flávio classificou a derrota como “matematicamente impossível”, sem apresentar provas, e disse que pretende contestar o resultado na Justiça, embora considere pequenas as chances de êxito. Em entrevista à Folha de S.Paulo em Miami, publicada em 6 de novembro segundo A Tarde, afirmou: “Não tenho provas e nem terei, porque é proibido investigar esse assunto”, “é impossível não ser manipulação de resultado” e “o problema é o que aconteceu dentro do TSE”; disse que sua equipe jurídica não questionará o funcionamento das urnas e se concentrará na acusação de uso da máquina pública. Em entrevista à Fox News publicada em 22 de novembro, segundo o Metrópoles, repetiu: “Eu não tenho provas porque sou proibido de investigar”, defendeu o registro impresso de cada voto e disse que permanecerá nos Estados Unidos; a reportagem registra que nenhuma prova de fraude foi apresentada.",
+      "response": "Flávio sustenta que a campanha de Lula cometeu abuso de poder político e econômico. O coordenador da campanha, senador Rogério Marinho (PL-RN), disse à Agência Brasil que “não há provas” de fraude, tratou a acusação como desabafo e atribuiu a troca de termos a “algum problema na confecção da carta”; o PL reconheceu o resultado.",
       "institutions": [
         "TSE",
         "STF"
@@ -50,6 +154,14 @@
         {
           "outlet": "Congresso em Foco",
           "url": "https://www.congressoemfoco.com.br/noticia/131353/como-cheguei-ate-aqui-levarei-ao-tumulo--diz-flavio-sobre-eua"
+        },
+        {
+          "outlet": "A Tarde",
+          "url": "https://atarde.com.br/politica/flavio-admite-que-nao-tem-provas-de-fraude-eleitoral-nem-terei-1408636"
+        },
+        {
+          "outlet": "Metrópoles",
+          "url": "https://metropoles.com/mundo/flavio-admite-nao-ter-provas-de-fraude-eleitoral-proibido-de-investigar"
         }
       ]
     },
@@ -173,6 +285,32 @@
       ]
     },
     {
+      "id": "zucco-questiona-eleicao",
+      "sort": "2026-10-26",
+      "when": "26 e 27 out. 2026",
+      "power": "eleicoes",
+      "title": "Governador eleito do Rio Grande do Sul diz em nota, sem apresentar provas, que a eleição presidencial teve “interferências abusivas” e “dados contraditórios”; reconhece o resultado no dia seguinte",
+      "summary": "Em nota divulgada em 26 de outubro, dia seguinte ao segundo turno, o governador eleito do Rio Grande do Sul, Luciano Zucco (PL), afirmou que a eleição presidencial teve “interferências abusivas, dados contraditórios e questionamentos que precisam ser devidamente esclarecidos”, segundo o Estadão Conteúdo, publicado por O Liberal; a reportagem registra que ele não apresentou provas de irregularidades. Em 27 de outubro, segundo o Jornal do Comércio, Zucco reconheceu a vitória de Lula e disse que vai trabalhar com o presidente a partir de 2027. As acusações de Flávio Bolsonaro sobre o resultado estão em ocorrência própria.",
+      "response": "O líder da bancada do PT na Assembleia Legislativa, Miguel Rossetto, classificou a nota como “inaceitável e altamente preocupante” e disse ser “patético e desonesto questionar o resultado por conta do atendimento de sua própria solicitação”, em referência à prorrogação do horário de votação; lembrou que o presidente do TSE, Kassio Nunes Marques, reconheceu o resultado, segundo o Estadão Conteúdo. As reportagens não trazem outra manifestação de Zucco sobre a nota além do reconhecimento.",
+      "institutions": [
+        "TSE"
+      ],
+      "status": "declaracao",
+      "cases": [
+        "A1"
+      ],
+      "sources": [
+        {
+          "outlet": "O Liberal (Estadão Conteúdo)",
+          "url": "https://www.oliberal.com/politica/bancada-do-pt-responde-zucco-e-diz-que-questionamento-sobre-reeleicao-de-lula-e-inaceitavel-1.1187268"
+        },
+        {
+          "outlet": "Jornal do Comércio",
+          "url": "https://www.jornaldocomercio.com/politica/2026/10/1268472-zucco-reconhece-vitoria-de-lula-em-eleicao-presidencial.html"
+        }
+      ]
+    },
+    {
       "id": "zanin-impeachment-pedidos",
       "sort": "2026-10-26",
       "when": "25 e 26 out. 2026",
@@ -207,10 +345,10 @@
     {
       "id": "flavio-passaporte",
       "sort": "2026-10-25",
-      "when": "23 a 29 out. 2026",
+      "when": "23 out. a 20 nov. 2026",
       "power": "judiciario",
       "title": "Na noite da apuração, Moraes autoriza, a pedido da PF, a retenção dos passaportes de Flávio Bolsonaro",
-      "summary": "O pedido da Polícia Federal, de 16 páginas, foi assinado às 21h16 de 25 de outubro, sete minutos depois de o TSE oficializar a derrota de Flávio Bolsonaro (PL-RJ) no segundo turno. O ministro Alexandre de Moraes concedeu a medida na mesma noite, sem consulta prévia à Procuradoria-Geral da República, e ela foi cumprida na manhã seguinte. A PF citou um inquérito sigiloso sobre lavagem de dinheiro atribuída ao advogado Willer Tomaz, em que Flávio aparece como usuário master de uma conta de empresa de Tomaz em Portugal até maio de 2025, e uma declaração de Eduardo Bolsonaro, em 23 de outubro, de que seria a favor de o irmão deixar o país se perdesse a eleição. Segundo a PF, Tomaz está em Miami desde agosto. Flávio não entregou os documentos, e a PF cancelou os passaportes comum e diplomático em 27 de outubro. Segundo a CNN Brasil, ele cruzou para a Argentina com passaporte italiano e entrou nos Estados Unidos, por Miami, com o passaporte diplomático já cancelado; a Agência Brasil registrou que não havia saída formal do país. Em 23 de outubro, dois dias antes da votação, Moraes já havia determinado, segundo a Agência Brasil, o bloqueio de até R$ 6 bilhões de Willer Tomaz, a quebra de seus sigilos bancário, fiscal e cambial, a suspensão de seus passaportes e a paralisação das atividades de suas empresas, depois de a PF apontar que ele viajara a Miami após ser alvo de busca na Operação Sem Desconto; Flávio disse ter apenas relação pessoal com Tomaz. Em 29 de outubro, segundo a CNN Brasil, a defesa de Flávio anunciou que pedirá ao presidente do STF, Edson Fachin, a saída de Moraes da relatoria: por prevenção, por entender que o juiz natural seria André Mendonça, relator da Operação Sem Desconto, de onde a investigação derivou; e por suspeição, porque o relatório da PF cita uma empresa com cotas da mesma aeronave usada por Moraes, cedida no contrato do escritório de sua esposa com Daniel Vorcaro. Segundo a Gazeta do Povo, a petição foi encaminhada a Fachin em 1º de novembro: pede que Moraes seja declarado impedido, com redistribuição a Mendonça, ou, se o impedimento não for reconhecido, suspeito, e a revogação das cautelares (cancelamento dos passaportes, entrega do passaporte italiano e proibição de contato com Willer Tomaz); a defesa contesta o risco de fuga baseado em declarações de terceiros e a imposição das medidas na noite da eleição sem manifestação prévia da PGR. Segundo a defesa, citada pela Gazeta do Povo, o banco negou que Flávio fosse “usuário master” de contas ligadas a Tomaz.",
+      "summary": "O pedido da Polícia Federal, de 16 páginas, foi assinado às 21h16 de 25 de outubro, sete minutos depois de o TSE oficializar a derrota de Flávio Bolsonaro (PL-RJ) no segundo turno. O ministro Alexandre de Moraes concedeu a medida na mesma noite, sem consulta prévia à Procuradoria-Geral da República, e ela foi cumprida na manhã seguinte. A PF citou um inquérito sigiloso sobre lavagem de dinheiro atribuída ao advogado Willer Tomaz, em que Flávio aparece como usuário master de uma conta de empresa de Tomaz em Portugal até maio de 2025, e uma declaração de Eduardo Bolsonaro, em 23 de outubro, de que seria a favor de o irmão deixar o país se perdesse a eleição. Segundo a PF, Tomaz está em Miami desde agosto. Flávio não entregou os documentos, e a PF cancelou os passaportes comum e diplomático em 27 de outubro. Segundo a CNN Brasil, ele cruzou para a Argentina com passaporte italiano e entrou nos Estados Unidos, por Miami, com o passaporte diplomático já cancelado; a Agência Brasil registrou que não havia saída formal do país. Em 23 de outubro, dois dias antes da votação, Moraes já havia determinado, segundo a Agência Brasil, o bloqueio de até R$ 6 bilhões de Willer Tomaz, a quebra de seus sigilos bancário, fiscal e cambial, a suspensão de seus passaportes e a paralisação das atividades de suas empresas, depois de a PF apontar que ele viajara a Miami após ser alvo de busca na Operação Sem Desconto; Flávio disse ter apenas relação pessoal com Tomaz. Em 29 de outubro, segundo a CNN Brasil, a defesa de Flávio anunciou que pedirá ao presidente do STF, Edson Fachin, a saída de Moraes da relatoria: por prevenção, por entender que o juiz natural seria André Mendonça, relator da Operação Sem Desconto, de onde a investigação derivou; e por suspeição, porque o relatório da PF cita uma empresa com cotas da mesma aeronave usada por Moraes, cedida no contrato do escritório de sua esposa com Daniel Vorcaro. Segundo a Gazeta do Povo, a petição foi encaminhada a Fachin em 1º de novembro: pede que Moraes seja declarado impedido, com redistribuição a Mendonça, ou, se o impedimento não for reconhecido, suspeito, e a revogação das cautelares (cancelamento dos passaportes, entrega do passaporte italiano e proibição de contato com Willer Tomaz); a defesa contesta o risco de fuga baseado em declarações de terceiros e a imposição das medidas na noite da eleição sem manifestação prévia da PGR. Segundo a defesa, citada pela Gazeta do Povo, o banco negou que Flávio fosse “usuário master” de contas ligadas a Tomaz. Segundo a Gazeta do Povo, que teve acesso à decisão sigilosa de 25 de outubro, Moraes citou como fundamentos o alerta da PF sobre a possibilidade de Flávio deixar o país e a declaração dele, após o anúncio do resultado, de que não reconhecia a vitória de Lula, lida pelo ministro como intenção de questionar as eleições. Em 20 de novembro, em julgamento virtual da Primeira Turma aberto até 30 de novembro, Moraes votou por rejeitar o recurso da defesa e manter a apreensão dos passaportes e a proibição de contato com Willer Tomaz, citando o descumprimento da ordem de entrega dos documentos e o “potencial para obstruir as investigações em curso”, segundo a Gazeta do Povo e o Agora RN; faltavam os votos de Cármen Lúcia, Cristiano Zanin e Flávio Dino. As reportagens não registram decisão de Fachin sobre o pedido de afastamento de Moraes.",
       "response": "Flávio Bolsonaro contesta a base da decisão e pergunta se a medida seria tomada caso ele tivesse vencido; integrantes da campanha falam em retaliação política. O STF não informou quando a decisão, sob sigilo, foi assinada. O escritório de Viviane Barci de Moraes nega a relação comercial apontada pela defesa, e Flávio e Willer Tomaz negam irregularidades, segundo a Gazeta do Povo. As reportagens consultadas não trazem manifestação de Moraes, de Fachin ou da PGR sobre os pedidos.",
       "institutions": [
         "STF",
@@ -253,6 +391,14 @@
         {
           "outlet": "O Antagonista",
           "url": "https://oantagonista.com.br/brasil/defesa-flavio-bolsonaro-recorre-stf-reaver-passaportes/"
+        },
+        {
+          "outlet": "Gazeta do Povo",
+          "url": "https://www.gazetadopovo.com.br/republica/fala-de-flavio-contra-resultado-da-eleicao-motivou-moraes-a-apreender-passaporte/"
+        },
+        {
+          "outlet": "Agora RN",
+          "url": "https://agorarn.com.br/brasil/moraes-vota-manter-passaportes-flavio-bolsonaro/"
         }
       ]
     },
@@ -514,7 +660,7 @@
       "when": "set.–nov. 2026",
       "power": "judiciario",
       "title": "Relatório da PF aponta 187 interações entre Alexandre de Moraes e Daniel Vorcaro; PGR pede a nulidade do documento",
-      "summary": "O relatório, entregue em 27 de agosto e tornado público em 1º de setembro, registra 187 interações e indícios de ao menos seis encontros entre o ministro do STF e o controlador do Banco Master. O procurador-geral Paulo Gonet e o diretor-geral da PF também são citados nas mensagens. O relator, ministro André Mendonça, abriu vista à PGR e propôs levar o material ao Plenário. O pedido de nulidade partiu da PGR, cujo chefe é citado no mesmo material. Em 15 de setembro, o Plenário do STF discutiu por mais de seis horas a validade das ordens de Mendonça e se os processos seriam julgados em conjunto; o ministro Flávio Dino pediu vista, com prazo de até 90 dias, e o mérito não foi decidido. Segundo O Povo, a votação preliminar estava em 4 a 3 pela separação dos processos, e Nunes Marques e Dias Toffoli se declararam impedidos. Em 12 de setembro, os inquéritos das operações Sem Desconto (INSS) e Compliance Zero (Master) haviam sido enviados à Presidência do STF, depois de Moraes representar contra Mendonça por suposto abuso de autoridade na condução das operações. Em 29 de outubro, segundo o STF e a Gazeta do Povo, Fachin devolveu a Operação Sem Desconto a Mendonça, por não haver menção concreta a autoridade com foro na Corte, e manteve provisoriamente na Presidência os procedimentos do Master, por até 90 dias contados de 12 de setembro e só para medidas urgentes, porque a PF identificou menção a autoridade sujeita ao Plenário; a decisão será submetida a referendo, e a PGR já havia se manifestado contra o pedido de Moraes para investigar Mendonça. No mesmo dia, a defesa de Vorcaro, indiciado pela PF em 28 de outubro com outras 14 pessoas por gestão fraudulenta, organização criminosa e lavagem, entregou ao STF laudo particular segundo o qual 657 arquivos do celular apreendido foram modificados e 436 criados depois da apreensão, e pediu acesso aos dados brutos; o perito não afirma que houve adulteração humana, segundo a Gazeta do Povo, e a PF não respondeu até a publicação. Em 25 de setembro, o Conselho Superior do MPF arquivou, por 5 votos a 4, o pedido de investigação sobre a conduta de Gonet aberto depois de a PF encontrar mensagens que o citam, e rejeitou por unanimidade afastá-lo dos processos do Master no STF, por entender que a decisão não cabe ao Conselho; Gonet não participou da sessão, presidida pelo vice-presidente, Nicolao Dino, segundo o Poder360 e o Migalhas. Em 4 de novembro, segundo a Gazeta do Povo, Fachin negou seguimento, por “inadmissível”, a pedido do deputado Nikolas Ferreira (PL-MG) de afastamento cautelar de Gonet do cargo, por entender que o parlamentar não tem legitimidade para exigir que o STF processe notícia de crime, cujo encaminhamento regimental é ao Ministério Público ou à polícia, que o Conselho Superior do MPF já concluíra pela falta de elementos mínimos e que faltava justa causa.",
+      "summary": "O relatório, tornado público em 1º de setembro, registra 187 interações e indícios de ao menos seis encontros entre o ministro do STF e o controlador do Banco Master. O procurador-geral Paulo Gonet e o diretor-geral da PF também são citados nas mensagens. O relator, ministro André Mendonça, abriu vista à PGR e propôs levar o material ao Plenário. O pedido de nulidade partiu da PGR. Em 15 de setembro, o Plenário do STF discutiu por mais de seis horas a validade das ordens de Mendonça e se os processos seriam julgados em conjunto; o ministro Flávio Dino pediu vista, com prazo de até 90 dias, e o mérito não foi decidido. Segundo O Povo, a votação preliminar estava em 4 a 3 pela separação dos processos, e Nunes Marques e Dias Toffoli se declararam impedidos. Em 12 de setembro, os inquéritos das operações Sem Desconto (INSS) e Compliance Zero (Master) haviam sido enviados à Presidência do STF, depois de Moraes representar contra Mendonça por suposto abuso de autoridade na condução das operações. Em 29 de outubro, segundo o STF e a Gazeta do Povo, Fachin devolveu a Operação Sem Desconto a Mendonça, por não haver menção concreta a autoridade com foro na Corte, e manteve provisoriamente na Presidência os procedimentos do Master, por até 90 dias contados de 12 de setembro e só para medidas urgentes, porque a PF identificou menção a autoridade sujeita ao Plenário; a decisão será submetida a referendo, e a PGR já havia se manifestado contra o pedido de Moraes para investigar Mendonça. No mesmo dia, a defesa de Vorcaro, indiciado pela PF em 28 de outubro com outras 14 pessoas por gestão fraudulenta, organização criminosa e lavagem, entregou ao STF laudo particular segundo o qual 657 arquivos do celular apreendido foram modificados e 436 criados depois da apreensão, e pediu acesso aos dados brutos; o perito não afirma que houve adulteração humana, segundo a Gazeta do Povo, e a PF não respondeu até a publicação. Em 25 de setembro, o Conselho Superior do MPF arquivou, por 5 votos a 4, o pedido de investigação sobre a conduta de Gonet aberto depois de a PF encontrar mensagens que o citam, e rejeitou por unanimidade afastá-lo dos processos do Master no STF, por entender que a decisão não cabe ao Conselho; Gonet não participou da sessão, presidida pelo vice-presidente, Nicolao Dino, segundo o Poder360 e o Migalhas. Em 4 de novembro, segundo a Gazeta do Povo, Fachin negou seguimento, por “inadmissível”, a pedido do deputado Nikolas Ferreira (PL-MG) de afastamento cautelar de Gonet do cargo, por entender que o parlamentar não tem legitimidade para exigir que o STF processe notícia de crime, cujo encaminhamento regimental é ao Ministério Público ou à polícia, que o Conselho Superior do MPF já concluíra pela falta de elementos mínimos e que faltava justa causa. Em 19 de novembro, segundo a Agência Brasil, Fachin enviou à PGR relatórios da PF sobre menções a Moraes, Mendonça, Nunes Marques e Toffoli no celular de Vorcaro e arquivou os de outros seis ministros, inclusive o que trata dele próprio (ver ocorrência própria).",
       "response": "A PF ressalva que não concluiu que o ministro tenha cometido crime, interferido em apurações ou atendido a pedidos de Vorcaro. A PGR sustenta que o relatório foi produzido de forma irregular. Em manifestação a Edson Fachin, Moraes chamou a investigação conduzida por Mendonça de “inconstitucional e ilegal”, disse que ela foi ordenada sem pedido da PGR ou da PF e sem aval do Plenário, e negou ter favorecido Vorcaro e ter recebido as mensagens listadas no relatório. Fachin afirmou que a devolução dos inquéritos não antecipa juízo sobre o mérito nem fixa definitivamente a competência. A defesa de Vorcaro sustenta que a alteração de arquivos sob custódia estatal compromete as provas e nega prejuízo ao BRB. No Conselho Superior do MPF, o relator, Francisco Sanseverino, afirmou que “não houve nenhum contato direto, nem indireto dele, solicitação direta ou indireta de vantagem” por parte de Gonet e que a suposta “amizade íntima” com Vorcaro “não tem confirmação na prova existente nos autos”, segundo o Poder360 e o Migalhas.",
       "institutions": [
         "STF",
@@ -573,6 +719,10 @@
         {
           "outlet": "Gazeta do Povo",
           "url": "https://www.gazetadopovo.com.br/republica/fachin-rejeita-pedido-de-nikolas-ferreira-para-afastar-paulo-gonet-da-pgr/"
+        },
+        {
+          "outlet": "Agência Brasil",
+          "url": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-11/caso-master-fachin-encaminha-pgr-citacoes-quatro-ministros-do-stf"
         }
       ]
     },
@@ -640,11 +790,11 @@
     {
       "id": "master-cpi",
       "sort": "2026-06-01",
-      "when": "jan.–set. 2026",
+      "when": "jan.–nov. 2026",
       "power": "legislativo",
       "title": "CPI do Banco Master reúne assinaturas no Senado e na Câmara, mas não é instalada",
-      "summary": "Os requerimentos superaram o mínimo exigido nas duas Casas — no Senado, 53 assinaturas segundo a Band, para um mínimo de 27. Os presidentes Davi Alcolumbre (Senado) e Hugo Motta (Câmara) não instalaram as comissões. Senadores recorreram ao STF para obrigar a instalação. Em 22 de setembro de 2026, o ministro Cristiano Zanin negou a liminar pedida pelo senador Alessandro Vieira (MDB-SE) no mandado de segurança 41.085, por entender que os documentos não demonstravam, “neste momento processual”, omissão ilegal de Alcolumbre, e pediu informações ao Senado; o requerimento, de março, tinha 41 assinaturas, e o mérito segue pendente, segundo o Congresso em Foco e o Diário do Grande ABC.",
-      "response": "Hugo Motta afirmou que seguiria o regimento e a fila de pedidos de CPI, sem prazo definido. Reportagens associam o impasse ao calendário eleitoral de 2026.",
+      "summary": "Os requerimentos superaram o mínimo exigido nas duas Casas — no Senado, 53 assinaturas segundo a Band, para um mínimo de 27. Os presidentes Davi Alcolumbre (Senado) e Hugo Motta (Câmara) não instalaram as comissões. Senadores recorreram ao STF para obrigar a instalação. Em setembro de 2026, o ministro Cristiano Zanin negou a liminar pedida pelo senador Alessandro Vieira (MDB-SE) no mandado de segurança 41.085, por entender que os documentos não demonstravam, “neste momento processual”, omissão ilegal de Alcolumbre, e pediu informações ao Senado; o requerimento, de março, tinha 41 assinaturas, e o mérito segue pendente, segundo o Congresso em Foco e o Diário do Grande ABC. Em 12 de novembro, depois das eleições, Alcolumbre voltou a negar, em sessão do Congresso, a leitura do requerimento da CPMI, apresentado em fevereiro pelo deputado Carlos Jordy (PL-RJ) com 238 assinaturas de deputados e 42 de senadores; afirmou que a Mesa já havia decidido a questão em abril e que “cabe à Presidência o momento ou não da leitura do requerimento”, segundo O Tempo. O deputado Marcel van Hattem (Novo-RS), que havia pedido a leitura argumentando que a justificativa eleitoral dada antes não se aplicava mais, recorreu da negativa, alegando que a decisão era ilegal; Alcolumbre disse que enviaria o recurso à CCJ “no tempo da presidência”, sem data, segundo o Estadão Conteúdo publicado pelo Jornal de Brasília.",
+      "response": "Hugo Motta afirmou que seguiria o regimento e a fila de pedidos de CPI, sem prazo definido. Reportagens associam o impasse ao calendário eleitoral de 2026. Em novembro, Alcolumbre sustentou que os fatos já são apurados pelo MPF, pela PF e pelo STF, segundo o Jornal de Brasília.",
       "institutions": [
         "Senado",
         "Câmara dos Deputados"
@@ -673,6 +823,14 @@
         {
           "outlet": "Diário do Grande ABC",
           "url": "https://www.dgabc.com.br/Noticia/4348552/zanin-nega-pedido-para-obrigar-senado-a-instalar-cpi-do-banco-master"
+        },
+        {
+          "outlet": "O Tempo",
+          "url": "https://www.otempo.com.br/politica/congresso/2026/11/12/alcolumbre-nega-abertura-de-cpmi-do-banco-master-e-diz-que-decisao-ja-foi-tomada"
+        },
+        {
+          "outlet": "Jornal de Brasília (Estadão Conteúdo)",
+          "url": "https://jornaldebrasilia.com.br/noticias/politica-e-poder/alcolumbre-nega-pedido-de-leitura-da-cpmi-do-master-ja-foi-decidido/"
         }
       ]
     },
@@ -1679,10 +1837,10 @@
     {
       "id": "inquerito-4781",
       "sort": "2019-03-14",
-      "when": "mar. 2019 – out. 2026",
+      "when": "mar. 2019 – nov. 2026",
       "power": "judiciario",
-      "title": "Inquérito das fake news: aberto de ofício pelo STF e prorrogado por mais de seis anos; em 2026, a Presidência do tribunal retira o relator e começa a arquivá-lo",
-      "summary": "Instaurado pelo próprio tribunal, sem pedido do Ministério Público, com relator designado sem sorteio, para apurar ataques à própria Corte. Tramitou sob sigilo e foi prorrogado sucessivamente — a última prorrogação localizada, de 180 dias, é de dezembro de 2024. A reportagem da IstoÉ registra as críticas de objeto indefinido e de acúmulo das funções de investigar e julgar. Em 9 de setembro de 2026, o presidente do STF, Edson Fachin, revogou por portaria a designação de Alexandre de Moraes para conduzir o inquérito; segundo a Gazeta do Povo, a Presidência passou a analisar os fatos e a enviar os autos à PGR, as ações penais com denúncia já recebida continuaram com Moraes e os atos anteriores foram preservados. Em 9 de outubro, segundo o SBT News, Fachin disse que arquivará o inquérito depois de examinar 104 procedimentos vinculados. Em 27 de outubro, segundo a Agência Brasil, arquivou três investigações, contra Eduardo Bolsonaro, Silas Malafaia e Guilherme Fiuza, as duas últimas com parecer da PGR pelo arquivamento; no caso de Malafaia, revogou as cautelares, inclusive a proibição de deixar o país, segundo a CNN Brasil. Em 29 de outubro, segundo o STF e a Agência Brasil, arquivou mais cinco, todas com parecer da PGR: a de Rui Costa Pimenta (PCO), por prescrição; as do ex-ministro do Turismo Gilson Machado e de Flávia Cordeiro Magalhães, por falta de indícios, com revogação da prisão preventiva desta; a do deputado estadual Alex Brasil (SC), por já ter sido investigado pelos mesmos fatos, com desbloqueio de suas redes; e a de um grupo do Telegram cujos administradores não puderam ser identificados. O sigilo das decisões foi levantado.",
+      "title": "Inquérito das fake news: aberto de ofício pelo STF e prorrogado por mais de seis anos; em 2026, a Presidência do tribunal retira o relator e arquiva o inquérito a pedido da PGR",
+      "summary": "Instaurado pelo próprio tribunal, sem pedido do Ministério Público, com relator designado sem sorteio, para apurar ataques à própria Corte. Tramitou sob sigilo e foi prorrogado sucessivamente — a última prorrogação localizada, de 180 dias, é de dezembro de 2024. A reportagem da IstoÉ registra as críticas de objeto indefinido e de acúmulo das funções de investigar e julgar. Em 9 de setembro de 2026, o presidente do STF, Edson Fachin, revogou por portaria a designação de Alexandre de Moraes para conduzir o inquérito; segundo a Gazeta do Povo, a Presidência passou a analisar os fatos e a enviar os autos à PGR, as ações penais com denúncia já recebida continuaram com Moraes e os atos anteriores foram preservados. Em 9 de outubro, segundo o SBT News, Fachin disse que arquivará o inquérito depois de examinar 104 procedimentos vinculados. Em 27 de outubro, segundo a Agência Brasil, arquivou três investigações, contra Eduardo Bolsonaro, Silas Malafaia e Guilherme Fiuza, as duas últimas com parecer da PGR pelo arquivamento; no caso de Malafaia, revogou as cautelares, inclusive a proibição de deixar o país, segundo a CNN Brasil. Em 29 de outubro, segundo o STF e a Agência Brasil, arquivou mais cinco, todas com parecer da PGR: a de Rui Costa Pimenta (PCO), por prescrição; as do ex-ministro do Turismo Gilson Machado e de Flávia Cordeiro Magalhães, por falta de indícios, com revogação da prisão preventiva desta; a do deputado estadual Alex Brasil (SC), por já ter sido investigado pelos mesmos fatos, com desbloqueio de suas redes; e a de um grupo do Telegram cujos administradores não puderam ser identificados. O sigilo das decisões foi levantado. Em 9 de novembro, o procurador-geral Paulo Gonet pediu o arquivamento do inquérito por entender que seu objeto se esgotou, segundo o Correio Braziliense, e Fachin o arquivou no mesmo dia, segundo o SBT News: afirmou que o inquérito, embora validado pelo plenário em 2020, não poderia permanecer aberto indefinidamente e que a sucessiva inclusão de fatos e linhas de investigação o transformou em estrutura permanente sem objeto suficientemente definido. Inquéritos e ações penais derivados não foram afetados, os 104 procedimentos vinculados serão revistos um a um e, contra o pedido da PGR de manter o sigilo, Fachin determinou a publicidade da maior parte dos autos depois da separação de dados protegidos por lei.",
       "response": "O Plenário do STF validou o inquérito em 2020, no julgamento da ADPF 572. Fachin fundamentou a revogação da designação no mesmo modelo validado na ADPF 572, segundo o qual o presidente do STF pode encerrar a delegação a qualquer tempo. As reportagens consultadas não trazem manifestação de Moraes sobre a retirada da relatoria.",
       "institutions": [
         "STF",
@@ -1730,6 +1888,14 @@
         {
           "outlet": "Agência Brasil",
           "url": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/fachin-arquiva-mais-cinco-investigacoes-do-inquerito-das-fake-news"
+        },
+        {
+          "outlet": "Correio Braziliense",
+          "url": "https://www.correiobraziliense.com.br/politica/2026/11/7535584-pgr-solicita-a-fachin-o-arquivamento-do-inquerito-das-fake-news.html"
+        },
+        {
+          "outlet": "SBT News",
+          "url": "https://sbtnews.sbt.com.br/noticia/politica/stf-arquiva-inquerito-das-fake-news"
         }
       ]
     }
